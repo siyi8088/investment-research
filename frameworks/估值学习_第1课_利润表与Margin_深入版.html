@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>估值系统学习｜第1课深入版：利润表与各种 Margin</title>
+<style>
+:root{
+ --bg:#f5f7fb;--card:#fff;--ink:#17202b;--muted:#667085;--line:#e4e7ec;
+ --blue:#315efb;--blue2:#eef2ff;--green:#149b68;--green2:#eaf8f1;
+ --orange:#d9822b;--orange2:#fff3e3;--red:#d64545;--red2:#fff0f0;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.8}
+.container{width:min(1180px,92vw);margin:auto}
+.hero{background:linear-gradient(140deg,#0f172a,#304780);color:#fff;padding:66px 0 54px}
+.eyebrow{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);font-size:13px;margin-bottom:18px}
+.hero h1{font-size:43px;line-height:1.18;margin:0 0 16px;letter-spacing:-.8px}
+.hero p{max-width:970px;color:#dbe2f0;font-size:18px;margin:0}
+.toc{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.toc .inner{display:flex;gap:18px;overflow:auto;white-space:nowrap;padding:11px 0}
+.toc a{font-size:14px;color:#475467}
+section{padding:44px 0}
+h2{font-size:30px;line-height:1.3;margin:0 0 10px}
+h3{font-size:21px;margin:28px 0 10px}
+h4{font-size:17px;margin:20px 0 6px}
+.lead{font-size:17px;color:#475467;max-width:960px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.chart{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 2px 9px rgba(16,24,40,.035)}
+.kpi{font-size:33px;font-weight:800;letter-spacing:-.4px}
+.small{font-size:13px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;padding:3px 8px;border-radius:7px;background:#f2f4f7;color:#344054}
+.tag.blue{background:var(--blue2);color:#3346b3}.tag.green{background:var(--green2);color:#16724a}.tag.orange{background:var(--orange2);color:#925608}.tag.red{background:var(--red2);color:#983333}
+.formula{background:#111827;color:#f8fafc;border-radius:13px;padding:15px 17px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto}
+.callout{padding:17px 19px;border-radius:12px;border-left:4px solid var(--blue);background:var(--blue2)}
+.callout.green{border-left-color:var(--green);background:var(--green2)}
+.callout.orange{border-left-color:var(--orange);background:var(--orange2)}
+.callout.red{border-left-color:var(--red);background:var(--red2)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+th,td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f8fafc;font-size:14px}
+tr:last-child td{border-bottom:0}
+.chart-title{font-weight:750;margin-bottom:9px}
+svg{width:100%;height:auto;display:block}
+.quote{font-size:22px;line-height:1.5;font-weight:700;padding:20px 22px;border-radius:16px;background:#111827;color:#fff}
+.two-col{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+dl{margin:0} dt{font-weight:760;margin-top:14px} dd{margin:4px 0 0 0;color:#475467}
+.source{font-size:12px;color:#667085;border-top:1px solid var(--line);margin-top:18px;padding-top:10px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.badge{border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:12px;color:#475467;background:#fff}
+footer{padding:25px 0 65px;color:var(--muted);font-size:13px}
+@media(max-width:850px){.grid2,.grid3,.two-col{grid-template-columns:1fr}.hero h1{font-size:33px}section{padding:32px 0}}
+</style></head>
+<body>
+<header class="hero"><div class="container">
+<div class="eyebrow">估值系统学习 · Lesson 1 · 深入版</div>
+<h1>利润表与各种 Margin：从“看懂数字”到“看懂商业模式”</h1>
+<p>系统理解 Revenue、COGS、Gross Profit、OpEx、EBIT、EBITDA、Net Income，以及 Gross / Operating / EBIT / EBITDA / Net Margin。通过 Adobe、Amazon、NVIDIA、Snowflake 等你已经研究过的公司，把术语、公式和投资含义串起来。</p>
+</div></header>
+<nav class="toc"><div class="container inner">
+<a href="#goal">学习目标</a><a href="#pnl">利润表</a><a href="#revenue">Revenue</a><a href="#cogs">COGS</a><a href="#gross">Gross Margin</a><a href="#opex">OpEx</a><a href="#operating-margin">Operating Margin</a><a href="#ebitda">EBIT/EBITDA</a><a href="#netincome">Net Income</a><a href="#six-margins">6种Margin</a><a href="#real-adobe">Adobe</a><a href="#real-amazon">Amazon</a><a href="#real-nvda">NVIDIA</a><a href="#real-snow">Snowflake</a><a href="#margin-trend">趋势</a><a href="#checklist">清单</a>
+</div></nav>
+<main>
+<section id="goal"><div class="container">
+<h2>一、先把这门课的目标说清楚</h2>
+<p class="lead">你现在学习估值，最容易遇到的问题不是“不知道 PE 是什么”，而是看到财报里的 <b>Revenue、Cost of Revenue、COGS、Gross Profit、Operating Expenses、EBIT、EBITDA、Net Income</b> 后，不清楚它们分别代表什么、为什么有的公司重视 Gross Margin，有的公司却明确告诉投资者“不要只看 Gross Margin”。</p>
+<div class="quote">这门课真正要建立的能力：<br>看到一家公司 → 能把利润表翻译成“商业模式” → 再把商业模式翻译成“未来利润率” → 最后才能谈估值。</div>
+<div class="grid3" style="margin-top:20px">
+<div class="card"><span class="tag blue">第一层</span><h3>Revenue</h3><div class="kpi">规模</div><p>公司到底卖了多少、收了多少。</p></div>
+<div class="card"><span class="tag green">第二层</span><h3>Margin</h3><div class="kpi">效率</div><p>收入经过某一层成本后，还能留下多少。</p></div>
+<div class="card"><span class="tag orange">第三层</span><h3>Profit</h3><div class="kpi">经济结果</div><p>这些收入最终转化成多少经营利润和净利润。</p></div>
+</div>
+</div></section>
+
+<section id="pnl"><div class="container">
+<h2>二、先认识“利润表”这张地图</h2>
+<p class="lead">利润表（Income Statement）解决的是一个最基本的问题：<b>在一段期间内，公司产生了多少收入，为了赚这些收入付出了多少成本和费用，最后还剩多少利润。</b></p>
+<div class="chart">
+<div class="chart-title">从 Revenue 到 Net Income：你应该脑中自动出现的路径</div>
+<svg viewBox="0 0 1100 470">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#98a2b3"/></marker></defs>
+<rect x="45" y="55" width="190" height="62" rx="12" fill="#315efb"/><text x="140" y="94" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">Revenue 收入</text>
+<text x="255" y="92" font-size="14" fill="#667085">− COGS / Cost of Revenue</text>
+<line x1="235" y1="86" x2="320" y2="86" stroke="#98a2b3" marker-end="url(#arrow)"/>
+<rect x="325" y="55" width="190" height="62" rx="12" fill="#149b68"/><text x="420" y="94" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">Gross Profit</text>
+<text x="535" y="92" font-size="14" fill="#667085">− Operating Expenses</text>
+<line x1="515" y1="86" x2="600" y2="86" stroke="#98a2b3" marker-end="url(#arrow)"/>
+<rect x="605" y="55" width="190" height="62" rx="12" fill="#d9822b"/><text x="700" y="94" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">EBIT / Op. Income</text>
+<text x="815" y="92" font-size="14" fill="#667085">± Interest / Other / Tax</text>
+<line x1="795" y1="86" x2="880" y2="86" stroke="#98a2b3" marker-end="url(#arrow)"/>
+<rect x="885" y="55" width="170" height="62" rx="12" fill="#17202b"/><text x="970" y="94" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">Net Income</text>
+
+<g font-size="15" fill="#344054">
+<text x="65" y="170">你可以把每一层理解成在回答不同的问题：</text>
+<text x="65" y="208"><tspan font-weight="700">Revenue</tspan>：有多大？</text>
+<text x="65" y="242"><tspan font-weight="700">Gross Profit</tspan>：卖这些东西，本身赚不赚钱？</text>
+<text x="65" y="276"><tspan font-weight="700">EBIT / Operating Income</tspan>：把研发、销售、管理等都算进去后，经营模式有多赚钱？</text>
+<text x="65" y="310"><tspan font-weight="700">Net Income</tspan>：利息、税等都处理之后，最终账面利润有多少？</text>
+</g>
+<rect x="65" y="350" width="970" height="70" rx="12" fill="#eef2ff"/>
+<text x="88" y="381" font-size="15" fill="#3346b3" font-weight="700">估值的核心</text>
+<text x="88" y="406" font-size="14" fill="#475467">今天的股价，本质是在给未来某个版本的 Revenue × Margin × Multiple 定价。</text>
+</svg>
+</div>
+</div></section>
+
+<section id="revenue"><div class="container">
+<h2>三、从 Revenue 开始：收入到底是什么</h2>
+<p class="lead"><b>Revenue / Sales / Net Sales</b> 本质上都是“公司向客户提供商品或服务后，根据收入确认规则确认的收入”。不同公司名字略有不同，但你读财报时先把它理解为“业务规模的会计口径”。</p>
+<div class="grid2">
+<div class="card"><h3>一个很重要的区别：收入 ≠ 收到现金</h3><p>例如企业今天签了一年期服务合同，客户先付了 $120。公司可能不会第一天把 $120 全部记成 Revenue，而是随着履约逐步确认收入。于是：</p><div class="formula">Cash received ≠ Revenue recognized</div><p>这正是第二课“利润为什么不等于现金”的伏笔。</p></div>
+<div class="card"><h3>为什么投资者非常关心 Revenue Growth</h3><p>如果 Revenue 从 $10B → $15B：</p><div class="formula">Revenue Growth = (15−10) / 10 = 50%</div><p>但“收入增长 50%”本身不是完整的投资结论。关键是：<b>增长的同时 Margin 怎么变？</b></p></div>
+</div>
+<div class="callout" style="margin-top:18px"><b>实战记忆：</b>Revenue 告诉你“蛋糕多大”，Margin 告诉你“蛋糕里最终能留下多少”。</div>
+</div></section>
+
+<section id="cogs"><div class="container">
+<h2>四、COGS 到底是什么？——把术语真正搞懂</h2>
+<div class="quote">COGS = Cost of Goods Sold<br><span style="font-size:16px;font-weight:400;color:#dbe2f0">字面意思：卖出去的商品对应的成本。不要机械翻译成“所有成本”。</span></div>
+<div class="grid2" style="margin-top:20px">
+<div class="card"><h3>1. COGS 的核心直觉</h3><p>如果你卖出一个产品，为了把这个产品/服务交付给客户，有一类与交付直接相关的成本。扣掉这部分以后，剩下的是 Gross Profit。</p><div class="formula">Gross Profit = Revenue − COGS</div></div>
+<div class="card"><h3>2. 为什么不同公司叫法不同</h3><p>软件公司常写 <b>Cost of Revenue</b>；制造公司可能写 <b>Cost of Sales</b>；它们都在表达类似概念。具体要看公司的财报定义和业务模式。</p></div>
+</div>
+<h3>COGS 里面究竟可能装什么？</h3>
+<table>
+<tr><th>业务类型</th><th>COGS / Cost of Revenue 可能包含</th><th>为什么</th></tr>
+<tr><td>制造业</td><td>原材料、直接人工、制造费用、产线相关成本</td><td>这些成本跟制造并交付产品直接相关。</td></tr>
+<tr><td>云计算 / SaaS</td><td>服务器、数据中心、云基础设施、第三方托管、客户支持中的部分直接成本</td><td>为了把软件/云服务真正交付给客户。</td></tr>
+<tr><td>电商</td><td>采购商品成本、配送/履约中的部分成本（具体分类因公司而异）</td><td>商品卖出去和交付给客户的直接经济成本。</td></tr>
+<tr><td>航空</td><td>飞机运营、维护、机组、机场等分类依公司披露而定</td><td>核心是提供运输服务所需的直接成本。</td></tr>
+</table>
+<div class="callout orange" style="margin-top:18px"><b>关键：</b>不要用“这笔钱是不是很大”判断它是不是 COGS，而要问：<b>它是否属于公司交付这些商品/服务的直接成本，以及公司如何在财报中分类。</b></div>
+</div></section>
+
+<section id="gross"><div class="container">
+<h2>五、Gross Profit 与 Gross Margin：第一层商业模式分析</h2>
+<div class="formula">Gross Profit = Revenue − COGS</div>
+<div class="formula" style="margin-top:10px">Gross Margin = Gross Profit / Revenue</div>
+<h3>用最简单的例子理解</h3>
+<div class="grid3">
+<div class="card"><span class="tag blue">Revenue</span><div class="kpi">$100</div><p>收入</p></div>
+<div class="card"><span class="tag orange">COGS</span><div class="kpi">$40</div><p>交付这些收入的直接成本</p></div>
+<div class="card"><span class="tag green">Gross Profit</span><div class="kpi">$60</div><p>毛利</p></div>
+</div>
+<div class="formula" style="margin-top:16px">Gross Margin = $60 / $100 = 60%</div>
+<p>经济直觉：公司每产生 $1 收入，在扣掉直接交付成本后，还剩约 $0.60 去支付研发、销售、管理、利息、税，并最终形成利润。</p>
+
+<h3>Gross Margin 高，到底意味着什么？</h3>
+<div class="grid2">
+<div class="card"><b>可能意味着：</b><p>产品具有较强定价能力、软件/数字产品边际成本低、规模效应明显、品牌或技术形成溢价等。</p></div>
+<div class="card"><b>但绝对不能直接推出：</b><p>“公司一定优秀”或“股票一定便宜”。因为 80% Gross Margin 的公司，如果研发和销售费用极高，仍可能没有经营利润。</p></div>
+</div>
+</div></section>
+
+<section id="opex"><div class="container">
+<h2>六、从 Gross Profit 到 Operating Income：OpEx 是怎么吃掉毛利的</h2>
+<p class="lead"><b>OpEx = Operating Expenses，经营费用。</b>它不是为了制造某一个产品直接发生的成本，而是为了让整个公司持续经营、研发、销售、管理而发生的费用。</p>
+<table>
+<tr><th>术语</th><th>英文</th><th>典型内容</th><th>投资上看什么</th></tr>
+<tr><td>R&D</td><td>Research & Development</td><td>研发人员、研发设施、软件/工程投入</td><td>公司是否持续创新；研发效率如何。</td></tr>
+<tr><td>S&M / Sales & Marketing</td><td>Sales & Marketing</td><td>销售人员、广告、渠道、市场活动</td><td>获客成本、品牌、销售效率。</td></tr>
+<tr><td>G&A</td><td>General & Administrative</td><td>财务、法务、人力、管理层、总部</td><td>规模扩大后是否产生经营杠杆。</td></tr>
+</table>
+<div class="formula" style="margin-top:16px">Operating Income ≈ Gross Profit − Operating Expenses</div>
+<div class="callout" style="margin-top:18px"><b>这里开始出现一个极其重要的投资概念：Operating Leverage（经营杠杆）。</b> 如果 Revenue 快速增长，而 R&D、S&M、G&A 的增速低于 Revenue，那么 Operating Margin 会不断扩张。</div>
+</div></section>
+
+<section id="operating-margin"><div class="container">
+<h2>七、Operating Margin：真正开始看到“商业模式的效率”</h2>
+<div class="formula">Operating Margin = Operating Income / Revenue</div>
+<div class="chart">
+<div class="chart-title">为什么同样 60% Gross Margin，不代表同样赚钱</div>
+<svg viewBox="0 0 1100 430">
+<text x="80" y="40" font-size="16" font-weight="700" fill="#17202b">公司 A：高研发高销售</text>
+<rect x="80" y="75" width="370" height="54" rx="8" fill="#315efb"/><text x="265" y="109" text-anchor="middle" fill="#fff" font-size="15">Revenue $100</text>
+<rect x="80" y="145" width="222" height="45" rx="8" fill="#13a36b"/><text x="191" y="174" text-anchor="middle" fill="#fff" font-size="14">Gross Profit $60</text>
+<rect x="80" y="206" width="185" height="45" rx="8" fill="#d9822b"/><text x="172" y="235" text-anchor="middle" fill="#fff" font-size="14">OpEx $50</text>
+<text x="80" y="285" font-size="15" fill="#17202b" font-weight="700">Operating Income = $10 → Margin 10%</text>
+
+<text x="620" y="40" font-size="16" font-weight="700" fill="#17202b">公司 B：规模化更强</text>
+<rect x="620" y="75" width="370" height="54" rx="8" fill="#315efb"/><text x="805" y="109" text-anchor="middle" fill="#fff" font-size="15">Revenue $100</text>
+<rect x="620" y="145" width="222" height="45" rx="8" fill="#13a36b"/><text x="731" y="174" text-anchor="middle" fill="#fff" font-size="14">Gross Profit $60</text>
+<rect x="620" y="206" width="111" height="45" rx="8" fill="#d9822b"/><text x="675" y="235" text-anchor="middle" fill="#fff" font-size="14">OpEx $30</text>
+<text x="620" y="285" font-size="15" fill="#17202b" font-weight="700">Operating Income = $30 → Margin 30%</text>
+
+<rect x="90" y="330" width="900" height="58" rx="10" fill="#eef2ff"/>
+<text x="540" y="365" text-anchor="middle" font-size="15" fill="#3346b3" font-weight="700">Gross Margin 一样都是 60%，但 Operating Margin 差了 20 个百分点</text>
+</svg></div>
+</div></section>
+
+<section id="ebitda"><div class="container">
+<h2>八、EBIT、EBITDA：为什么会出现两个“经营利润”</h2>
+<div class="grid2">
+<div class="card"><span class="tag orange">EBIT</span><h3>Earnings Before Interest and Taxes</h3><p>字面：<b>息税前利润</b>。它回答：如果先不考虑融资结构（Interest）和所得税，公司本身的经营产生多少利润？</p><div class="formula">EBIT Margin = EBIT / Revenue</div></div>
+<div class="card"><span class="tag green">EBITDA</span><h3>Earnings Before Interest, Taxes, Depreciation & Amortization</h3><p>在 EBIT 基础上再加回 D&A（折旧与摊销）。</p><div class="formula">EBITDA = EBIT + D&A</div></div>
+</div>
+<h3>D&A 是什么？</h3>
+<div class="grid2">
+<div class="card"><b>Depreciation 折旧</b><p>机器、工厂、飞机、服务器等长期资产，不会在买入当天全部计入费用，而是按会计规则在多个期间计提折旧。</p></div>
+<div class="card"><b>Amortization 摊销</b><p>某些无形资产，例如收购形成的客户关系、专利、软件等，也会在一定期间摊销。</p></div>
+</div>
+<div class="callout orange" style="margin-top:18px"><b>非常重要：</b>“把 D&A 加回来”不等于“这些资产不需要花钱”。如果设备需要持续更新，你最终还是要花 CapEx。这个问题会在第二课 FCF 中彻底展开。</div>
+</div></section>
+
+<section id="netincome"><div class="container">
+<h2>九、Net Income：最后到底剩多少钱</h2>
+<div class="formula">Net Income = Income Before Tax − Income Tax（简化理解）</div>
+<p>从 EBIT / Operating Income 往下，还会出现 Interest、Other Income/Expense、投资收益等非经营项目，然后缴税，最后得到 Net Income。</p>
+<div class="chart">
+<div class="chart-title">为什么 EBIT 和 Net Income 会不一样</div>
+<svg viewBox="0 0 1100 350">
+<line x1="70" y1="290" x2="1030" y2="290" stroke="#d0d5dd"/>
+<rect x="80" y="70" width="210" height="220" rx="9" fill="#d9822b"/><text x="185" y="58" text-anchor="middle" font-size="16" font-weight="700">EBIT $25</text>
+<rect x="350" y="114" width="210" height="176" rx="9" fill="#eef2ff"/><text x="455" y="103" text-anchor="middle" font-size="15" fill="#3346b3">− Interest $5</text>
+<rect x="620" y="149" width="210" height="141" rx="9" fill="#fff3e3"/><text x="725" y="138" text-anchor="middle" font-size="15" fill="#925608">− Tax $4</text>
+<rect x="890" y="176" width="120" height="114" rx="9" fill="#149b68"/><text x="950" y="165" text-anchor="middle" font-size="16" font-weight="700">NI $16</text>
+<text x="80" y="322" font-size="13" fill="#667085">所以：同样的经营业务，如果债务更多、税率不同、非经营收益不同，Net Income 就可能不同。</text>
+</svg></div>
+<div class="callout" style="margin-top:18px"><b>这也是为什么 PE 有时候会产生误导：</b>PE 的分母是 Net Income，而 Net Income 会受到利息、税、投资收益和会计项目影响。后面第 3、4 课我们再把 PE 与 EV/EBITDA、P/FCF 放在一起比较。</div>
+</div></section>
+
+<section id="six-margins"><div class="container">
+<h2>十、把你最关心的各种 Margin 一次性彻底搞懂</h2>
+<table>
+<tr><th>Margin</th><th>公式</th><th>在问什么</th><th>最适合观察什么</th></tr>
+<tr><td><b>Gross Margin</b></td><td>Gross Profit / Revenue</td><td>产品/服务交付本身有多赚钱？</td><td>定价权、产品经济性、直接成本。</td></tr>
+<tr><td><b>EBITDA Margin</b></td><td>EBITDA / Revenue</td><td>不考虑 D&A 时，经营业务有多赚钱？</td><td>经营规模、同行比较、资本结构影响较小的经营表现。</td></tr>
+<tr><td><b>Operating Margin</b></td><td>Operating Income / Revenue</td><td>把经营费用也算进去后有多赚钱？</td><td>经营杠杆、成熟度。</td></tr>
+<tr><td><b>EBIT Margin</b></td><td>EBIT / Revenue</td><td>扣除 D&A 后的经营利润率是多少？</td><td>经营盈利能力，尤其适合与资产消耗联系起来看。</td></tr>
+<tr><td><b>Net Margin</b></td><td>Net Income / Revenue</td><td>最终会计利润是多少？</td><td>股东最终利润、EPS 的基础。</td></tr>
+<tr><td><b>FCF Margin</b></td><td>FCF / Revenue</td><td>收入最终能变成多少自由现金？</td><td>现金创造能力；第二课重点。</td></tr>
+</table>
+<div class="callout green" style="margin-top:18px"><b>千万不要孤立看某一个 Margin。</b>更有价值的是把它们连起来看：Gross Margin → Operating Margin → Net Margin → FCF Margin，并观察几年中的变化。</div>
+</div></section>
+
+<section id="real-adobe"><div class="container">
+<h2>十一、真实案例 ①：Adobe —— 为什么高毛利 + 订阅模式非常重要</h2>
+<p class="lead">Adobe FY2025 年报披露：总收入约 <b>$23.77B</b>，其中 Subscription 收入约 $22.90B，占总收入约 96%；Cost of Revenue 约 $2.55B；Gross Profit 约 $21.22B；Operating Income 约 $8.71B；Net Income 约 $7.13B。citeturn979583search48turn979583search49</p>
+<table>
+<tr><th>Adobe FY2025</th><th>金额</th><th>约占 Revenue</th></tr>
+<tr><td>Revenue</td><td>$23.77B</td><td>100%</td></tr>
+<tr><td>Cost of Revenue</td><td>$2.55B</td><td>10.7%</td></tr>
+<tr><td>Gross Profit</td><td>$21.22B</td><td><b>89.3%</b></td></tr>
+<tr><td>R&D + S&M + G&A + other OpEx</td><td>约 $12.51B</td><td>52.6%</td></tr>
+<tr><td>Operating Income</td><td>$8.71B</td><td><b>36.6%</b></td></tr>
+<tr><td>Net Income</td><td>$7.13B</td><td><b>30.0%</b></td></tr>
+</table>
+<div class="callout" style="margin-top:18px"><b>你应该看到的不是“Adobe 毛利 89%，好牛”。</b>真正值得学习的是：它巨大的 Gross Profit 能覆盖大量研发和销售投入后，依然留下了很高的 Operating Margin。这说明高毛利 + 规模化订阅模式能够形成很强的经营杠杆。Adobe 2025 年 Subscription Revenue 已占总收入约 96%。citeturn979583search49</div>
+</div></section>
+
+<section id="real-amazon"><div class="container">
+<h2>十二、真实案例 ②：Amazon —— 为什么不能机械地追求 Gross Margin</h2>
+<p class="lead">Amazon 2025 年总净销售额约 <b>$716.9B</b>，Cost of Sales 约 $356.4B，但它还有 Fulfillment、Technology & Infrastructure、Sales & Marketing、G&A 等大量经营成本；Operating Income 约 $80.0B。Amazon 在 10-K 中甚至明确表示，由于业务结构多样，<b>Operating Income 比 Gross Profit/Gross Margin 更有意义</b>。citeturn567036search0</p>
+<div class="chart">
+<div class="chart-title">Amazon 2025：一个很好的“术语反例”</div>
+<svg viewBox="0 0 1100 440">
+<text x="75" y="40" font-size="16" font-weight="700">Revenue $716.9B</text>
+<rect x="75" y="62" width="900" height="58" rx="8" fill="#315efb"/>
+<text x="75" y="160" font-size="15" fill="#344054">Cost of Sales $356.4B</text>
+<rect x="75" y="178" width="448" height="48" rx="8" fill="#d9822b"/>
+<text x="555" y="160" font-size="15" fill="#344054">Fulfillment + Tech + S&M + G&A + Other：规模巨大</text>
+<rect x="75" y="243" width="790" height="48" rx="8" fill="#eef2ff"/>
+<text x="90" y="274" font-size="14" fill="#3346b3">总运营费用远不止 Cost of Sales</text>
+<rect x="75" y="315" width="100" height="48" rx="8" fill="#149b68"/>
+<text x="190" y="347" font-size="16" font-weight="700" fill="#17202b">Operating Income ≈ $80B</text>
+</svg></div>
+<div class="callout orange" style="margin-top:18px"><b>Amazon 给我们的重要教训：</b>“COGS 低不低”不是脱离商业模式的绝对标准。对于一个同时包含零售、电商履约、云计算、广告等多种业务的巨型平台，Gross Margin 本身可能无法完整反映业务经济性。因此你读财报时，要看公司自己如何定义和管理经营指标。citeturn567036search0</div>
+</div></section>
+
+<section id="real-nvda"><div class="container">
+<h2>十三、真实案例 ③：NVIDIA —— 极高 Gross Margin 为什么重要，但为什么还要看它的趋势</h2>
+<p class="lead">NVIDIA FY2026 年收入约 <b>$215.9B</b>，Gross Margin 约 <b>71.1%</b>，Operating Income 约 <b>$130.4B</b>；10-K 同时披露 FY2025 Gross Margin 为 75.0%，说明收入高速增长时，毛利率也可能波动。citeturn567036search2turn567036search4</p>
+<div class="grid2">
+<div class="card"><span class="tag green">为什么 71% 很惊人</span><p>公司每创造 $1 收入，在扣掉 Revenue Cost 后还剩约 $0.71 毛利。这给予公司极大的空间去支付 R&D、销售、管理等费用，并形成巨额经营利润。</p></div>
+<div class="card"><span class="tag orange">但别忘了 75% → 71.1%</span><p>高毛利不意味着毛利率永远上升。产品结构、系统级产品、供应链、竞争、价格等都可能影响 Gross Margin。</p></div>
+</div>
+<div class="callout" style="margin-top:18px"><b>对估值的启发：</b>如果市场愿意给 NVIDIA 很高估值，背后赌的不只是“Revenue 很快”，还包括“未来依旧能维持极强的 Margin 和现金创造能力”。所以“Margin 的可持续性”本身就是护城河的一部分。</div>
+</div></section>
+
+<section id="real-snow"><div class="container">
+<h2>十四、真实案例 ④：Snowflake —— 最能帮你理解“高毛利 ≠ 高利润”</h2>
+<p class="lead">Snowflake FY2026 全年 Product Revenue 约 <b>$4.47B</b>，Product Gross Margin 约 <b>72%</b>，但 GAAP Operating Loss 约 <b>-$1.44B</b>；同时经营现金流约 $1.22B，FCF 约 $1.12B。citeturn979583search0</p>
+<div class="chart">
+<div class="chart-title">Snowflake：毛利很高，但 OpEx 吃掉了大量毛利</div>
+<svg viewBox="0 0 1100 370">
+<rect x="80" y="60" width="900" height="55" rx="8" fill="#315efb"/><text x="530" y="95" text-anchor="middle" fill="#fff" font-weight="700">Product Revenue ≈ $4.47B</text>
+<rect x="80" y="140" width="650" height="55" rx="8" fill="#149b68"/><text x="405" y="175" text-anchor="middle" fill="#fff" font-weight="700">Product Gross Profit ≈ $3.21B / 72%</text>
+<rect x="80" y="220" width="880" height="55" rx="8" fill="#d9822b"/><text x="520" y="255" text-anchor="middle" fill="#fff" font-weight="700">GAAP OpEx + 其他经营项目 → Operating Loss ≈ $1.44B</text>
+<text x="80" y="315" font-size="14" fill="#667085">这正是为什么只看 Gross Margin 会把你带偏：高毛利只是“还有很多钱可以用于经营”，不是“已经赚到很多钱”。</text>
+</svg></div>
+<div class="callout red" style="margin-top:18px"><b>Snowflake 的另外一个估值启示：</b>如果一家高增长 SaaS 当前利润很低，投资者实际是在预测“未来 Revenue × Future Operating Margin”。这就是为什么高增长亏损公司常常使用 PS / EV-Sales，而成熟公司更容易使用 PE / FCF。后续课程会正式展开。citeturn979583search0</div>
+</div></section>
+
+<section id="margin-trend"><div class="container">
+<h2>十五、真正开始做投资：不要只看 Margin，要看 Margin 的方向</h2>
+<p class="lead">假设两家公司今天 Operating Margin 都是 20%，但一家从 10% → 15% → 20%，另一家从 30% → 25% → 20%。它们今天的 20% 完全相同，但估值意义可能截然不同。</p>
+<div class="chart">
+<div class="chart-title">同一个当前 Margin，不同的趋势</div>
+<svg viewBox="0 0 1100 420">
+<line x1="90" y1="340" x2="1020" y2="340" stroke="#d0d5dd"/><line x1="90" y1="60" x2="90" y2="340" stroke="#d0d5dd"/>
+<g fill="#667085" font-size="13"><text x="74" y="344" text-anchor="end">0%</text><text x="74" y="274" text-anchor="end">10%</text><text x="74" y="204" text-anchor="end">20%</text><text x="74" y="134" text-anchor="end">30%</text><text x="74" y="64" text-anchor="end">40%</text></g>
+<g fill="#667085" font-size="13"><text x="170" y="365">现在−2</text><text x="400" y="365">现在−1</text><text x="640" y="365">现在</text><text x="875" y="365">未来</text></g>
+<polyline points="170,204 400,239 640,204 875,169" fill="none" stroke="#315efb" stroke-width="5"/>
+<polyline points="170,134 400,169 640,204 875,239" fill="none" stroke="#d9822b" stroke-width="5"/>
+<g fill="#315efb"><circle cx="170" cy="204" r="6"/><circle cx="400" cy="239" r="6"/><circle cx="640" cy="204" r="6"/><circle cx="875" cy="169" r="6"/></g>
+<g fill="#d9822b"><circle cx="170" cy="134" r="6"/><circle cx="400" cy="169" r="6"/><circle cx="640" cy="204" r="6"/><circle cx="875" cy="239" r="6"/></g>
+<text x="700" y="130" font-size="14" fill="#3346b3" font-weight="700">A：未来继续扩张</text>
+<text x="700" y="265" font-size="14" fill="#925608" font-weight="700">B：未来继续压缩</text>
+</svg></div>
+<div class="callout green" style="margin-top:18px"><b>这就是你之前分析 CRM、AVGO、MRVL 时不断碰到的核心：</b>市场经常给的不是“今年利润”的价格，而是“未来成熟利润率”的价格。</div>
+</div></section>
+
+<section id="mini-case"><div class="container">
+<h2>十六、把一个公司的估值故事拆成 4 个问题</h2>
+<div class="grid2">
+<div class="card"><span class="tag blue">Q1</span><h3>Revenue 能涨多少？</h3><p>市场空间、份额、价格、客户数、ARPU、产品扩张、周期等。</p></div>
+<div class="card"><span class="tag green">Q2</span><h3>Gross Margin 能维持多少？</h3><p>定价权、产品结构、竞争、供应链、单位成本、规模效应。</p></div>
+<div class="card"><span class="tag orange">Q3</span><h3>Operating Margin 能到哪里？</h3><p>R&D、S&M、G&A 会不会随收入同比增长，还是会产生经营杠杆。</p></div>
+<div class="card"><span class="tag red">Q4</span><h3>这些利润最终值多少钱？</h3><p>这才进入 PE、P/FCF、EV/EBITDA、PS、DCF 与 Reverse Valuation。</p></div>
+</div>
+<div class="formula" style="margin-top:20px">Revenue × Future Operating Margin = Future Operating Profit → 估值 Multiple → Equity Value</div>
+</div></section>
+
+<section id="checklist"><div class="container">
+<h2>十七、以后你打开任何一家公司的 10-K / 10-Q，可以先这样读</h2>
+<table>
+<tr><th>步骤</th><th>先看什么</th><th>脑子里问什么</th></tr>
+<tr><td>1</td><td>Revenue</td><td>业务规模多大？增长多快？</td></tr>
+<tr><td>2</td><td>Revenue Mix</td><td>收入来自哪里？哪些业务增长最快？</td></tr>
+<tr><td>3</td><td>COGS / Cost of Revenue</td><td>交付这些收入的直接成本是什么？</td></tr>
+<tr><td>4</td><td>Gross Margin</td><td>产品经济性怎么样？有没有变化？</td></tr>
+<tr><td>5</td><td>R&D / S&M / G&A</td><td>公司为了增长花了多少钱？</td></tr>
+<tr><td>6</td><td>Operating Margin</td><td>有没有经营杠杆？</td></tr>
+<tr><td>7</td><td>EBITDA / D&A</td><td>是不是重资产？D&A 是否很大？</td></tr>
+<tr><td>8</td><td>Net Income</td><td>最终利润是多少？是否受到非经营项目影响？</td></tr>
+<tr><td>9</td><td>Margin Trend</td><td>未来利润率可能往哪里走？</td></tr>
+<tr><td>10</td><td>现金流</td><td>利润能不能变成现金？——下一课继续。</td></tr>
+</table>
+</div></section>
+
+<section id="glossary"><div class="container">
+<h2>十八、术语表：这一课建议真正记住的词</h2>
+<div class="grid3">
+<div class="card"><h3>Revenue</h3><p>收入 / 销售额。</p></div>
+<div class="card"><h3>COGS</h3><p>Cost of Goods Sold；销售商品对应的直接成本。服务型公司常见 Cost of Revenue。</p></div>
+<div class="card"><h3>Gross Profit</h3><p>毛利 = Revenue − COGS。</p></div>
+<div class="card"><h3>Gross Margin</h3><p>毛利率 = Gross Profit / Revenue。</p></div>
+<div class="card"><h3>OpEx</h3><p>Operating Expenses；经营费用，如研发、销售、管理。</p></div>
+<div class="card"><h3>Operating Income</h3><p>经营利润；很多场景下接近 EBIT。</p></div>
+<div class="card"><h3>EBIT</h3><p>Earnings Before Interest and Taxes；息税前利润。</p></div>
+<div class="card"><h3>EBITDA</h3><p>EBIT + Depreciation + Amortization。</p></div>
+<div class="card"><h3>Net Income</h3><p>净利润；扣除利息、税等后剩下的会计利润。</p></div>
+</div>
+</div></section>
+
+<section id="takeaway"><div class="container">
+<h2>十九、这一课真正应该带走的 5 句话</h2>
+<div class="card">
+<ol style="margin:0;padding-left:24px">
+<li><b>Revenue 是规模，不是利润。</b></li>
+<li><b>COGS 是交付收入的直接成本，不是“所有成本”。</b></li>
+<li><b>Gross Margin 反映产品经济性；Operating Margin 更能反映成熟后的经营模式。</b></li>
+<li><b>EBITDA 把 D&A 加回来，因此不能直接等同于现金流。</b></li>
+<li><b>估值真正关心的是未来 Revenue × Margin，而不是孤立的当前 Margin。</b></li>
+</ol>
+</div>
+<div class="callout" style="margin-top:18px"><b>下一课的自然衔接：</b>现在我们已经知道“利润是怎么一层层形成的”，下一步必须回答：<b>为什么 Net Income 有时候和银行账户真正增加的钱差很多？</b> 这就进入 CFO、Working Capital、CapEx、SBC 和 FCF。</div>
+</div></section>
+
+<section><div class="container">
+<h2>参考来源</h2>
+<div class="source">
+Adobe 2025 Form 10-K：Revenue、Cost of Revenue、Gross Profit、Operating Income、Net Income 及收入结构。citeturn979583search48turn979583search49<br><br>
+Amazon 2025 Form 10-K：2025 年 Revenue、Cost of Sales、各类 Operating Expenses、Operating Income、Net Income，以及公司对 Gross Margin 与 Operating Income 的解释。citeturn567036search0<br><br>
+NVIDIA FY2026 Form 10-K：Revenue、Gross Margin、Operating Income，以及 FY2025/FY2026 Margin 对比。citeturn567036search2turn567036search4<br><br>
+Snowflake FY2026 Full-Year Results：Product Revenue、Product Gross Margin、GAAP Operating Loss、CFO 与 FCF。citeturn979583search0
+</div>
+</div></section>
+</main>
+<footer><div class="container">说明：示例公式采用简化表达，具体公司财报的项目分类、非 GAAP 定义和管理层指标应以公司披露为准。</div></footer>
+</body></html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>估值系统学习｜第2课：利润与现金流</title><style>
+:root{
+  --bg:#f6f7fb;--card:#fff;--ink:#17202b;--muted:#667085;--line:#e4e7ec;
+  --blue:#315efb;--blue2:#eef2ff;--green:#13a36b;--green2:#eafaf2;
+  --orange:#d9822b;--orange2:#fff3e4;--red:#d64545;--red2:#fff0f0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.75}
+a{color:var(--blue);text-decoration:none}
+.container{width:min(1160px,92vw);margin:auto}
+.hero{background:linear-gradient(140deg,#101828,#2d3f78);color:#fff;padding:62px 0 50px}
+.hero .eyebrow{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);font-size:13px;margin-bottom:18px}
+.hero h1{margin:0 0 14px;font-size:42px;line-height:1.2;letter-spacing:-.8px}
+.hero p{max-width:900px;margin:0;color:#dbe2f0;font-size:18px}
+.toc{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.toc .inner{display:flex;gap:18px;overflow:auto;padding:11px 0;white-space:nowrap}
+.toc a{font-size:14px;color:#475467}
+section{padding:42px 0}
+h2{font-size:29px;line-height:1.3;margin:0 0 10px}
+h3{font-size:21px;margin:26px 0 10px}
+.lead{font-size:17px;color:#475467;max-width:930px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.chart,.note-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 2px 10px rgba(16,24,40,.035)}
+.kpi{font-size:34px;font-weight:800;letter-spacing:-.5px}
+.small{font-size:13px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;padding:3px 8px;border-radius:7px;background:#f2f4f7;color:#344054}
+.tag.blue{background:var(--blue2);color:#3548b7}.tag.green{background:var(--green2);color:#18764e}.tag.orange{background:var(--orange2);color:#96590c}.tag.red{background:var(--red2);color:#9c3535}
+.formula{background:#111827;color:#f8fafc;border-radius:13px;padding:14px 16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto}
+.callout{padding:16px 18px;border-radius:12px;border-left:4px solid var(--blue);background:var(--blue2)}
+.callout.green{border-left-color:var(--green);background:var(--green2)}
+.callout.orange{border-left-color:var(--orange);background:var(--orange2)}
+.callout.red{border-left-color:var(--red);background:var(--red2)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);overflow:hidden}
+th,td{padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{background:#f8fafc;font-size:14px}
+tr:last-child td{border-bottom:0}
+.chart-title{font-weight:750;margin-bottom:8px}
+svg{width:100%;height:auto;display:block}
+.timeline{position:relative;margin:16px 0}
+.timeline:before{content:"";position:absolute;left:13px;top:8px;bottom:8px;width:2px;background:#d0d5dd}
+.step{display:grid;grid-template-columns:28px 1fr;gap:13px;margin:0 0 20px}
+.dot{width:28px;height:28px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--blue2);margin-top:2px}
+.step strong{display:block;font-size:16px}
+footer{padding:30px 0 65px;color:var(--muted);font-size:13px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}.hero h1{font-size:32px}section{padding:32px 0}}
+</style></head>
+<body>
+<header class="hero"><div class="container"><div class="eyebrow">MODULE 2 · CASH FLOW</div><h1>估值系统学习｜第2课：利润与现金流</h1><p>理解 Net Income、CFO、CapEx 与 FCF 的差异，掌握 Working Capital、SBC 等估值中经常决定“利润含金量”的关键因素。</p></div></header>
+<nav class="toc"><div class="container inner"><a href="#overview">核心问题</a><a href="#bridge">利润→现金</a><a href="#cfo">CFO</a><a href="#capex">CapEx</a><a href="#sbc">SBC</a><a href="#fcf">FCF</a><a href="#case">案例</a><a href="#check">读财报清单</a></div></nav>
+<main>
+<section id="overview"><div class="container">
+<h2>1. 第二课的核心：利润 ≠ 现金</h2>
+<p class="lead">上一课解决“公司赚了多少钱”；这一课解决一个更接近投资的问题：这些利润到底有没有变成现金？</p>
+<div class="grid3">
+<div class="card"><span class="tag blue">会计</span><h3>Net Income</h3><div class="kpi">$16</div><p>损益表上的会计利润。</p></div>
+<div class="card"><span class="tag orange">经营现金</span><h3>CFO</h3><div class="kpi">$30</div><p>经营活动真正带来的现金流。</p></div>
+<div class="card"><span class="tag green">自由现金</span><h3>FCF</h3><div class="kpi">$20</div><p>扣除必要资本开支后的自由现金流。</p></div>
+</div>
+<div class="callout" style="margin-top:18px"><b>投资者真正关心：</b>公司不是“账面上赚了多少钱”，而是这些经济利润最终能转化成多少可支配现金。</div>
+</div></section>
+
+<section id="bridge"><div class="container">
+<h2>2. Net Income 到 FCF：最重要的一座桥</h2>
+<p class="lead">可以把现金流理解成：从 Net Income 出发，把“不代表当期现金支出/收入”的项目调回来，再扣掉维持和扩张业务所需的资本开支。</p>
+<div class="chart">
+<div class="chart-title">示例：Net Income → CFO → FCF</div>
+<svg viewBox="0 0 1040 450">
+<line x1="70" y1="380" x2="970" y2="380" stroke="#d0d5dd"/>
+<g>
+<rect x="70" y="267" width="150" height="113" rx="9" fill="#315efb"/>
+<rect x="290" y="170" width="150" height="210" rx="9" fill="#13a36b"/>
+<rect x="510" y="100" width="150" height="280" rx="9" fill="#13a36b"/>
+<rect x="730" y="190" width="150" height="190" rx="9" fill="#d9822b"/>
+</g>
+<g font-size="15" fill="#17202b" font-weight="700">
+<text x="103" y="255">$16B</text><text x="332" y="158">$30B</text><text x="553" y="88">$30B</text><text x="775" y="178">$20B</text>
+</g>
+<g font-size="14" fill="#344054">
+<text x="94" y="410">Net Income</text><text x="335" y="410">+ 非现金/营运调整</text><text x="552" y="410">CFO</text><text x="775" y="410">− CapEx</text>
+</g>
+<g stroke="#98a2b3" stroke-width="2"><line x1="220" y1="267" x2="290" y2="267"/><line x1="440" y1="170" x2="510" y2="170"/><line x1="660" y1="190" x2="730" y2="190"/></g>
+<text x="83" y="75" font-size="15" fill="#475467">为什么 CFO 可以高于 Net Income？</text>
+<text x="83" y="98" font-size="13" fill="#667085">折旧摊销、营运资金变化等，会让“会计利润”和“现金”在当期产生差异。</text>
+</svg></div>
+</div></section>
+
+<section id="cfo"><div class="container">
+<h2>3. CFO：经营活动产生了多少现金</h2>
+<div class="grid2">
+<div class="card">
+<h3>从 Net Income 出发</h3>
+<p>间接法现金流量表通常从净利润开始，调整：</p>
+<div class="timeline">
+<div class="step"><div class="dot"></div><div><strong>加回非现金费用</strong>折旧、摊销等在利润表里减少利润，但当期未必对应同等现金流出。</div></div>
+<div class="step"><div class="dot"></div><div><strong>处理营运资金变化</strong>应收账款、存货、应付账款等变化，会让现金与收入/费用确认发生时间差。</div></div>
+<div class="step"><div class="dot"></div><div><strong>得到 CFO</strong>即经营活动真正产生/消耗的现金。</div></div>
+</div>
+</div>
+<div class="card">
+<h3>最常见的营运资金直觉</h3>
+<table>
+<tr><th>变化</th><th>对当期现金</th><th>直觉</th></tr>
+<tr><td>Accounts Receivable ↑</td><td>减少</td><td>收入确认了，但客户还没付钱。</td></tr>
+<tr><td>Inventory ↑</td><td>减少</td><td>现金先变成了库存。</td></tr>
+<tr><td>Accounts Payable ↑</td><td>增加</td><td>货先拿到了，现金还没付出去。</td></tr>
+<tr><td>Deferred Revenue ↑</td><td>增加</td><td>客户先付款，公司以后再确认收入。</td></tr>
+</table>
+</div>
+</div>
+</div></section>
+
+<section id="capex"><div class="container">
+<h2>4. CapEx：为什么 EBITDA 不能直接当 FCF</h2>
+<p class="lead">折旧摊销是会计费用，而 CapEx 是真实的现金支出。对于数据中心、飞机、工厂、网络设备等重资产商业模式，这个差异尤其重要。</p>
+<div class="chart">
+<div class="chart-title">同样 $10B EBITDA，不同 CapEx 会产生完全不同的 FCF</div>
+<svg viewBox="0 0 1040 400">
+<line x1="80" y1="330" x2="980" y2="330" stroke="#d0d5dd"/>
+<g fill="#667085" font-size="13"><text x="75" y="350">低 CapEx</text><text x="345" y="350">中 CapEx</text><text x="625" y="350">高 CapEx</text></g>
+<g>
+<rect x="100" y="80" width="150" height="250" rx="9" fill="#315efb"/>
+<rect x="370" y="80" width="150" height="250" rx="9" fill="#315efb"/>
+<rect x="640" y="80" width="150" height="250" rx="9" fill="#315efb"/>
+<rect x="265" y="280" width="45" height="50" rx="6" fill="#d9822b"/>
+<rect x="535" y="205" width="45" height="125" rx="6" fill="#d9822b"/>
+<rect x="805" y="140" width="45" height="190" rx="6" fill="#d9822b"/>
+</g>
+<g font-size="15" fill="#17202b" font-weight="700"><text x="143" y="69">EBITDA $10B</text><text x="413" y="69">EBITDA $10B</text><text x="683" y="69">EBITDA $10B</text></g>
+<g font-size="13" fill="#96590c"><text x="247" y="274">CapEx $2B</text><text x="505" y="198">CapEx $5B</text><text x="774" y="133">CapEx $7.5B</text></g>
+<g font-size="15" fill="#18764e" font-weight="700"><text x="127" y="310">FCF ~ $8B</text><text x="395" y="190">FCF ~ $5B</text><text x="665" y="125">FCF ~ $2.5B</text></g>
+</svg></div>
+<div class="callout orange" style="margin-top:18px"><b>所以：</b>看到 EV/EBITDA 很便宜，下一步一定要问：这家公司需要多少 CapEx 才能维持/扩张业务？如果 EBITDA 很高但 CapEx 同样很高，真正属于股东的现金可能并不多。</div>
+</div></section>
+
+<section id="sbc"><div class="container">
+<h2>5. SBC：科技股 FCF 的一个重要“额外问题”</h2>
+<p class="lead">SBC（Stock-Based Compensation，股权激励）既是会计费用，也是很多科技公司现金流分析中容易被忽略的一环。</p>
+<div class="grid2">
+<div class="card"><span class="tag blue">为什么 FCF 会看起来很好</span><h3>SBC 是非现金费用</h3><p>会计利润通常会确认 SBC；但现金流量表中需要把非现金 SBC 加回，因此 CFO/FCF 可能被明显抬高。</p><div class="formula">FCF ↑  ←  SBC add-back</div></div>
+<div class="card"><span class="tag orange">真正问题</span><h3>股东被稀释了吗？</h3><p>虽然当期没有现金流出，但员工拿到股票期权/受限股，会造成未来股权稀释。因此观察“FCF 很高”时，不能完全忽略 SBC。</p><div class="formula">真实经济回报 ≠ 只看 FCF</div></div>
+</div>
+<div class="callout red" style="margin-top:18px"><b>实战提示：</b>看科技公司 FCF 时，把 SBC / Revenue、SBC / FCF、以及 diluted shares outstanding 的变化一起看，比只看 headline FCF 更可靠。</div>
+</div></section>
+
+<section id="fcf"><div class="container">
+<h2>6. FCF：估值里最值得掌握的现金指标之一</h2>
+<div class="formula">FCF ≈ CFO − CapEx</div>
+<p>严格定义在不同公司/口径上可能略有差异；实务中你要以公司现金流量表和披露定义为准。核心思想始终是：<b>经营产生的现金 − 为维持/扩张业务所需资本开支</b>。</p>
+<div class="grid3" style="margin-top:18px">
+<div class="card"><h3>FCF Margin</h3><div class="formula">FCF / Revenue</div><p>衡量收入转现金的能力。</p></div>
+<div class="card"><h3>FCF Conversion</h3><div class="formula">FCF / Net Income</div><p>看会计利润转现金的效率。</p></div>
+<div class="card"><h3>FCF Yield</h3><div class="formula">FCF / Market Cap</div><p>把现金创造能力与股票价格联系起来。</p></div>
+</div>
+</div></section>
+
+<section id="case"><div class="container">
+<h2>7. 三种公司，为什么估值不能只看 EBITDA</h2>
+<table>
+<thead><tr><th>公司 A</th><th>公司 B</th><th>公司 C</th></tr></thead>
+<tbody>
+<tr><td>EBITDA $10B</td><td>EBITDA $10B</td><td>EBITDA $10B</td></tr>
+<tr><td>CapEx $1B</td><td>CapEx $5B</td><td>CapEx $8B</td></tr>
+<tr><td>FCF 粗看很强</td><td>FCF 中等</td><td>FCF 很弱</td></tr>
+<tr><td><b>EV/EBITDA 可能很有参考价值</b></td><td><b>需要同时检查 FCF</b></td><td><b>只看 EBITDA 可能严重高估</b></td></tr>
+</tbody></table>
+<div class="callout green" style="margin-top:18px"><b>这就是为什么你前面分析 CRWV / NBIS 一类公司时，需要特别关注 CapEx、折旧、融资和现金流，而不能只因为 EBITDA 增长就下结论。</b></div>
+</div></section>
+
+<section id="check"><div class="container">
+<h2>8. 以后读财报，可以按这张清单快速扫一遍</h2>
+<div class="grid2">
+<div class="card">
+<h3>利润表</h3>
+<div class="timeline">
+<div class="step"><div class="dot"></div><div><strong>Revenue</strong>增长多少？有机还是并购？</div></div>
+<div class="step"><div class="dot"></div><div><strong>Gross Margin</strong>有没有改善？</div></div>
+<div class="step"><div class="dot"></div><div><strong>Operating Margin</strong>有没有经营杠杆？</div></div>
+<div class="step"><div class="dot"></div><div><strong>Net Income</strong>增长是否真实、可持续？</div></div>
+</div>
+</div>
+<div class="card">
+<h3>现金流</h3>
+<div class="timeline">
+<div class="step"><div class="dot"></div><div><strong>CFO</strong>是否跟着利润一起增长？</div></div>
+<div class="step"><div class="dot"></div><div><strong>Working Capital</strong>是否吞掉现金？</div></div>
+<div class="step"><div class="dot"></div><div><strong>CapEx</strong>是否越来越重？</div></div>
+<div class="step"><div class="dot"></div><div><strong>FCF + SBC</strong>现金创造是否被稀释扭曲？</div></div>
+</div>
+</div>
+</div>
+<div class="callout" style="margin-top:18px"><b>一句话总结：</b>利润表告诉你“公司在会计上赚了多少”；现金流量表告诉你“钱有没有真正进来”；FCF 则进一步告诉你“为了经营这个生意，剩下多少现金真正可以由股东支配”。</div>
+</div></section>
+</main>
+<footer><div class="container">这一课的核心记忆：利润是会计结果，CFO 是经营现金，FCF 是扣除资本开支后的自由现金。估值时，最终一定要回到现金创造能力。</div></footer>
+</body></html>
