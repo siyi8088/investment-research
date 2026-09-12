@@ -16,12 +16,12 @@ investment-research/
 │   ├── template-company.md   # 个股全景主档案模板
 │   ├── template-earnings.md  # 季度财报追踪模板
 │   └── template-research.md  # 深度专题与估值模型模板
-├── companies/              # [公司研究] (以 Ticker 命名)
-│   └── NVDA/
-│       ├── README.md         # NVDA 主档案 (商业模式、全栈壁垒、三情景估值)
-│       ├── earnings/         # 历季财报追踪 (FY2027-Q2.md / FY2026-Q2.md 等)
-│       ├── research/         # 深度专题与估值模型 (DCF 模型、算力敏感性推演)
-│       └── notes/            # 调研随手记、电话会速记
+│   ├── NVDA/                 # 英伟达主档案与历季财报
+│   │   └── ...
+│   └── AVGO/                 # 博通主档案、Q3财报复盘与估值模型
+│       ├── README.md         # AVGO 主档案 (定制ASIC、以太网、VMware)
+│       ├── earnings/         # 历季财报复盘 (FY2026-Q3.md 等)
+│       └── research/         # 深度专题与估值模型 (三情景DCF模型)
 ├── industries/             # [行业研究] 上下游产业链与行业全景图
 └── frameworks/             # [投资框架] 估值方法论、仓位管理、投资清单与心法
 ```
@@ -33,6 +33,7 @@ investment-research/
 | 标的代码 (Ticker) | 公司名称 | 所属行业 | 覆盖状态 | 当前观点 | 现价基准 | Base Case 目标价 | 潜在空间 | 最新财报 | 最近更新 |
 |---|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [**NVDA**](companies/NVDA/README.md) | NVIDIA Corporation | 半导体 / AI 算力系统 | **持仓** | **强烈看多** | **$217.00** | **$350.00** | **+61.3%** | [FY27 Q2](companies/NVDA/earnings/FY2027-Q2.md) | 2026-09-12 |
+| [**AVGO**](companies/AVGO/README.md) | Broadcom Inc. | 半导体定制算力 / 软件 | **重点跟踪** | **强烈看多** | **$361.99** | **$475.00** | **+31.2%** | [FY26 Q3](companies/AVGO/earnings/FY2026-Q3.md) | 2026-09-12 |
 
 > **状态说明**：`重点跟踪` (深度调研中) / `持仓` (已有头寸) / `观察` (列入 Watchlist) / `已清仓` / `暂不关注`
 
