@@ -58,14 +58,21 @@ description: >-
 
 ---
 
-## 核心原则 4：估值建模与目标价严谨性
+## 核心原则 4：多维度估值建模与敏感性矩阵规范（Multi-Dimensional Valuation Framework）
 
-1. **逻辑一致性**：
-   - 目标价（Target Price）必须与当前真实股价保持合理的上行/下行空间计算（Up/Downside %）。
-   - 目标价必须给出清晰的底层公式：`目标价 = 预测每股收益 (EPS) × 目标市盈率 (Target P/E)` 或 `DCF 内在价值`。
-2. **三情景敏感性（Bear / Base / Bull）**：
-   - 必须提供悲观、中性、乐观三套互斥且覆盖合理的假设。
-   - 必须包含反向证伪条件（Falsification Criteria）。
+严禁使用“每种情景仅给出 1 个孤立数据”的粗糙推演，所有标的估值必须包含以下五个维度的立体交叉检验：
+
+1. **三情景全科目业务驱动拆解（Scenario Drivers）**：
+   - 必须细化至：未来两至三年营收（按业务分部拆解）、YoY 增速、稳态毛利率、营业利润率、净利润、稀释 EPS、自由现金流（FCF）及每股 FCF。
+2. **多估值方法论横向交叉矩阵（Multi-Methodology Valuation Matrix）**：
+   - 必须综合检验：**近端市盈率（FY+1 P/E）**、**远期市盈率（FY+2 P/E）**、**EV / NTM EBITDA**、**FCF Yield（自由现金流收益率）** 与 **10年期 DCF 现金流折现**，测算多模型合成公允区间。
+3. **双变量敏感性分析网格（Two-Variable Sensitivity Grids）**：
+   - **网格 A（EPS × 目标市盈率 P/E 敏感性格点）**：单元格标出目标股价及相对现价涨跌幅，清晰定位当前股价所隐含的市场情绪分位。
+   - **网格 B（DCF 贴现率 WACC × 永续增长率 g 矩阵）**：测试极限流动性与宏观压力下的内在价值底线。
+4. **行业与科技巨头横向对标（Peer Group Benchmarking）**：
+   - 选取 5~8 家对标公司，横向对比 NTM P/E、Forward PEG、预期营收增速、Gross Margin 与 FCF Margin，找寻估值贴水或溢价依据。
+5. **风险收益比与非对称性评估（Risk / Reward Asymmetry）**：
+   - 必须测算：**概率加权期望目标价**（如 Bear 20% + Base 60% + Bull 20%）及 **盈亏比（Risk/Reward Ratio = 基准上行空间 ÷ 悲观下行风险）**，评估是否具备“非对称看涨期权”价值。
 
 ---
 
