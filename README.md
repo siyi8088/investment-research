@@ -32,7 +32,7 @@ investment-research/
 
 | 标的代码 (Ticker) | 公司名称 | 所属行业 | 覆盖状态 | 当前观点 | 现价基准 | Base Case 目标价 | 潜在空间 | 最新财报 | 最近更新 |
 |---|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [**NVDA**](companies/NVDA/README.md) | NVIDIA Corporation | 半导体 / AI 算力系统 | **持仓** | **看多** | **$217.00** | **$270.00** | **+24.4%** | [FY27 Q2](companies/NVDA/earnings/FY2027-Q2.md) | 2026-08-30 |
+| [**NVDA**](companies/NVDA/README.md) | NVIDIA Corporation | 半导体 / AI 算力系统 | **持仓** | **强烈看多** | **$217.00** | **$350.00** | **+61.3%** | [FY27 Q2](companies/NVDA/earnings/FY2027-Q2.md) | 2026-09-12 |
 
 > **状态说明**：`重点跟踪` (深度调研中) / `持仓` (已有头寸) / `观察` (列入 Watchlist) / `已清仓` / `暂不关注`
 
