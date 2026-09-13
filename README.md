@@ -20,10 +20,11 @@ investment-research/
 │   ├── NVDA/                 # 英伟达主档案与历季财报
 │   ├── AVGO/                 # 博通主档案、Q3财报复盘与估值模型
 │   ├── INTC/                 # 英特尔主档案、Q2财报复盘与SOTP分部估值模型
-│   └── VST/                  # Vistra 主档案、Q2财报复盘与核电SOTP估值模型
-│       ├── README.md         # VST 主档案 (6.4GW核电、PJM容量拍卖、发售一体)
+│   ├── VST/                  # Vistra 主档案、Q2财报复盘与核电SOTP估值模型
+│   └── AMZN/                 # 亚马逊主档案、Q2财报复盘与五大支柱SOTP估值模型
+│       ├── README.md         # AMZN 主档案 (AWS 37%爆发、$169B跑道、广告、履约)
 │       ├── earnings/         # 历季财报复盘 (FY2026-Q2.md 等)
-│       └── research/         # 深度专题与估值模型 (SOTP分部模型)
+│       └── research/         # 深度专题与估值模型 (SOTP五大支柱模型)
 ├── industries/             # [行业研究] 上下游产业链与行业全景图
 └── frameworks/             # [投资框架] 估值方法论、仓位管理、投资清单与心法
 ```
@@ -38,6 +39,7 @@ investment-research/
 | [**AVGO**](companies/AVGO/README.md) | Broadcom Inc. | 半导体定制算力 / 软件 | **重点跟踪** | **强烈看多** | **$361.99** | **$475.00** | **+31.2%** | [FY26 Q3](companies/AVGO/earnings/FY2026-Q3.md) | 2026-09-12 |
 | [**INTC**](companies/INTC/README.md) | Intel Corporation | x86 芯片设计 / 晶圆代工 | **重点跟踪** | **审慎看多** | **$102.94** | **$130.00** | **+26.3%** | [FY26 Q2](companies/INTC/earnings/FY2026-Q2.md) | 2026-09-12 |
 | [**VST**](companies/VST/README.md) | Vistra Corp. | 电力公用事业 / AI算力基建 | **重点跟踪** | **强力看多** | **$148.38** | **$186.04** | **+25.4%** | [FY26 Q2](companies/VST/earnings/FY2026-Q2.md) | 2026-09-13 |
+| [**AMZN**](companies/AMZN/README.md) | Amazon.com, Inc. | 云计算与AI / 零售 / 广告 | **重点跟踪** | **强烈看多** | **$256.78** | **$328.23** | **+27.8%** | [FY26 Q2](companies/AMZN/earnings/FY2026-Q2.md) | 2026-09-13 |
 
 > **状态说明**：`重点跟踪` (深度调研中) / `持仓` (已有头寸) / `观察` (列入 Watchlist) / `已清仓` / `暂不关注`
 
