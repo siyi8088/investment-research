@@ -17,11 +17,11 @@ investment-research/
 │   ├── template-earnings.md  # 季度财报追踪模板
 │   └── template-research.md  # 深度专题与估值模型模板
 │   ├── NVDA/                 # 英伟达主档案与历季财报
-│   │   └── ...
-│   └── AVGO/                 # 博通主档案、Q3财报复盘与估值模型
-│       ├── README.md         # AVGO 主档案 (定制ASIC、以太网、VMware)
-│       ├── earnings/         # 历季财报复盘 (FY2026-Q3.md 等)
-│       └── research/         # 深度专题与估值模型 (三情景DCF模型)
+│   ├── AVGO/                 # 博通主档案、Q3财报复盘与估值模型
+│   └── INTC/                 # 英特尔主档案、Q2财报复盘与SOTP分部估值模型
+│       ├── README.md         # INTC 主档案 (产品芯片设计、代工重资产、重组)
+│       ├── earnings/         # 历季财报复盘 (FY2026-Q2.md 等)
+│       └── research/         # 深度专题与估值模型 (SOTP分部模型)
 ├── industries/             # [行业研究] 上下游产业链与行业全景图
 └── frameworks/             # [投资框架] 估值方法论、仓位管理、投资清单与心法
 ```
@@ -34,6 +34,7 @@ investment-research/
 |---|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [**NVDA**](companies/NVDA/README.md) | NVIDIA Corporation | 半导体 / AI 算力系统 | **持仓** | **强烈看多** | **$217.00** | **$350.00** | **+61.3%** | [FY27 Q2](companies/NVDA/earnings/FY2027-Q2.md) | 2026-09-12 |
 | [**AVGO**](companies/AVGO/README.md) | Broadcom Inc. | 半导体定制算力 / 软件 | **重点跟踪** | **强烈看多** | **$361.99** | **$475.00** | **+31.2%** | [FY26 Q3](companies/AVGO/earnings/FY2026-Q3.md) | 2026-09-12 |
+| [**INTC**](companies/INTC/README.md) | Intel Corporation | x86 芯片设计 / 晶圆代工 | **重点跟踪** | **审慎看多** | **$102.94** | **$130.00** | **+26.3%** | [FY26 Q2](companies/INTC/earnings/FY2026-Q2.md) | 2026-09-12 |
 
 > **状态说明**：`重点跟踪` (深度调研中) / `持仓` (已有头寸) / `观察` (列入 Watchlist) / `已清仓` / `暂不关注`
 

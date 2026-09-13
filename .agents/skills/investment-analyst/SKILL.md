@@ -44,6 +44,11 @@ description: >-
    - 美股约半数核心科技与消费大厂使用 **Q4 Inc.**（`s2xx.q4cdn.com/<Client_ID>/...`）托管官方 IR。
    - 官方电话会文字记录多由 **FactSet CallStreet** 制作权威纠错版。
    - 最佳获取路径：公司官方 IR 门户页面（`investor.<company>.com`）直达 Transcript，或通过 SEC EDGAR API 调取 8-K 附件。
+3. **财报复盘文档强制性规范（Mandatory Earnings Call & Analyst Q&A Standard）**：
+   - **严禁偷懒**：严禁在季度财报复盘文档中仅罗列 8-K/10-Q 报表数字而缺失电话会实录。
+   - **必须包含两大电话会核心模块**：
+     - ① **管理层开场口头定调（CEO/CFO Prepared Remarks & Strategic Tone）**：提取超越书面报告的定性基调、跨期口头指引与供应链瓶颈现状；
+     - ② **华尔街顶级分析师尖锐 Q&A 连环攻防（Analyst Q&A Highlights）**：必须至少结构化还原 2~3 个最具争议性的核心交锋点（如产品交付节奏、晶圆制造良率、真实客户意向、毛利承压与 CapEx 纪律），直接暴露管理层的真实底牌与应对举措。
 
 ---
 
@@ -73,6 +78,13 @@ description: >-
    - 选取 5~8 家对标公司，横向对比 NTM P/E、Forward PEG、预期营收增速、Gross Margin 与 FCF Margin，找寻估值贴水或溢价依据。
 5. **风险收益比与非对称性评估（Risk / Reward Asymmetry）**：
    - 必须测算：**概率加权期望目标价**（如 Bear 20% + Base 60% + Bull 20%）及 **盈亏比（Risk/Reward Ratio = 基准上行空间 ÷ 悲观下行风险）**，评估是否具备“非对称看涨期权”价值。
+6. **分部加总估值规范（Sum-of-the-Parts / SOTP Protocol）**：
+   - **适用场景**：当标的具备跨行业多业务分部、各业务利润率/资本开支/贴现率截然不同、或存在独立拆分/对外代工核算预期时（如 **AVGO** 之半导体 vs VMware 软件；**INTC** 之芯片产品 CCG/DCAI vs 晶圆代工 Foundry vs Mobileye/Altera；**AMZN** 之 AWS 云 vs 电商广告），**必须启动 SOTP 分部加总估值**。
+   - **SOTP 四大操作准则**：
+     1. **分部 EBITDA / 营业利润优先**：直接基于 10-Q/10-K 分部披露的 Segment Operating Income / EBITDA 测算分部企业价值（Segment EV），避免主观分摊总部利息与所得税带来的模型扭曲；
+     2. **细分对标纯粹性**：每个分部必须严格锚定该细分赛道的 Pure-play 龙头（如芯片产品对标 AMD/NVDA，晶圆代工对标 TSMC/GlobalFoundries，软件对标 Oracle/SAP）；
+     3. **集团层面统一扣除净负债**：$\text{Total Equity Value} = \sum(\text{Segment EV}) - \text{集团净负债 (Net Debt)} - \text{少数股东权益}$，除以稀释股本得出每股目标价；
+     4. **评估控股折价与拆分溢价（SOTP Unlock）**：清晰揭示市场混同估值造成的折价，量化各分部“保底安全垫”与“成长弹性”。
 
 ---
 
