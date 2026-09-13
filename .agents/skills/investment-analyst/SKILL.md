@@ -63,7 +63,31 @@ description: >-
 
 ---
 
-## 核心原则 4：多维度估值建模与敏感性矩阵规范（Multi-Dimensional Valuation Framework）
+## 核心原则 4：非经营性损益剥离与主营业务纯度规范（Operational Purity & Non-Operating Items Protocol）
+
+在个股研究与财报复盘中，当标的利润表受到非经营性重大项目（如股权投资公允价值变动、一次性重组诉讼、大额资产减值、养老金调整等）严重扰动时，必须严格执行以下三层约束：
+
+1. **官方 Non-GAAP 的“在场性”检索与反幻觉准则（Anti-Hallucination on Non-GAAP）**：
+   - **核查官方信披**：首先检索公司官方（8-K 新闻稿、10-Q/10-K Item 2）是否正式发布了 `Non-GAAP Net Income` / `Adjusted EPS` 及官方对账表（Reconciliation Table）。
+   - **有官方调整披露（如 GE、AVGO、INTC、NVDA）**：必须严格采用官方披露口径与数字，并完整引用官方对账表。
+   - **无官方调整披露（如 AMZN、BRK）**：若公司官方未定义并披露调整后净利润，**严禁大模型私自捏造“官方 Non-GAAP 净利润”或虚构官方口径**。
+2. **纯主营业务的法定硬锚点（Core Operational Anchors）**：
+   若公司无官方 Non-GAAP 净利润，严禁强行拼凑未经官方背书的假调整净利，而应**直接回退并锚定官方报表中未被污染的法定经营指标**：
+   - **第一硬锚点：GAAP 营业利润（Operating Income / Segment Operating Profit）**：
+     - 营业利润线以上不受任何股权投资估值变动、其他收支（Other income/expense）的干扰，是衡量主业造血能力与经营杠杆的最权威官方硬事实（如衡量 Amazon AWS 及零售主业爆发力）。
+   - **第二硬锚点：经营活动现金流（Operating Cash Flow, OCF）与自由现金流（FCF）**：
+     - 现金流量表天然剔除未实现公允价值变动，真实反映企业经营现金回流。
+3. **分析师穿透对账桥梁规范（Analytical Bridge Standard）**：
+   当分析师确需向买方投资人展示“扣除投资影响后的可比视角”时，必须遵循以下标准：
+   - **数据源唯一性**：只允许使用 10-Q 官方行项目（如 `Other income (expense), net`、`Provision for income taxes`）。
+   - **明晰标签区隔**：必须明确打上 **`[官方信披 / 10-Q Official]`** 与 **`[分析师测算 / Analytical Bridge]`** 双重标签，严禁将分析师测算结果表述为“公司官方财报数据”。
+   - **公式与假设透明**：
+     $$\text{Core Operating Pre-tax Income} = \text{GAAP Operating Income} - \text{Net Interest Expense}$$
+     附注必须明确列示：“*公司未提供 Non-GAAP 净利润，此处核心税前利润系分析师基于 10-Q 剥离 Other Income 中非经营性投资收益所得，仅供透视主业趋势参考。*”
+
+---
+
+## 核心原则 5：多维度估值建模与敏感性矩阵规范（Multi-Dimensional Valuation Framework）
 
 严禁使用“每种情景仅给出 1 个孤立数据”的粗糙推演，所有标的估值必须包含以下五个维度的立体交叉检验：
 
@@ -88,7 +112,7 @@ description: >-
 
 ---
 
-## 核心原则 5：标准买方投研生成工作流（SOP）
+## 核心原则 6：标准买方投研生成工作流（SOP）
 
 ```mermaid
 graph TD
