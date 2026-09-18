@@ -1,0 +1,229 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>估值系统学习｜第4课深入版</title><style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#17202b;--muted:#667085;--line:#e4e7ec;--blue:#315efb;--blue2:#eef2ff;--green:#149b68;--green2:#eaf8f1;--orange:#d9822b;--orange2:#fff3e3;--red:#d64545;--red2:#fff0f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.82}.container{width:min(1180px,92vw);margin:auto}
+.hero{background:linear-gradient(140deg,#0f172a,#304780);color:#fff;padding:66px 0 54px}.eyebrow{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);font-size:13px;margin-bottom:18px}.hero h1{font-size:43px;line-height:1.18;margin:0 0 16px}.hero p{max-width:1000px;color:#dbe2f0;font-size:18px;margin:0}
+.toc{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}.toc .inner{display:flex;gap:17px;overflow:auto;white-space:nowrap;padding:11px 0}.toc a{font-size:14px;color:#475467}
+section{padding:44px 0}h2{font-size:30px;line-height:1.3;margin:0 0 10px}h3{font-size:21px;margin:28px 0 10px}.lead{font-size:17px;color:#475467;max-width:980px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.chart{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 2px 9px rgba(16,24,40,.035)}.kpi{font-size:33px;font-weight:800}.tag{display:inline-block;font-size:12px;padding:3px 8px;border-radius:7px;background:#f2f4f7;color:#344054}.tag.blue{background:var(--blue2);color:#3346b3}.tag.green{background:var(--green2);color:#16724a}.tag.orange{background:var(--orange2);color:#925608}.tag.red{background:var(--red2);color:#983333}
+.formula{background:#111827;color:#f8fafc;border-radius:13px;padding:15px 17px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto}.callout{padding:17px 19px;border-radius:12px;border-left:4px solid var(--blue);background:var(--blue2)}.callout.green{border-left-color:var(--green);background:var(--green2)}.callout.orange{border-left-color:var(--orange);background:var(--orange2)}.callout.red{border-left-color:var(--red);background:var(--red2)}
+.quote{font-size:22px;line-height:1.5;font-weight:700;padding:20px 22px;border-radius:16px;background:#111827;color:#fff}table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}th,td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f8fafc;font-size:14px}tr:last-child td{border-bottom:0}
+svg{width:100%;height:auto;display:block}.timeline{position:relative;margin:16px 0}.timeline:before{content:"";position:absolute;left:13px;top:7px;bottom:7px;width:2px;background:#d0d5dd}.step{display:grid;grid-template-columns:28px 1fr;gap:13px;margin:0 0 21px}.dot{width:28px;height:28px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--blue2);margin-top:2px}.step strong{display:block;font-size:16px}.source{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:18px;padding-top:10px}
+footer{padding:25px 0 65px;color:var(--muted);font-size:13px}@media(max-width:850px){.grid2,.grid3{grid-template-columns:1fr}.hero h1{font-size:33px}section{padding:32px 0}}
+</style></head><body>
+<header class="hero"><div class="container"><div class="eyebrow">估值系统学习 · Lesson 4 · 深入版</div><h1>Enterprise Value 与 Equity Value：把企业价值真正拆到股东价值</h1><p>彻底理解 Market Cap、Equity Value、Enterprise Value、Net Debt、NCI、Preferred、Lease 等概念，建立 EV Bridge，并把它与 PE、EV/EBITDA、EV/Sales、FCF 统一起来，为 Growth + Margin + Multiple、DCF 和 Reverse Valuation 打基础。</p></div></header>
+<nav class="toc"><div class="container inner">
+<a href="#goal">核心</a><a href="#formula">核心公式</a><a href="#simple">收购例子</a><a href="#components">EV Bridge</a><a href="#cash">Cash</a><a href="#debt">Debt</a><a href="#nci">NCI</a><a href="#matching">口径匹配</a><a href="#pe-vs-ev">P/E vs EV</a><a href="#leases">Lease</a><a href="#fcff">FCFF/FCFE</a><a href="#scenario">完整例子</a><a href="#real">公司案例</a><a href="#mistakes">常见坑</a><a href="#workflow">操作清单</a><a href="#takeaway">总结</a>
+</div></nav><main>
+<section id="goal"><div class="container">
+<h2>一、第四课的核心：EV 不是“高级市值”</h2>
+<p class="lead">第三课里我们看到 P/E、P/FCF 属于 Equity Value 语言，而 EV/EBITDA、EV/Sales 属于 Enterprise Value 语言。这一课要把两者之间的桥彻底打通。</p>
+<div class="quote">EV 试图回答：如果我把整个经营业务拿下来，同时承接它的融资负担、拿走它的现金和其他非普通股权益，那么这个“企业”到底值多少钱？</div>
+<div class="grid3" style="margin-top:20px">
+<div class="card"><span class="tag blue">Equity</span><h3>股东价值</h3><div class="kpi">Market Cap</div><p>普通股股东权益的市场价格。</p></div>
+<div class="card"><span class="tag green">Enterprise</span><h3>企业价值</h3><div class="kpi">EV</div><p>经营资产对应的企业层面价值。</p></div>
+<div class="card"><span class="tag orange">Bridge</span><h3>价值桥</h3><div class="kpi">Debt / Cash</div><p>资本结构把 EV 与 Equity Value 连接起来。</p></div>
+</div></div></section>
+
+
+<section id="formula"><div class="container">
+<h2>二、核心公式：从 EV 回到普通股股东价值</h2>
+<div class="formula">Equity Value ≈ EV − Debt + Cash − Preferred Equity − NCI + Other Adjustments</div>
+<p>更简化：</p><div class="formula">Equity Value ≈ EV − Net Debt</div>
+<div class="formula">Net Debt = Debt − Cash</div>
+<div class="callout orange"><b>方向感一定要牢记：</b>Debt 会减少普通股股东剩余价值；Cash 会增加普通股股东剩余价值。相同 EV 下，净债务越高，Equity Value 越低。</div>
+</div></section>
+
+
+<section id="simple"><div class="container">
+<h2>三、用一个收购故事真正理解 EV</h2>
+<p>假设一项经营业务本身价值 $100B，公司同时有 $30B Debt 和 $10B Cash。</p>
+<div class="chart"><svg viewBox="0 0 1100 400">
+<rect x="60" y="55" width="300" height="70" rx="10" fill="#315efb"/><text x="210" y="99" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Enterprise Value $100B</text>
+<rect x="400" y="55" width="250" height="70" rx="10" fill="#d9822b"/><text x="525" y="99" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">Debt +$30B</text>
+<rect x="690" y="55" width="250" height="70" rx="10" fill="#149b68"/><text x="815" y="99" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">Cash −$10B</text>
+<text x="65" y="190" font-size="15" fill="#344054">从企业层面的 $100B 开始：</text>
+<text x="65" y="225" font-size="14" fill="#475467">债务不是属于普通股股东的资产；买家需要承接/偿还，因此要加进企业层面的负担。</text>
+<text x="65" y="258" font-size="14" fill="#475467">现金随企业一起被拿到，因此从净投入角度应该扣除。</text>
+<rect x="65" y="305" width="880" height="55" rx="10" fill="#eef2ff"/><text x="505" y="340" text-anchor="middle" fill="#3346b3" font-size="17" font-weight="700">Equity Value ≈ $100B − $30B + $10B = $80B</text>
+</svg></div>
+</div></section>
+
+
+<section id="components"><div class="container">
+<h2>四、EV Bridge：哪些项目加进去，哪些减出来</h2>
+<table>
+<tr><th>项目</th><th>常见处理</th><th>经济含义</th></tr>
+<tr><td>Cash & Cash Equivalents</td><td><b>−</b></td><td>买下公司同时取得的现金。</td></tr>
+<tr><td>Short-term Debt</td><td><b>+</b></td><td>短期融资义务。</td></tr>
+<tr><td>Long-term Debt</td><td><b>+</b></td><td>长期融资义务。</td></tr>
+<tr><td>Preferred Stock</td><td><b>+</b></td><td>优先于普通股的资本索取权。</td></tr>
+<tr><td>Minority Interest / NCI</td><td><b>+</b></td><td>合并报表中存在但不属于母公司普通股股东的部分。</td></tr>
+<tr><td>Lease Liabilities</td><td>视口径</td><td>部分租赁在经济上类似融资，需要判断是否纳入。</td></tr>
+<tr><td>Pension / debt-like items</td><td>视情况</td><td>判断是不是类似融资负担。</td></tr>
+<tr><td>Non-operating Investments</td><td>可能减</td><td>若属于独立、可变现的非核心资产，可能从企业价值桥中剔除。</td></tr>
+</table>
+<div class="callout red" style="margin-top:18px"><b>不要死背公式：</b>真正的原则是“如果我要买整个企业，这项资产/负债会不会跟着企业一起被我获得或承担？”</div>
+</div></section>
+
+
+<section id="cash"><div class="container">
+<h2>五、Cash 为什么不是永远可以 100% 减掉</h2>
+<p class="lead">很多平台直接做 EV = Market Cap + Debt − Cash。但真正分析公司时，你还要问：<b>这些 Cash 是“多余现金”，还是业务运行必须的现金？</b></p>
+<div class="grid2">
+<div class="card"><span class="tag green">Excess Cash</span><h3>多余现金</h3><p>超过正常营运需求，可以用于回购、分红、并购、还债等。它更接近非经营资产。</p></div>
+<div class="card"><span class="tag orange">Operating Cash</span><h3>经营现金</h3><p>企业需要保留来支付供应商、员工、保险赔付、库存等日常经营。不能简单把它全部当作“买家白送的现金”。</p></div>
+</div>
+<div class="callout">这也是为什么银行、保险等金融机构的 EV 估值会特别麻烦——它们的 Debt、Cash 本身就是经营业务的一部分，而不是普通工业公司的单纯融资结构。</div>
+</div></section>
+
+
+<section id="debt"><div class="container">
+<h2>六、Debt 也不是一个简单的数字</h2>
+<table>
+<tr><th>融资</th><th>为什么可能影响 EV</th><th>分析时看什么</th></tr>
+<tr><td>普通债券 / 银行借款</td><td>典型融资负担</td><td>本金、利率、期限。</td></tr>
+<tr><td>Convertible Debt</td><td>同时具有债与潜在股权属性</td><td>转股条件、稀释、会计分类。</td></tr>
+<tr><td>Lease Liabilities</td><td>长期获取经营资产的合同义务</td><td>数据库是否计入 EV；分母是否已经反映租赁成本。</td></tr>
+<tr><td>Supplier Financing</td><td>有时经济上接近融资</td><td>期限和供应链安排。</td></tr>
+</table>
+<div class="callout orange"><b>进阶原则：</b>估值不是“会计科目搬运”。应该从经济实质判断：这是正常经营负债，还是事实上替代了借债的融资义务？</div>
+</div></section>
+
+
+<section id="nci"><div class="container">
+<h2>七、NCI / Minority Interest：为什么分子和分母一定要匹配</h2>
+<p><b>Non-controlling Interest（非控制性权益）</b>存在于母公司并表某子公司，但没有持有 100% 股权的情况下。</p>
+<div class="chart"><svg viewBox="0 0 1100 390">
+<rect x="70" y="60" width="270" height="75" rx="10" fill="#315efb"/><text x="205" y="106" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">母公司持股 80%</text>
+<rect x="415" y="60" width="270" height="75" rx="10" fill="#149b68"/><text x="550" y="106" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">合并报表 = 子公司 100%</text>
+<rect x="760" y="60" width="270" height="75" rx="10" fill="#d9822b"/><text x="895" y="106" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">20% 属于其他股东</text>
+<text x="75" y="200" font-size="15" fill="#344054">如果 EBITDA 分母把子公司 100% 都算进来了，</text>
+<text x="75" y="235" font-size="14" fill="#475467">那么 EV 分子也需要考虑这 20% 不属于母公司普通股股东的经济利益。</text>
+<rect x="75" y="290" width="900" height="48" rx="10" fill="#eef2ff"/><text x="525" y="321" text-anchor="middle" fill="#3346b3" font-size="15" font-weight="700">核心：分子和分母必须覆盖同一组经济利益。</text>
+</svg></div>
+</div></section>
+
+
+<section id="matching"><div class="container">
+<h2>八、把第三课最重要的“分子分母匹配”彻底打通</h2>
+<table>
+<tr><th>分子</th><th>分母</th><th>倍数</th><th>直觉</th></tr>
+<tr><td>Market Cap</td><td>Net Income</td><td>P/E</td><td>股东价值 / 股东利润。</td></tr>
+<tr><td>Market Cap</td><td>FCF</td><td>P/FCF</td><td>股东价值 / 股东自由现金。</td></tr>
+<tr><td>EV</td><td>EBITDA</td><td>EV/EBITDA</td><td>企业价值 / 企业经营结果。</td></tr>
+<tr><td>EV</td><td>EBIT</td><td>EV/EBIT</td><td>企业价值 / 扣除 D&amp;A 后经营利润。</td></tr>
+<tr><td>EV</td><td>Revenue</td><td>EV/Sales</td><td>企业价值 / 收入规模。</td></tr>
+</table>
+<div class="callout red" style="margin-top:18px"><b>反例：</b>EV / Net Income 不是常规意义上的标准倍数，因为 EV 是企业层面的分子，而 Net Income 已经是扣除利息后的股东层面利润。</div>
+</div></section>
+
+
+<section id="pe-vs-ev"><div class="container">
+<h2>九、P/E 和 EV/EBITDA 为什么不能直接比较大小</h2>
+<div class="chart"><svg viewBox="0 0 1100 430">
+<rect x="70" y="55" width="900" height="60" rx="10" fill="#315efb"/><text x="520" y="93" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">EBITDA：Interest / Tax / D&amp;A 之前</text>
+<rect x="70" y="155" width="760" height="60" rx="10" fill="#149b68"/><text x="450" y="193" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">EBIT：扣掉 D&amp;A</text>
+<rect x="70" y="255" width="570" height="60" rx="10" fill="#d9822b"/><text x="355" y="293" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">Net Income：再扣 Interest / Tax / Other</text>
+<text x="855" y="193" font-size="14" fill="#475467">EV/EBITDA</text><text x="855" y="292" font-size="14" fill="#475467">P/E</text>
+<rect x="70" y="355" width="930" height="45" rx="9" fill="#eef2ff"/><text x="535" y="384" text-anchor="middle" font-size="14" font-weight="700" fill="#3346b3">两者处于不同利润层级，所以“12× EV/EBITDA vs 20× PE”不存在简单的高低关系。</text>
+</svg></div>
+</div></section>
+
+
+<section id="leases"><div class="container">
+<h2>十、租赁：EV 最常见的“数据平台口径差异”之一</h2>
+<p class="lead">航空、零售、通信、数据中心等企业可能拥有大量租赁。不同数据库对 Operating Lease 是否作为 Debt-like Item 加入 EV，处理并不完全一致。</p>
+<div class="grid2">
+<div class="card"><h3>为什么可以加</h3><p>长期租赁在经济上可能是获取经营资产的一种融资安排。若忽略它，企业看起来可能比实际杠杆更低。</p></div>
+<div class="card"><h3>为什么不能机械全加</h3><p>租赁同时也是经营成本的一部分，而 EBITDA 的具体口径会影响分析。必须保证分子与分母的租赁处理一致。</p></div>
+</div>
+<div class="callout orange"><b>实战：</b>不同网站显示的 EV 不完全一致时，不一定是谁“算错了”，很可能是租赁、NCI、优先股、养老金和现金口径不同。</div>
+</div></section>
+
+
+<section id="fcff"><div class="container">
+<h2>十一、EV 与 FCF：FCFF / FCFE 为后面的 DCF 铺路</h2>
+<div class="grid2">
+<div class="card"><span class="tag green">FCFF</span><h3>Free Cash Flow to Firm</h3><p>从整个企业资本提供者视角看的自由现金流，更自然地与 <b>EV</b> 对应。</p><div class="formula">EV ↔ FCFF</div></div>
+<div class="card"><span class="tag blue">FCFE</span><h3>Free Cash Flow to Equity</h3><p>从普通股股东视角看的自由现金流，更自然地与 <b>Equity Value</b> 对应。</p><div class="formula">Equity Value ↔ FCFE</div></div>
+</div>
+<div class="callout green"><b>这个连接非常重要：</b>以后学习 DCF 时，不同现金流定义对应不同的折现率和价值对象。现在先记住“企业现金 ↔ EV，股东现金 ↔ Equity”。</div>
+</div></section>
+
+
+<section id="scenario"><div class="container">
+<h2>十二、完整例子：EV 相同，为什么股东价值可以差很多</h2>
+<table>
+<tr><th></th><th>公司 A</th><th>公司 B</th><th>公司 C</th></tr>
+<tr><td>EV</td><td>$100B</td><td>$100B</td><td>$100B</td></tr>
+<tr><td>Debt</td><td>$0B</td><td>$30B</td><td>$50B</td></tr>
+<tr><td>Cash</td><td>$0B</td><td>$0B</td><td>$20B</td></tr>
+<tr><td><b>Equity Value</b></td><td><b>$100B</b></td><td><b>$70B</b></td><td><b>$70B</b></td></tr>
+</table>
+<p>注意 C 虽然 Debt 更高，但同时拥有更多 Cash，因此最终 Equity Value 可以和 B 一样。</p>
+<div class="callout">所以当你看到一个公司“EV 很高”，下一步一定要问：<b>其中到底有多少价值最终属于普通股股东？</b></div>
+</div></section>
+
+
+<section id="real"><div class="container">
+<h2>十三、把我们之前研究过的公司放回来</h2>
+<div class="grid2">
+<div class="card"><span class="tag orange">CRWV / NBIS</span><h3>为什么 EV Bridge 尤其重要</h3><p>AI 基础设施需要大量资本投入，也可能伴随较强融资需求。EV/EBITDA 看的是企业价值，但最终股票投资要回到 Debt、Cash 与 Equity Value。</p></div>
+<div class="card"><span class="tag blue">Boeing</span><h3>经营资产价值 ≠ 股东价值</h3><p>周期制造业的经营资产、债务、现金和其他负债应该分别看。最终必须从 EV 折回普通股股东价值。</p></div>
+<div class="card"><span class="tag green">Amazon</span><h3>为什么资本结构不能被忽略</h3><p>大型综合平台拥有大量经营资产，同时还存在现金、债务和租赁等项目。EV 比单独 Market Cap 更接近“整个经营平台”的估值语言。</p></div>
+<div class="card"><span class="tag blue">Adobe / Snowflake</span><h3>轻资本企业也需要做 Bridge</h3><p>即使现金流很好、债务少，仍然要确认 Cash、SBC、可转债等是否会改变从企业价值到每股价值的桥接。</p></div>
+</div></div></section>
+
+
+<section id="mistakes"><div class="container">
+<h2>十四、EV 分析最常见的 10 个坑</h2>
+<table>
+<tr><th>#</th><th>错误</th><th>正确理解</th></tr>
+<tr><td>1</td><td>EV 就是 Market Cap + Debt − Cash，永远不用调整</td><td>这是基础近似，复杂资本结构需要额外项目。</td></tr>
+<tr><td>2</td><td>所有 Cash 都能减掉</td><td>应区分 Excess Cash 与经营需要的现金。</td></tr>
+<tr><td>3</td><td>所有 Debt 一样</td><td>可转债、租赁、供应商融资经济属性可能不同。</td></tr>
+<tr><td>4</td><td>只比较 Market Cap</td><td>债务差异可能让企业价值完全不同。</td></tr>
+<tr><td>5</td><td>EV / Net Income</td><td>企业层面的分子与股东层面的分母口径不匹配。</td></tr>
+<tr><td>6</td><td>EV/EBITDA 就等于现金流估值</td><td>EBITDA 没有扣 CapEx。</td></tr>
+<tr><td>7</td><td>忽略 NCI</td><td>合并报表的经营结果可能包含不属于普通股股东的部分。</td></tr>
+<tr><td>8</td><td>忽略 Lease</td><td>数据平台的 EV 可能因此出现差异。</td></tr>
+<tr><td>9</td><td>EV 算出来就结束</td><td>还要检查 EV → Equity 的桥。</td></tr>
+<tr><td>10</td><td>只看今天 EV</td><td>估值最终仍然要回答未来的 EBITDA / EBIT / FCF 是多少。</td></tr>
+</table></div></section>
+
+
+<section id="workflow"><div class="container">
+<h2>十五、以后自己算 EV：固定走这 8 步</h2>
+<div class="card">
+<div class="timeline">
+<div class="step"><div class="dot"></div><div><strong>1. Market Cap</strong>股价 × Diluted Shares。</div></div>
+<div class="step"><div class="dot"></div><div><strong>2. Debt</strong>短债 + 长债，检查可转债等。</div></div>
+<div class="step"><div class="dot"></div><div><strong>3. Cash</strong>现金及等价物，并判断是否有大量经营必需现金。</div></div>
+<div class="step"><div class="dot"></div><div><strong>4. NCI / Preferred</strong>确认是否存在不属于普通股股东的权益。</div></div>
+<div class="step"><div class="dot"></div><div><strong>5. Lease / Pension / Other</strong>确认你使用的 EV 口径。</div></div>
+<div class="step"><div class="dot"></div><div><strong>6. EV</strong>完成 Enterprise Value Bridge。</div></div>
+<div class="step"><div class="dot"></div><div><strong>7. 倍数</strong>与 EBITDA、EBIT、Sales 等企业层面分母匹配。</div></div>
+<div class="step"><div class="dot"></div><div><strong>8. 折回 Equity</strong>EV − Net Debt − NCI / Preferred 等 → 普通股股东价值。</div></div>
+</div></div>
+</div></section>
+
+
+<section id="takeaway"><div class="container">
+<h2>十六、这一课真正应该记住的 10 句话</h2>
+<div class="card"><ol style="margin:0;padding-left:24px">
+<li><b>Market Cap 是普通股股东权益的市场价值。</b></li>
+<li><b>EV 是企业层面的价值，不等于 Market Cap。</b></li>
+<li><b>最简单的关系：EV ≈ Equity Value + Net Debt。</b></li>
+<li><b>Debt 通常让 Equity Value 降低，Cash 通常让 Equity Value 增加。</b></li>
+<li><b>Cash、Debt、Lease、NCI、Preferred 的经济属性需要具体分析。</b></li>
+<li><b>Enterprise Value 必须与 EBITDA / EBIT / Sales 这样的企业层面分母配对。</b></li>
+<li><b>Equity Value 必须与 Net Income / Equity-level FCF 这样的股东层面分母配对。</b></li>
+<li><b>EV/EBITDA 低，不等于股东层面一定便宜。</b></li>
+<li><b>FCFF 更自然对应 EV；FCFE 更自然对应 Equity Value。</b></li>
+<li><b>最终股票投资仍然要从企业价值回到普通股每股价值。</b></li>
+</ol></div>
+<div class="callout green" style="margin-top:18px"><b>下一课建议：</b>现在“估值倍数的分子”已经打通。下一步进入最关键的 <b>Growth + Margin + Multiple</b>：建立 3～5 年经营预测，用 Revenue Growth、Margin Expansion 和终局 Multiple 解释当前股价，然后再进入 DCF。</div>
+</div></section>
+</main>
+<footer><div class="container">说明：本课中的 EV Bridge 使用估值实践中的常用近似表达。真实公司应结合最新 10-K / 10-Q、资产负债表附注以及数据平台的具体口径核对 Lease、NCI、Preferred、Pension、Restricted Cash 等项目。</div></footer>
+</body></html>

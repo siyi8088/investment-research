@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>估值系统学习｜第3课深入版：估值倍数</title><style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#17202b;--muted:#667085;--line:#e4e7ec;--blue:#315efb;--blue2:#eef2ff;--green:#149b68;--green2:#eaf8f1;--orange:#d9822b;--orange2:#fff3e3;--red:#d64545;--red2:#fff0f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.82}
+.container{width:min(1180px,92vw);margin:auto}.hero{background:linear-gradient(140deg,#0f172a,#304780);color:#fff;padding:66px 0 54px}.eyebrow{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);font-size:13px;margin-bottom:18px}.hero h1{font-size:43px;line-height:1.18;margin:0 0 16px}.hero p{max-width:1000px;color:#dbe2f0;font-size:18px;margin:0}
+.toc{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}.toc .inner{display:flex;gap:17px;overflow:auto;white-space:nowrap;padding:11px 0}.toc a{font-size:14px;color:#475467}section{padding:44px 0}
+h2{font-size:30px;line-height:1.3;margin:0 0 10px}h3{font-size:21px;margin:28px 0 10px}.lead{font-size:17px;color:#475467;max-width:980px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.chart{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 2px 9px rgba(16,24,40,.035)}.kpi{font-size:33px;font-weight:800}.tag{display:inline-block;font-size:12px;padding:3px 8px;border-radius:7px;background:#f2f4f7;color:#344054}.tag.blue{background:var(--blue2);color:#3346b3}.tag.green{background:var(--green2);color:#16724a}.tag.orange{background:var(--orange2);color:#925608}.tag.red{background:var(--red2);color:#983333}
+.formula{background:#111827;color:#f8fafc;border-radius:13px;padding:15px 17px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto}.callout{padding:17px 19px;border-radius:12px;border-left:4px solid var(--blue);background:var(--blue2)}.callout.green{border-left-color:var(--green);background:var(--green2)}.callout.orange{border-left-color:var(--orange);background:var(--orange2)}.callout.red{border-left-color:var(--red);background:var(--red2)}
+.quote{font-size:22px;line-height:1.5;font-weight:700;padding:20px 22px;border-radius:16px;background:#111827;color:#fff}table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}th,td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f8fafc;font-size:14px}tr:last-child td{border-bottom:0}svg{width:100%;height:auto;display:block}
+.timeline{position:relative;margin:16px 0}.timeline:before{content:"";position:absolute;left:13px;top:7px;bottom:7px;width:2px;background:#d0d5dd}.step{display:grid;grid-template-columns:28px 1fr;gap:13px;margin:0 0 21px}.dot{width:28px;height:28px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--blue2);margin-top:2px}.step strong{display:block;font-size:16px}.source{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:18px;padding-top:10px}footer{padding:25px 0 65px;color:var(--muted);font-size:13px}
+@media(max-width:850px){.grid2,.grid3{grid-template-columns:1fr}.hero h1{font-size:33px}section{padding:32px 0}}
+</style></head>
+<body>
+<header class="hero"><div class="container"><div class="eyebrow">估值系统学习 · Lesson 3 · 深入版</div>
+<h1>估值倍数：PE、P/FCF、EV/EBITDA、EV/EBIT、PS 到底在给什么定价？</h1>
+<p>从 Market Cap 与 Enterprise Value 开始，把常见估值倍数放进同一套体系，深入理解分子、分母、TTM/Forward、GAAP/Non-GAAP、增长与 Margin 的关系，并结合 Snowflake、Amazon、NVIDIA、CRWV/NBIS、Boeing、Adobe 等你研究过的公司。</p>
+</div></header>
+<nav class="toc"><div class="container inner">
+<a href="#goal">核心思想</a><a href="#map">估值地图</a><a href="#equity-ev">Market Cap/EV</a><a href="#ev-example">EV例子</a><a href="#pe">P/E</a><a href="#pfcf">P/FCF</a><a href="#ev-ebitda">EV/EBITDA</a><a href="#ev-ebit">EV/EBIT</a><a href="#sales">PS</a><a href="#ps-math">PS拆解</a><a href="#forward">TTM/Forward</a><a href="#gaap">GAAP/Non-GAAP</a><a href="#company-choice">选倍数</a><a href="#same-company">同公司</a><a href="#reverse">反推</a><a href="#multiples">Multiple来源</a><a href="#mistakes">常见坑</a><a href="#checklist">清单</a>
+</div></nav>
+<main>
+<section id="goal"><div class="container">
+<h2>一、第三课的核心：估值倍数不是“贵/便宜”的答案</h2>
+<p class="lead">前两课我们已经把 Revenue、Margin、Net Income、CFO、CapEx、FCF 拆开。现在进入估值，最常见的错误就是把“30× PE”“15× FCF”“8× EV/EBITDA”当成结论。</p>
+<div class="quote">估值倍数真正表达的是：<br>市场今天愿意为公司某一层“经济结果”支付多少钱。</div>
+<div class="grid3" style="margin-top:20px">
+<div class="card"><span class="tag blue">1</span><h3>分子</h3><div class="kpi">Market Cap / EV</div><p>你是在给股东权益定价，还是给整个经营资产定价？</p></div>
+<div class="card"><span class="tag green">2</span><h3>分母</h3><div class="kpi">Earnings / FCF / Sales</div><p>你买的是利润、现金，还是收入增长的“潜力”？</p></div>
+<div class="card"><span class="tag orange">3</span><h3>未来</h3><div class="kpi">Growth + Margin</div><p>当前倍数最终由未来经营结果来兑现。</p></div>
+</div>
+</div></section>
+
+<section id="map"><div class="container">
+<h2>二、先把所有常见估值倍数放进一张地图</h2>
+<div class="chart">
+<div class="chart-title">Equity Value 家族 vs Enterprise Value 家族</div>
+<svg viewBox="0 0 1100 450">
+<rect x="60" y="45" width="420" height="120" rx="15" fill="#315efb"/>
+<text x="270" y="90" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">Equity Value</text>
+<text x="270" y="125" text-anchor="middle" fill="#dbe2ff" font-size="14">最终属于普通股股东的价值</text>
+<rect x="620" y="45" width="420" height="120" rx="15" fill="#149b68"/>
+<text x="830" y="90" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">Enterprise Value</text>
+<text x="830" y="125" text-anchor="middle" fill="#dff7eb" font-size="14">整个经营资产的价值</text>
+<text x="70" y="225" font-size="16" font-weight="700" fill="#17202b">Equity Value Multiples</text>
+<text x="70" y="258" font-size="14" fill="#475467">P/E = Market Cap / Net Income</text>
+<text x="70" y="290" font-size="14" fill="#475467">P/FCF = Market Cap / FCF</text>
+<text x="620" y="225" font-size="16" font-weight="700" fill="#17202b">Enterprise Value Multiples</text>
+<text x="620" y="258" font-size="14" fill="#475467">EV/EBITDA = EV / EBITDA</text>
+<text x="620" y="290" font-size="14" fill="#475467">EV/EBIT = EV / EBIT</text>
+<text x="620" y="322" font-size="14" fill="#475467">EV/Sales = EV / Revenue</text>
+<rect x="70" y="365" width="960" height="48" rx="10" fill="#eef2ff"/>
+<text x="550" y="395" text-anchor="middle" font-size="14" font-weight="700" fill="#3346b3">黄金规则：Equity 对 Equity；Enterprise 对 Enterprise。分子和分母必须口径匹配。</text>
+</svg></div>
+</div></section>
+
+<section id="equity-ev"><div class="container">
+<h2>三、Market Cap 和 Enterprise Value：为什么这是第三课最重要的地基</h2>
+<h3>1. Market Cap</h3>
+<div class="formula">Market Cap = Share Price × Diluted Shares Outstanding</div>
+<p>Market Cap 是市场给普通股股东权益的总价格。你可以买一股，也可以把所有股票乘起来看整个 Equity Value。</p>
+<h3>2. Enterprise Value</h3>
+<div class="formula">EV ≈ Market Cap + Debt + Preferred Equity + Minority Interest − Cash</div>
+<p>最常用的简化形式是：</p>
+<div class="formula">EV ≈ Market Cap + Net Debt</div>
+<p>严格分析时还可能加入租赁负债、养老金、少数股东权益等，具体口径依数据库和公司定义而异。</p>
+<div class="callout orange"><b>为什么现金要减？</b>假设 A 公司市值 $100B、没有债务、持有 $30B 现金。一个买家花 $100B 买全部股票后，还得到 $30B 现金，所以从“买经营资产”的角度看，净投入更接近 $70B。</div>
+</div></section>
+
+<section id="ev-example"><div class="container">
+<h2>四、一个例子把 Market Cap 与 EV 彻底分清</h2>
+<table>
+<tr><th></th><th>公司 A</th><th>公司 B</th></tr>
+<tr><td>Market Cap</td><td>$100B</td><td>$100B</td></tr>
+<tr><td>Debt</td><td>$0B</td><td>$50B</td></tr>
+<tr><td>Cash</td><td>$20B</td><td>$5B</td></tr>
+<tr><td>Net Debt</td><td>−$20B</td><td>$45B</td></tr>
+<tr><td><b>简化 EV</b></td><td><b>$80B</b></td><td><b>$145B</b></td></tr>
+</table>
+<p>假设两家公司 EBITDA 都是 $10B：</p>
+<div class="grid2">
+<div class="card"><h3>A</h3><div class="formula">EV/EBITDA = $80 / $10 = 8×</div></div>
+<div class="card"><h3>B</h3><div class="formula">EV/EBITDA = $145 / $10 = 14.5×</div></div>
+</div>
+<div class="callout green">这就是 EV/EBITDA 的价值：它让债务、现金造成的资本结构差异显性化，而不是把债务全部混在股东市值里。</div>
+</div></section>
+
+<section id="pe"><div class="container">
+<h2>五、P/E：最直观的“股东利润价格”</h2>
+<div class="formula">P/E = Market Cap / Net Income = Share Price / EPS</div>
+<p><b>E = Earnings</b> 通常指净利润或每股收益 EPS。P/E 20×，粗略可以理解为：市场愿意为每 $1 当前/预期股东利润支付 $20 的股权价值。</p>
+<div class="grid2">
+<div class="card"><h3>为什么 P/E 好用</h3><p>Net Income 最终属于股东视角；EPS 又能直接与股价对应，所以非常直观。成熟、盈利稳定的公司很适合以 P/E 作为主要语言之一。</p></div>
+<div class="card"><h3>为什么 P/E 容易失真</h3><p>利息、税率、投资收益、减值、一次性项目和资本结构都会影响 Net Income。亏损公司甚至没有正常意义上的 P/E。</p></div>
+</div>
+<h3>一个特别重要的理解：P/E 低，不自动代表便宜</h3>
+<p>假设公司今年 EPS = $10，股价 $150，P/E = 15×。如果明年因为周期下行 EPS 只有 $5，所谓“15× 低估值”可能很快变成 30×。反过来，快速成长公司的 Forward P/E 可能高于传统公司，却仍然有更高未来 EPS。</p>
+<div class="callout orange"><b>所以 PE 的核心不是“倍数本身”，而是 Earnings 的持续性、增长率和周期位置。</b></div>
+</div></section>
+
+<section id="pfcf"><div class="container">
+<h2>六、P/FCF：把估值直接连接到自由现金</h2>
+<div class="formula">P/FCF = Market Cap / FCF</div>
+<p>它的分母来自第二课：<b>FCF ≈ CFO − CapEx</b>。因此相比 P/E，P/FCF 更强调现金创造能力。</p>
+<div class="grid3">
+<div class="card"><span class="tag green">优势</span><h3>接近现金</h3><p>减少一部分会计利润与实际现金之间的差异。</p></div>
+<div class="card"><span class="tag orange">限制</span><h3>CapEx 的周期性</h3><p>企业正在扩张时，FCF 可能被 Growth CapEx 大幅压低。</p></div>
+<div class="card"><span class="tag red">限制</span><h3>SBC</h3><p>高 SBC 公司需要继续看到稀释和每股 FCF，而不能只看总 FCF。</p></div>
+</div>
+<h3>P/FCF 和 FCF Yield 是一枚硬币的两面</h3>
+<div class="formula">FCF Yield = FCF / Market Cap = 1 / (P/FCF)</div>
+<p>例如 P/FCF = 20×，对应 FCF Yield = 5%。这不是承诺“股票每年回报 5%”，只是描述当前市场价值与当前 FCF 的关系。</p>
+</div></section>
+
+<section id="ev-ebitda"><div class="container">
+<h2>七、EV/EBITDA：为什么在企业比较里如此常见</h2>
+<div class="formula">EV/EBITDA = Enterprise Value / EBITDA</div>
+<p><b>EBITDA = Earnings Before Interest, Taxes, Depreciation and Amortization。</b>它把利息、税和 D&amp;A 排除在外，因此比 Net Income 更少受到资本结构和折旧摊销政策的影响。</p>
+<h3>它最适合回答的问题</h3>
+<p>“如果暂时不管公司怎么融资、税率多少、历史资产折旧怎么计，公司经营层面产生了多大的 EBITDA？”</p>
+<div class="callout orange"><b>但请牢记：</b>EBITDA 没有扣掉 CapEx，所以不能直接等同 FCF。对飞机、工厂、数据中心等资产密集型公司，这一点尤其重要。</div>
+</div></section>
+
+<section id="ev-ebit"><div class="container">
+<h2>八、EV/EBIT：在 EBITDA 与 FCF 之间再往前走一步</h2>
+<div class="formula">EV/EBIT = Enterprise Value / EBIT</div>
+<p>因为 EBIT 已经扣掉 D&amp;A，所以它至少开始反映资产消耗。</p>
+<div class="grid2">
+<div class="card"><h3>轻资产公司</h3><p>D&amp;A 小，EBITDA 与 EBIT 差距小，两个倍数通常不会相差特别离谱。</p></div>
+<div class="card"><h3>重资产公司</h3><p>D&amp;A 大，EBITDA 可能显著高于 EBIT。此时只看 EV/EBITDA 可能低估资产消耗。</p></div>
+</div>
+<p class="lead">但 EV/EBIT 仍然不是 FCF，因为它没有直接处理 Working Capital、CapEx、税、利息等现金项目。</p>
+</div></section>
+
+<section id="sales"><div class="container">
+<h2>九、PS / EV-Sales：为什么亏损成长公司常常先看“收入”</h2>
+<div class="formula">P/S = Market Cap / Revenue</div>
+<div class="formula">EV/Sales = Enterprise Value / Revenue</div>
+<p>如果一家公司还处于高速增长阶段，Net Income 和 FCF 可能为负，P/E 和 P/FCF 就失去了正常意义。这时候 Revenue 是相对稳定、可比较的业务规模指标。</p>
+<div class="callout">但是：<b>Sales 只是估值的“入口”，绝不是终点。</b>最终一定要问未来 Gross Margin、Operating Margin、FCF Margin 到底能到多少。</div>
+</div></section>
+
+<section id="ps-math"><div class="container">
+<h2>十、把 PS 拆开：你会发现它最终还是在赌未来 FCF Margin</h2>
+<div class="formula">P/S = P/FCF × FCF Margin</div>
+<p>严格说这是在同一口径、同一时期定义下的代数关系。它非常适合建立直觉：</p>
+<table>
+<tr><th>公司</th><th>Market Cap</th><th>Revenue</th><th>P/S</th><th>未来 FCF Margin</th><th>假设未来 Revenue</th><th>未来 FCF</th></tr>
+<tr><td>A</td><td>$150B</td><td>$10B</td><td>15×</td><td>30%</td><td>$20B</td><td>$6B</td></tr>
+<tr><td>B</td><td>$150B</td><td>$10B</td><td>15×</td><td>5%</td><td>$20B</td><td>$1B</td></tr>
+</table>
+<div class="callout green"><b>结论：</b>同样的 P/S，只要未来 Margin 不一样，真正的经济价值就可能完全不同。所以高 PS 公司真正需要证明的是：<b>未来收入规模 × 长期利润/现金率</b>。</div>
+</div></section>
+
+<section id="forward"><div class="container">
+<h2>十一、TTM、NTM、Forward：一个倍数为什么经常“口径不明”</h2>
+<table>
+<tr><th>术语</th><th>全称</th><th>意思</th><th>问题</th></tr>
+<tr><td>TTM</td><td>Trailing Twelve Months</td><td>过去 12 个月实际结果</td><td>最可靠，但可能落后于拐点。</td></tr>
+<tr><td>NTM</td><td>Next Twelve Months</td><td>未来 12 个月预测</td><td>更前瞻，但依赖预测。</td></tr>
+<tr><td>Forward P/E</td><td>Forward Price/Earnings</td><td>未来 EPS 对应的 PE</td><td>分析师预期修正会让倍数变化。</td></tr>
+<tr><td>FY1 / FY2</td><td>Fiscal Year 1 / 2</td><td>下一财年/下下财年</td><td>不同公司财年时间不同。</td></tr>
+<tr><td>Normalized</td><td>正常化</td><td>尝试剔除周期/一次性影响</td><td>主观性更高。</td></tr>
+</table>
+<div class="callout orange" style="margin-top:18px"><b>所以当别人告诉你“这家公司只有 18× PE”时，你第一反应应该是问：</b>TTM 还是 Forward？GAAP 还是 Adjusted？Earnings 是周期高点还是正常水平？</div>
+</div></section>
+
+<section id="gaap"><div class="container">
+<h2>十二、GAAP vs Non-GAAP：为什么 Adjusted Earnings 不能直接照单全收</h2>
+<div class="grid2">
+<div class="card"><span class="tag blue">GAAP</span><h3>标准化会计口径</h3><p>适合跨期、跨公司的基础比较。调整空间相对小。</p></div>
+<div class="card"><span class="tag orange">Non-GAAP</span><h3>经营视角的补充</h3><p>公司可能剔除 SBC、并购摊销、重组等项目，用来描述“核心经营表现”。</p></div>
+</div>
+<p>问题不在于 Non-GAAP 一定不好，而在于：<b>被调整掉的项目是不是长期反复发生？</b>如果每年都有大额 SBC，那么把 SBC 永久排除，可能会让利润看起来过于漂亮。</p>
+</div></section>
+
+<section id="company-choice"><div class="container">
+<h2>十三、不同类型公司，为什么适合不同估值倍数</h2>
+<table>
+<tr><th>公司类型</th><th>通常更值得关注</th><th>原因</th><th>重点风险</th></tr>
+<tr><td>成熟高利润科技</td><td>P/E、P/FCF</td><td>利润和现金流均成熟。</td><td>增长放缓、SBC、资本回报。</td></tr>
+<tr><td>成熟 SaaS</td><td>P/FCF、P/E、EV/EBIT</td><td>现金流已经成为核心经济结果。</td><td>SBC、增长减速。</td></tr>
+<tr><td>高增长亏损 SaaS</td><td>PS、EV/Sales</td><td>P/E / PFCF 当前可能无意义。</td><td>未来 Margin 是否兑现。</td></tr>
+<tr><td>半导体</td><td>P/E、EV/EBITDA、FCF</td><td>盈利强，但周期与 CapEx 重要。</td><td>周期顶部利润虚高。</td></tr>
+<tr><td>AI 基础设施</td><td>EV/EBITDA + FCF</td><td>D&amp;A、CapEx、Debt 极重要。</td><td>资本强度与融资。</td></tr>
+<tr><td>周期制造</td><td>Normalized EBIT/FCF</td><td>单年利润不能代表长期状态。</td><td>周期位置。</td></tr>
+</table>
+<div class="callout green" style="margin-top:18px"><b>重要：</b>不是“一家公司只能用一个倍数”。优秀的分析恰恰应该让几个倍数互相校验。</div>
+</div></section>
+
+<section id="same-company"><div class="container">
+<h2>十四、同一家公司用不同倍数，为什么会看到不同数字</h2>
+<p class="lead">假设公司经营数据如下：</p>
+<div class="formula">Revenue = $100B
+EBITDA = $30B
+EBIT = $20B
+Net Income = $15B
+FCF = $18B
+Market Cap = $300B
+Net Debt = $60B
+EV = $360B</div>
+<table>
+<tr><th>倍数</th><th>结果</th><th>它在回答什么</th></tr>
+<tr><td>P/E</td><td>20×</td><td>股东价值 / 净利润。</td></tr>
+<tr><td>P/FCF</td><td>16.7×</td><td>股东价值 / 自由现金。</td></tr>
+<tr><td>EV/EBITDA</td><td>12×</td><td>企业价值 / EBITDA。</td></tr>
+<tr><td>EV/EBIT</td><td>18×</td><td>企业价值 / EBIT。</td></tr>
+<tr><td>EV/Sales</td><td>3.6×</td><td>企业价值 / Revenue。</td></tr>
+</table>
+<div class="callout">这些数字没有互相打架。它们只是在看同一家公司的不同“楼层”。<b>问题不是哪个倍数最大，而是哪个倍数最能回答你当前要研究的问题。</b></div>
+</div></section>
+
+<section id="bridge-math"><div class="container">
+<h2>十五、把 P/E 与 EV/EBITDA 连接起来：中间其实隔着一整条利润瀑布</h2>
+<div class="chart">
+<div class="chart-title">同一家公司从 EBITDA 到 Net Income</div>
+<svg viewBox="0 0 1100 450">
+<rect x="70" y="55" width="200" height="60" rx="9" fill="#315efb"/><text x="170" y="92" text-anchor="middle" fill="#fff" font-weight="700">EBITDA 30</text>
+<rect x="310" y="55" width="200" height="60" rx="9" fill="#d9822b"/><text x="410" y="92" text-anchor="middle" fill="#fff" font-weight="700">− D&amp;A 10</text>
+<rect x="550" y="55" width="200" height="60" rx="9" fill="#149b68"/><text x="650" y="92" text-anchor="middle" fill="#fff" font-weight="700">EBIT 20</text>
+<rect x="790" y="55" width="220" height="60" rx="9" fill="#111827"/><text x="900" y="92" text-anchor="middle" fill="#fff" font-weight="700">Net Income 15</text>
+<line x1="270" y1="85" x2="310" y2="85" stroke="#98a2b3" stroke-width="3"/><line x1="510" y1="85" x2="550" y2="85" stroke="#98a2b3" stroke-width="3"/><line x1="750" y1="85" x2="790" y2="85" stroke="#98a2b3" stroke-width="3"/>
+<text x="70" y="190" font-size="15" font-weight="700" fill="#17202b">中间还发生了什么？</text>
+<text x="70" y="225" font-size="14" fill="#475467">Interest → 利息</text>
+<text x="70" y="257" font-size="14" fill="#475467">Tax → 所得税</text>
+<text x="70" y="289" font-size="14" fill="#475467">Other Income / Expense → 非经营项目</text>
+<text x="70" y="321" font-size="14" fill="#475467">因此 EV/EBITDA 与 P/E 不可能天然相等。</text>
+<rect x="70" y="365" width="940" height="42" rx="9" fill="#eef2ff"/><text x="540" y="392" text-anchor="middle" fill="#3346b3" font-size="14" font-weight="700">理解两种倍数的关键：不是争论“哪个更准”，而是看你想把哪些成本/资本结构放进分母。</text>
+</svg></div>
+</div></section>
+
+<section id="cases"><div class="container">
+<h2>十六、结合我们之前研究的公司：估值倍数应该怎么读</h2>
+<div class="grid2">
+<div class="card"><span class="tag blue">Snowflake</span><h3>PS 为什么合理，但不能停在 PS</h3><p>Snowflake FY2026 Product Revenue 约 $4.47B，Product Gross Margin 约 72%，GAAP Operating Loss 约 $1.44B，同时经营现金流约 $1.22B、FCF 约 $1.12B。citeturn797524search0</p><p>这类公司当前更重要的问题不是“PE 多少”，而是未来 Revenue、Operating Margin 和 FCF Margin 能走到哪里。</p></div>
+<div class="card"><span class="tag green">Amazon</span><h3>为什么 P/E 与 EV/EBITDA 之外还要看 FCF</h3><p>Amazon 2025 Revenue 约 $716.9B、Operating Income 约 $80.0B、Net Income 约 $77.7B；业务又包含零售、AWS、广告等多种经济模型。citeturn797524search1</p><p>因此不能只找一个“正确倍数”，而应分别看业务利润池、资本开支和现金流。</p></div>
+<div class="card"><span class="tag orange">NVIDIA</span><h3>高 P/E 为什么需要“增长”来解释</h3><p>NVIDIA FY2026 Revenue 约 $215.9B，同比增长 65%；Gross Margin 71.1%，Operating Income $130.4B。citeturn797524search2turn797524search3</p><p>对于这类高增长、高利润率公司，不能简单拿成熟公司的 PE 直接套用。真正的问题是：未来增长能维持多久，Margin 能维持多久。</p></div>
+<div class="card"><span class="tag red">CRWV / NBIS</span><h3>为什么 EV/EBITDA 很重要，但不够</h3><p>AI 基础设施的 D&amp;A、CapEx、债务融资都可能非常重。EV/EBITDA 有助于看经营规模，但最终必须追到 FCF、债务和每股经济价值。</p></div>
+<div class="card"><span class="tag blue">Boeing</span><h3>为什么要 Normalized FCF</h3><p>周期制造业单年 EBITDA / EPS 可能受交付节奏、产能、库存和预付款影响。更重要的是长期正常化的现金创造能力。</p></div>
+<div class="card"><span class="tag green">Adobe</span><h3>为什么成熟订阅公司可以看 P/FCF</h3><p>当 Revenue 已经成熟、Operating Margin 和 FCF 都较稳定时，估值可以逐步从“收入故事”转向“利润和现金故事”。</p></div>
+</div>
+</div></section>
+
+<section id="reverse"><div class="container">
+<h2>十七、真正从“看倍数”进入“做估值”：Reverse Valuation</h2>
+<p class="lead">这是我们之前分析 AVGO、BA、CRM 时经常做的事情：不给你一个“合理 PE”，而是从今天的股价反推市场到底在要求什么。</p>
+<div class="chart">
+<div class="chart-title">价格 → 隐含经营假设</div>
+<svg viewBox="0 0 1100 430">
+<rect x="55" y="55" width="170" height="60" rx="9" fill="#111827"/><text x="140" y="92" text-anchor="middle" fill="#fff" font-weight="700">当前股价</text>
+<rect x="270" y="55" width="170" height="60" rx="9" fill="#315efb"/><text x="355" y="92" text-anchor="middle" fill="#fff" font-weight="700">Market Cap / EV</text>
+<rect x="485" y="55" width="170" height="60" rx="9" fill="#149b68"/><text x="570" y="92" text-anchor="middle" fill="#fff" font-weight="700">隐含 Earnings / FCF</text>
+<rect x="700" y="55" width="170" height="60" rx="9" fill="#d9822b"/><text x="785" y="92" text-anchor="middle" fill="#fff" font-weight="700">隐含 Margin</text>
+<rect x="915" y="55" width="130" height="60" rx="9" fill="#315efb"/><text x="980" y="92" text-anchor="middle" fill="#fff" font-weight="700">Growth</text>
+<g stroke="#98a2b3" stroke-width="3"><line x1="225" y1="85" x2="270" y2="85"/><line x1="440" y1="85" x2="485" y2="85"/><line x1="655" y1="85" x2="700" y2="85"/><line x1="870" y1="85" x2="915" y2="85"/></g>
+<text x="70" y="180" font-size="15" font-weight="700" fill="#17202b">举例：市场给一家亏损 SaaS 15× Sales。</text>
+<text x="70" y="215" font-size="14" fill="#475467">你不能只说“15× 很高”。应该问：未来 Revenue 是 $10B 还是 $30B？</text>
+<text x="70" y="248" font-size="14" fill="#475467">长期 FCF Margin 是 5%、15% 还是 30%？</text>
+<text x="70" y="281" font-size="14" fill="#475467">然后再问：市场愿意给成熟状态多少倍 FCF？</text>
+<rect x="70" y="335" width="950" height="50" rx="10" fill="#eef2ff"/><text x="545" y="366" text-anchor="middle" font-size="15" font-weight="700" fill="#3346b3">Reverse Valuation 的问题不是“贵不贵”，而是“这个价格要求我相信什么？”</text>
+</svg></div>
+</div></section>
+
+<section id="multiples"><div class="container">
+<h2>十八、一个非常重要的进阶认识：Multiple 本身也有“来源”</h2>
+<p class="lead">后面进入 DCF 前，你先建立一个直觉：一个高倍数通常意味着市场相信未来现金流增长更快、持续时间更长，或者风险更低。</p>
+<div class="grid3">
+<div class="card"><span class="tag blue">Growth</span><h3>增长更快</h3><p>未来 Earnings / FCF 更大，因此今天可以为它支付更高价格。</p></div>
+<div class="card"><span class="tag green">Duration</span><h3>高增长持续更久</h3><p>同样 30% 增长，持续 2 年和持续 8 年，价值完全不同。</p></div>
+<div class="card"><span class="tag orange">Risk</span><h3>风险更低</h3><p>现金流越稳定、资产负债表越强，投资者要求的回报率可能越低，对应估值倍数可能更高。</p></div>
+</div>
+<div class="callout">这三件事——<b>Growth、Duration、Risk</b>——将在 DCF 中被系统地数学化。届时你会看到：PE/FCF/EV/EBITDA 其实是在用一个非常简化的方式表达市场对未来现金流的定价。</div>
+</div></section>
+
+<section id="mistakes"><div class="container">
+<h2>十九、估值倍数最常见的 8 个坑</h2>
+<table>
+<tr><th>#</th><th>坑</th><th>为什么错</th></tr>
+<tr><td>1</td><td>看到 PE 低就认为便宜</td><td>可能是周期高点利润。</td></tr>
+<tr><td>2</td><td>只比较 P/E，不看增长</td><td>10× 与 30× 的公司可能处于完全不同生命周期。</td></tr>
+<tr><td>3</td><td>拿 EV/EBITDA 当 FCF</td><td>EBITDA 没有扣 CapEx。</td></tr>
+<tr><td>4</td><td>不同公司直接比较 PS</td><td>长期 Margin 可能天差地别。</td></tr>
+<tr><td>5</td><td>忽略 Net Debt</td><td>Market Cap 相同，不代表 EV 相同。</td></tr>
+<tr><td>6</td><td>混用 TTM 与 Forward</td><td>分母时间点不一致。</td></tr>
+<tr><td>7</td><td>直接接受 Adjusted Earnings</td><td>一次性调整可能变成“每年都有”。</td></tr>
+<tr><td>8</td><td>只看总 FCF，不看 FCF/Share</td><td>SBC / 增发可能稀释股东。</td></tr>
+</table>
+</div></section>
+
+<section id="checklist"><div class="container">
+<h2>二十、以后看到任何一个估值倍数，固定问这 10 个问题</h2>
+<div class="card">
+<ol style="margin:0;padding-left:24px">
+<li><b>分子是 Market Cap 还是 EV？</b></li>
+<li><b>分母是 Net Income、EBITDA、EBIT、FCF 还是 Revenue？</b></li>
+<li><b>分子分母是否口径匹配？</b></li>
+<li><b>TTM、NTM、FY1 还是 Normalized？</b></li>
+<li><b>GAAP 还是 Adjusted？</b></li>
+<li><b>公司处于增长期、成熟期还是周期高/低点？</b></li>
+<li><b>未来 Revenue 增长多少？</b></li>
+<li><b>长期 Margin 能到多少？</b></li>
+<li><b>CapEx、Debt、SBC 会不会改变股东真正拿到的经济利益？</b></li>
+<li><b>把当前价格反推回去，市场到底隐含了什么假设？</b></li>
+</ol>
+</div>
+</div></section>
+
+<section id="takeaway"><div class="container">
+<h2>二十一、第三课真正应该记住的 10 句话</h2>
+<div class="card">
+<ol style="margin:0;padding-left:24px">
+<li><b>估值倍数不是结论，而是价格与某个经营结果之间的比率。</b></li>
+<li><b>P/E = 股东市值 / 净利润。</b></li>
+<li><b>P/FCF = 股东市值 / 自由现金流。</b></li>
+<li><b>EV/EBITDA = 企业价值 / EBITDA。</b></li>
+<li><b>EV/EBIT = 企业价值 / EBIT。</b></li>
+<li><b>PS / EV-Sales 在利润不成熟时有用，但最终必须落到未来 Margin。</b></li>
+<li><b>Market Cap 与 EV 不同，核心区别来自 Debt、Cash 等资本结构项目。</b></li>
+<li><b>TTM、Forward、GAAP、Non-GAAP 会改变倍数的实际含义。</b></li>
+<li><b>没有天然“最好”的倍数；最重要的是分母与商业模式是否匹配。</b></li>
+<li><b>真正的估值思维，是从“这个倍数高不高”升级到“这个价格要求我相信什么”。</b></li>
+</ol>
+</div>
+<div class="callout green" style="margin-top:18px"><b>下一阶段：</b>第四课可以专门把 <b>Enterprise Value ↔ Equity Value</b> 讲透，然后进入我们估值学习中最重要的一块：<b>Growth + Margin + Multiple</b>，最终再落到 DCF 和 Reverse DCF。</div>
+</div></section>
+
+<section><div class="container">
+<h2>参考资料</h2>
+<div class="source">
+Amazon 2025 Form 10-K：Revenue、Operating Income、Net Income及业务分部数据。citeturn797524search1<br><br>
+Snowflake FY2026 Full-Year Results：Product Revenue、Product Gross Margin、GAAP Operating Loss、CFO、FCF。citeturn797524search0<br><br>
+NVIDIA FY2026 Form 10-K：Revenue、Gross Margin、Operating Income、Net Income及利润率变化。citeturn797524search2turn797524search3
+</div></div></section>
+</main>
+<footer><div class="container">说明：本课用于建立估值框架。真实公司分析应以最新 10-K / 10-Q、公司自身定义和完整资本结构为准；不同数据平台的 EV、Forward Earnings 与 Adjusted Earnings 口径可能不同。</div></footer>
+</body></html>

@@ -22,8 +22,11 @@ investment-research/
 │   ├── INTC/                 # 英特尔主档案、Q2财报复盘与SOTP分部估值模型
 │   ├── VST/                  # Vistra 主档案、Q2财报复盘与核电SOTP估值模型
 │   ├── AMZN/                 # 亚马逊主档案、Q2财报复盘与五大支柱SOTP估值模型
-│   └── GE/                   # GE Aerospace 主档案、Q2财报复盘与航发后市场SOTP估值模型
-│       ├── README.md         # GE 主档案 (4.4万台商用航发底座、CFM垄断、剃刀与刀片模式)
+│   ├── GE/                   # GE Aerospace 主档案、Q2财报复盘与航发后市场SOTP估值模型
+│   ├── KLAC/                 # KLA Corp 主档案、Q4全财年财报复盘与良率控制SOTP估值模型
+│   ├── FN/                   # Fabrinet 主档案、Q4全财年财报复盘与AI光互连SOTP估值模型
+│   └── VRT/                  # Vertiv 主档案、Q2财报复盘与液冷温控/供电SOTP估值模型
+│       ├── README.md         # VRT 主档案 (全球AI温控供电霸主、英伟达联合研发、净现金转正、订单破$150亿)
 │       ├── earnings/         # 历季财报复盘 (FY2026-Q2.md 等)
 │       └── research/         # 深度专题与估值模型 (SOTP分部模型)
 ├── industries/             # [行业研究] 上下游产业链与行业全景图
@@ -42,6 +45,9 @@ investment-research/
 | [**VST**](companies/VST/README.md) | Vistra Corp. | 电力公用事业 / AI算力基建 | **重点跟踪** | **强力看多** | **$148.38** | **$186.04** | **+25.4%** | [FY26 Q2](companies/VST/earnings/FY2026-Q2.md) | 2026-09-13 |
 | [**AMZN**](companies/AMZN/README.md) | Amazon.com, Inc. | 云计算与AI / 零售 / 广告 | **重点跟踪** | **强烈看多** | **$256.78** | **$328.23** | **+27.8%** | [FY26 Q2](companies/AMZN/earnings/FY2026-Q2.md) | 2026-09-13 |
 | [**GE**](companies/GE/README.md) | GE Aerospace | 航空航天动力 / 后市场维修 | **重点跟踪** | **审慎看多** | **$323.66** | **$365.00** | **+12.8%** | [FY26 Q2](companies/GE/earnings/FY2026-Q2.md) | 2026-09-13 |
+| [**KLAC**](companies/KLAC/README.md) | KLA Corporation | 半导体制造良率与过程控制 | **重点跟踪** | **审慎看多** | **$168.02** | **$180.67** | **+7.5%** | [FY26 Q4](companies/KLAC/earnings/FY2026-Q4.md) | 2026-09-16 |
+| [**FN**](companies/FN/README.md) | Fabrinet | 高端精密光学与AI光互连制造 | **重点跟踪** | **强烈看多** | **$374.91** | **$442.08** | **+17.9%** | [FY26 Q4](companies/FN/earnings/FY2026-Q4.md) | 2026-09-17 |
+| [**VRT**](companies/VRT/README.md) | Vertiv Holdings Co | AI算力基建 / 液冷温控与供电 | **重点跟踪** | **强烈看多** | **$239.41** | **$289.49** | **+20.9%** | [FY26 Q2](companies/VRT/earnings/FY2026-Q2.md) | 2026-09-17 |
 
 > **状态说明**：`重点跟踪` (深度调研中) / `持仓` (已有头寸) / `观察` (列入 Watchlist) / `已清仓` / `暂不关注`
 
