@@ -26,8 +26,9 @@ investment-research/
 │   ├── KLAC/                 # KLA Corp 主档案、Q4全财年财报复盘与良率控制SOTP估值模型
 │   ├── FN/                   # Fabrinet 主档案、Q4全财年财报复盘与AI光互连SOTP估值模型
 │   ├── VRT/                  # Vertiv 主档案、Q2财报复盘与液冷温控/供电SOTP估值模型
-│   └── GLW/                  # Corning 主档案、Q2财报复盘与高密光通信/特种材料SOTP估值模型
-│       ├── README.md         # GLW 主档案 (高密光通信霸主、英伟达10x扩产、亚马逊大单、Springboard升级)
+│   ├── GLW/                  # Corning 主档案、Q2财报复盘与高密光通信/特种材料SOTP估值模型
+│   └── BA/                   # Boeing 主档案、Q2财报复盘与民航大飞机双寡头/防务SOTP估值模型
+│       ├── README.md         # BA 主档案 (民航大飞机双寡头、Kelly Ortberg新政、737提速、订单破$7,150亿)
 │       ├── earnings/         # 历季财报复盘 (FY2026-Q2.md 等)
 │       └── research/         # 深度专题与估值模型 (SOTP分部模型)
 ├── industries/             # [行业研究] 上下游产业链与行业全景图
@@ -50,6 +51,7 @@ investment-research/
 | [**FN**](companies/FN/README.md) | Fabrinet | 高端精密光学与AI光互连制造 | **重点跟踪** | **强烈看多** | **$374.91** | **$442.08** | **+17.9%** | [FY26 Q4](companies/FN/earnings/FY2026-Q4.md) | 2026-09-17 |
 | [**VRT**](companies/VRT/README.md) | Vertiv Holdings Co | AI算力基建 / 液冷温控与供电 | **重点跟踪** | **强烈看多** | **$239.41** | **$289.49** | **+20.9%** | [FY26 Q2](companies/VRT/earnings/FY2026-Q2.md) | 2026-09-17 |
 | [**GLW**](companies/GLW/README.md) | Corning Incorporated | AI光通信高密互连 / 特种材料 | **重点跟踪** | **强烈看多** | **$149.79** | **$175.00** | **+16.8%** | [FY26 Q2](companies/GLW/earnings/FY2026-Q2.md) | 2026-09-19 |
+| [**BA**](companies/BA/README.md) | The Boeing Company | 商用大飞机制造 / 航空防务军工 | **重点跟踪** | **审慎看多** | **$198.20** | **$217.80** | **+9.9%** | [FY26 Q2](companies/BA/earnings/FY2026-Q2.md) | 2026-09-20 |
 
 > **状态说明**：`重点跟踪` (深度调研中) / `持仓` (已有头寸) / `观察` (列入 Watchlist) / `已清仓` / `暂不关注`
 
