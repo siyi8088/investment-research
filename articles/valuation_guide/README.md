@@ -25,7 +25,7 @@
 ### 【第三篇：终极真理·现金流折现（DCF）与反向工程】
 7. **第 07 讲**：[07_DCF手把手推导FCFF.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/07_DCF手把手推导FCFF.md)（已完稿 ✅ | 封面：`assets/cover_ep07_2.35x1.jpg`）
 8. **第 08 讲**：[08_终值陷阱与自洽法则.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/08_终值陷阱与自洽法则.md)（已完稿 ✅ | 封面：`assets/cover_ep08_2.35x1.jpg`）
-9. **第 09 讲**：`09_反向DCF预期投资学.md`（待启动 ⏳）
+9. **第 09 讲**：[09_反向DCF预期投资学.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/09_反向DCF预期投资学.md)（已完稿 ✅ | 封面：`assets/cover_ep09_2.35x1.jpg`）
 
 ### 【第四篇：因地制宜·不同商业物种的专用估值武器】
 10. **第 10 讲**：`10_SaaS与订阅经济学.md`（待启动 ⏳）
