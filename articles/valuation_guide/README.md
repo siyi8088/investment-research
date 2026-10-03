@@ -28,7 +28,7 @@
 9. **第 09 讲**：[09_反向DCF预期投资学.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/09_反向DCF预期投资学.md)（已完稿 ✅ | 封面：`assets/cover_ep09_2.35x1.jpg`）
 
 ### 【第四篇：因地制宜·不同商业物种的专用估值武器】
-10. **第 10 讲**：`10_SaaS与订阅经济学.md`（待启动 ⏳）
+10. **第 10 讲**：[10_SaaS与订阅经济学.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/10_SaaS与订阅经济学.md)（已完稿 ✅ | 封面：`assets/cover_ep10_2.35x1.jpg`）
 11. **第 11 讲**：`11_半导体与硬科技中枢估值.md`（待启动 ⏳）
 12. **第 12 讲**：`12_分部加总SOTP估值法.md`（待启动 ⏳）
 
