@@ -29,9 +29,14 @@
 
 ### 【第四篇：因地制宜·不同商业物种的专用估值武器】
 10. **第 10 讲**：[10_SaaS与订阅经济学.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/10_SaaS与订阅经济学.md)（已完稿 ✅ | 封面：`assets/cover_ep10_2.35x1.jpg`）
-11. **第 11 讲**：`11_半导体与硬科技中枢估值.md`（待启动 ⏳）
-12. **第 12 讲**：`12_分部加总SOTP估值法.md`（待启动 ⏳）
+11. **第 11 讲**：[11_半导体与硬科技估值法.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/11_半导体与硬科技估值法.md)（已完稿 ✅ | 封面：`assets/cover_ep11_2.35x1.jpg`）
+12. **第 12 讲**：[12_分部加总SOTP估值法.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/12_分部加总SOTP估值法.md)（已完稿 ✅ | 封面：`assets/cover_ep12_2.35x1.jpg`）
 
 ### 【第五篇：知行合一·买方级估值建模全流程实操】
-13. **第 13 讲**：`13_10K三情景财务预测买方实战.md`（待启动 ⏳）
-14. **第 14 讲**：`14_安全边际与投资备忘录自查.md`（待启动 ⏳）
+13. **第 13 讲**：[13_10K三情景财务预测买方实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/13_10K三情景财务预测买方实战.md)（已完稿 ✅ | 封面：`assets/cover_ep13_2.35x1.jpg`）
+14. **第 14 讲**：[14_安全边际与投资备忘录自查.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/14_安全边际与投资备忘录自查.md)（已完稿·全专栏圆满收官 ✅ | 封面：`assets/cover_ep14_2.35x1.jpg`）
+
+---
+
+> **《买方级估值修炼手册》全专栏 14 讲已全部完稿。**
+
