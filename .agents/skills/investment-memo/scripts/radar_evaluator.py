@@ -67,7 +67,7 @@ def evaluate_and_plot(ticker, scores, output_png=None):
             angles += angles[:1]
             plot_scores = scores + scores[:1]
 
-            fig, ax = plt.subplots(figsize=(8.5, 7.5), subplot_kw=dict(polar=True), dpi=300)
+            fig, ax = plt.subplots(figsize=(6.8, 6.0), subplot_kw=dict(polar=True), dpi=160)
             fig.patch.set_facecolor('#0d1117')
             ax.set_facecolor('#161b22')
 
