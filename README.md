@@ -24,6 +24,7 @@ investment-research/
 │   ├── GLW/                  # 康宁 (AI高密光纤光互连 / 真实造血修复 / 备忘录 49.0分)
 │   ├── VRT/                  # 维谛技术 (AI数据中心液冷绝对龙头 / 逢低击球区 / 备忘录 47.5分)
 │   ├── NOK/                  # 诺基亚 ($30.8亿净现金 / Infinera整合与指数重返 / 备忘录 46.0分)
+│   ├── QCOM/                 # 高通 (汽车数字底盘高增 / AI PC突破 / 备忘录 52.0分)
 │   ├── BA/                   # 波音 (300天在制品积压 / 估值透支 / 观察池等待深度安全边际)
 │   ├── INTC/                 # 英特尔 (重资产折旧承压 / IFS微利拐点 / 观察池等待击球区)
 │   ├── VST/                  # Vistra (电力公用事业 / AI算力核电基建 / SOTP估值)
@@ -53,6 +54,7 @@ investment-research/
 | [**GLW**](companies/GLW/README.md) | Corning Incorporated | AI光通信互连 / 特种材料 | **重点跟踪** | **强烈看多 (稳健配置)** | **$149.79** | **$175.00** | **+16.8%** | **49.0 / 60.0** (PROCEED) | [FY26 Q2](companies/GLW/earnings/FY2026-Q2.md) | 2026-10-04 |
 | [**AVGO**](companies/AVGO/README.md) | Broadcom Inc. | 定制半导体 / 企业级软件 | **重点跟踪** | **重点跟踪 (买入)** | **$378.00** | **$475.00** | **+25.7%** | **47.5 / 60.0** (PROCEED) | [FY26 Q3](companies/AVGO/earnings/FY2026-Q3.md) | 2026-10-04 |
 | [**VRT**](companies/VRT/README.md) | Vertiv Holdings Co | AI算力温控 / 液冷与供电 | **重点跟踪** | **重点跟踪 (逢低布局)** | **$245.00** | **$289.49** | **+18.2%** | **47.5 / 60.0** (PROCEED) | [FY26 Q2](companies/VRT/earnings/FY2026-Q2.md) | 2026-10-04 |
+| [**QCOM**](companies/QCOM/README.md) | Qualcomm Incorporated | 边缘AI计算 / 汽车底盘 / 专利池 | **重点跟踪** | **重点买入 (核心配置)** | **$184.87** | **$245.00** | **+32.5%** | **52.0 / 60.0** (PROCEED) | [FY26 Q3](companies/QCOM/earnings/FY2026-Q3.md) | 2026-10-05 |
 | [**NOK**](companies/NOK/README.md) | Nokia Corporation | AI全光网基建 / 专利许可 | **重点跟踪** | **强烈看多 (稳健配置)** | **$8.82** | **$14.20** | **+61.0%** | **46.0 / 60.0** (PROCEED) | [FY26 Q2](companies/NOK/earnings/FY2026-Q2.md) | 2026-10-04 |
 | [**BA**](companies/BA/README.md) | The Boeing Company | 商用大飞机 / 航空防务 | **观察池** | **观察 (等待安全边际)** | **$198.20** | **$217.80** | **+9.9%** | **38.5 / 60.0** (WAIT) | [FY26 Q2](companies/BA/earnings/FY2026-Q2.md) | 2026-10-04 |
 | [**INTC**](companies/INTC/README.md) | Intel Corporation | x86芯片设计 / 晶圆代工 | **观察池** | **观察 (等待安全边际)** | **$105.00** | **$130.00** | **+23.8%** | **40.5 / 60.0** (WAIT) | [FY26 Q2](companies/INTC/earnings/FY2026-Q2.md) | 2026-10-04 |
