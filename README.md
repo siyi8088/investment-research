@@ -18,12 +18,14 @@ investment-research/
 ├── README.md               # [全局索引] 覆盖标的看板与总览
 ├── companies/              # [个股深度主档案、历季财报与买方备忘录]
 │   ├── NVDA/                 # 英伟达 (AI算力系统级垄断者 / 核心底仓 / 备忘录 55.0分)
+│   ├── TSM/                  # 台积电 (先进制程绝对霸主 / 核心底仓 / 备忘录 53.5分)
 │   ├── AMZN/                 # 亚马逊 (负CCC营运资本飞轮 / AWS盈利拐点 / 备忘录 50.5分)
 │   ├── AXP/                  # 美国运通 (闭环高端会员生态 / 极低隐含增速 / 备忘录 53.0分)
 │   ├── AVGO/                 # 博通 (定制ASIC与网络物理层垄断 / 45% FCF利润率 / 备忘录 47.5分)
 │   ├── GLW/                  # 康宁 (AI高密光纤光互连 / 真实造血修复 / 备忘录 49.0分)
 │   ├── VRT/                  # 维谛技术 (AI数据中心液冷绝对龙头 / 逢低击球区 / 备忘录 47.5分)
 │   ├── NOK/                  # 诺基亚 ($30.8亿净现金 / Infinera整合与指数重返 / 备忘录 46.0分)
+│   ├── ASML/                 # 阿斯麦 (EUV/High-NA绝对垄断 / 逢低布局 / 备忘录 51.5分)
 │   ├── QCOM/                 # 高通 (汽车数字底盘高增 / AI PC突破 / 备忘录 52.0分)
 │   ├── BA/                   # 波音 (300天在制品积压 / 估值透支 / 观察池等待深度安全边际)
 │   ├── INTC/                 # 英特尔 (重资产折旧承压 / IFS微利拐点 / 观察池等待击球区)
@@ -49,11 +51,13 @@ investment-research/
 | 标的代码 (Ticker) | 公司名称 | 所属行业 | 覆盖状态 | 买方投资评级 | 现价基准 | Base Case 目标价 | 潜在空间 | 六维量规总分 | 最新财报 | 最近更新 |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [**NVDA**](companies/NVDA/README.md) | NVIDIA Corporation | 半导体 / AI 算力系统 | **持仓** | **强烈看多 (核心底仓)** | **$217.00** | **$350.00** | **+61.3%** | **55.0 / 60.0** (PROCEED) | [FY27 Q2](companies/NVDA/earnings/FY2027-Q2.md) | 2026-10-04 |
+| [**TSM**](companies/TSM/README.md) | Taiwan Semiconductor (TSMC) | 晶圆代工制造 / 先进制程绝对垄断 | **持仓** | **强烈看多 (核心底仓)** | **$430.00** | **$560.00** | **+30.2%** | **53.5 / 60.0** (PROCEED) | [FY26 Q3](companies/TSM/earnings/FY2026-Q3.md) | 2026-10-15 |
 | [**AXP**](companies/AXP/README.md) | American Express | 闭环支付网络 / 会员经济 | **重点跟踪** | **强烈看多 (核心底仓)** | **$275.50** | **$383.80** | **+39.3%** | **53.0 / 60.0** (PROCEED) | [FY26 Q2](companies/AXP/earnings/FY2026-Q2.md) | 2026-10-04 |
 | [**AMZN**](companies/AMZN/README.md) | Amazon.com, Inc. | 云计算与AI / 零售 / 广告 | **重点跟踪** | **强烈看多 (核心底仓)** | **$256.78** | **$328.23** | **+27.8%** | **50.5 / 60.0** (PROCEED) | [FY26 Q2](companies/AMZN/earnings/FY2026-Q2.md) | 2026-10-04 |
 | [**GLW**](companies/GLW/README.md) | Corning Incorporated | AI光通信互连 / 特种材料 | **重点跟踪** | **强烈看多 (稳健配置)** | **$149.79** | **$175.00** | **+16.8%** | **49.0 / 60.0** (PROCEED) | [FY26 Q2](companies/GLW/earnings/FY2026-Q2.md) | 2026-10-04 |
 | [**AVGO**](companies/AVGO/README.md) | Broadcom Inc. | 定制半导体 / 企业级软件 | **重点跟踪** | **重点跟踪 (买入)** | **$378.00** | **$475.00** | **+25.7%** | **47.5 / 60.0** (PROCEED) | [FY26 Q3](companies/AVGO/earnings/FY2026-Q3.md) | 2026-10-04 |
 | [**VRT**](companies/VRT/README.md) | Vertiv Holdings Co | AI算力温控 / 液冷与供电 | **重点跟踪** | **重点跟踪 (逢低布局)** | **$245.00** | **$289.49** | **+18.2%** | **47.5 / 60.0** (PROCEED) | [FY26 Q2](companies/VRT/earnings/FY2026-Q2.md) | 2026-10-04 |
+| [**ASML**](companies/ASML/README.md) | ASML Holding N.V. | 半导体设备 / 极紫外EUV光刻垄断 | **重点跟踪** | **重点跟踪 (逢低布局)** | **$1,780.00** | **$2,100.00** | **+18.0%** | **51.5 / 60.0** (PROCEED) | [FY26 Q3](companies/ASML/earnings/FY2026-Q3.md) | 2026-10-14 |
 | [**QCOM**](companies/QCOM/README.md) | Qualcomm Incorporated | 边缘AI计算 / 汽车底盘 / 专利池 | **重点跟踪** | **重点买入 (核心配置)** | **$184.87** | **$245.00** | **+32.5%** | **52.0 / 60.0** (PROCEED) | [FY26 Q3](companies/QCOM/earnings/FY2026-Q3.md) | 2026-10-05 |
 | [**NOK**](companies/NOK/README.md) | Nokia Corporation | AI全光网基建 / 专利许可 | **重点跟踪** | **强烈看多 (稳健配置)** | **$8.82** | **$14.20** | **+61.0%** | **46.0 / 60.0** (PROCEED) | [FY26 Q2](companies/NOK/earnings/FY2026-Q2.md) | 2026-10-04 |
 | [**BA**](companies/BA/README.md) | The Boeing Company | 商用大飞机 / 航空防务 | **观察池** | **观察 (等待安全边际)** | **$198.20** | **$217.80** | **+9.9%** | **38.5 / 60.0** (WAIT) | [FY26 Q2](companies/BA/earnings/FY2026-Q2.md) | 2026-10-04 |
