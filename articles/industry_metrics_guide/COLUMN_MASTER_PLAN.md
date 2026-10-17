@@ -18,7 +18,7 @@
 | **第 01 讲** | 商业银行解剖：为什么银行没有毛利与FCF？穿透 NIM、ROTCE 与 CET1 监管红线 | 摩根大通 (JPM) vs 美国银行 (BAC) | 净利息收入(NII)、净息差(NIM)、ROTCE、CET1、贷款拨备(Provision) | **已完稿** ✅ | `assets/cover_ep01_2.35x1.jpg` |
 | **第 02 讲** | 华尔街投行与做市商：轻重资产转型、交易做市与投资银行佣金池 | 摩根士丹利 (MS) vs 高盛 (GS) | 非利息收入结构、财富管理净新增资产(NNA)、收费客户资产(Fee-Based Assets)、薪酬费用率、SLR、ROTCE | **已完稿** ✅ | `assets/cover_ep02_2.35x1.jpg` |
 | **第 03 讲** | 资管与另类投资印钞机：AUM 蓄水池、有机净流入与费率 bps 经济学 | 贝莱德 (BLK) vs 黑石 (BX) | AUM、有机资金净流入率(Organic Inflow)、管理费率(bps)、Carry 业绩提成、FRE、DE、干粉储备 | **已完稿** ✅ | `assets/cover_ep03_2.35x1.jpg` |
-| **第 04 讲** | 医疗保险与控费航母：医疗损失率 (MLR) 红线与巴菲特浮存金炼金术 | 联合健康 (UNH)（配对参考：伯克希尔 BRK） | 医疗赔付率(MLR)、Optum 经营利润率、Float 浮存金与投资收益 | 待动笔 📋 | `assets/cover_ep04_2.35x1.jpg` |
+| **第 04 讲** | 医疗保险与控费航母：医疗损失率 (MLR) 红线与巴菲特浮存金炼金术 | 联合健康 (UNH)（配对参考：伯克希尔 BRK） | 医疗赔付率(MLR)、Optum 经营利润率、Float 浮存金与投资收益 | **已完稿** ✅ | `assets/cover_ep04_2.35x1.jpg` |
 | **第 05 讲** | SaaS 与云服务深度体检：合同负债蓄水池、留存率与 CAC 回收期 | 赛富时 (CRM) vs Snowflake (SNOW) | ARR/MRR、净金额留存率(NDR)、现时剩余履约义务(cRPO)、递延收入 | 待动笔 📋 | `assets/cover_ep05_2.35x1.jpg` |
 | **第 06 讲** | 互联网平台与双边网络：变现漏斗、抽成率与单客经济学 (ARPU/LTV) | 优步 (UBER) vs 爱彼迎 (ABNB) | 总预订额(Gross Bookings)、抽成率(Take Rate)、变现漏斗、单均边际贡献 | 待动笔 📋 | `assets/cover_ep06_2.35x1.jpg` |
 | **第 07 讲** | 芯片代工与设备垄断：晶圆良率、折旧剪刀差与在手订单转化 | 台积电 (TSM) vs 阿斯麦 (ASML) | 晶圆良率(Yield)、Fab利用率、制程收入占比、Net Bookings净订单与Backlog | 待动笔 📋 | `assets/cover_ep07_2.35x1.jpg` |
@@ -50,9 +50,12 @@
 4. **严禁使用 ASCII 边框字符代码块**：
    * 避免 ````text ┌─── ```` 这类文本边框，微信会将其当成代码块显示行号。
    * 结构图一律用标准 Markdown 表格排版，墨滴渲染后有优雅底色与边框。
-5. **复杂会计分拆与案例展示准则**：
-   * 复杂情景必须采用 **横向对照表（如：散户直觉 vs 买方真相）**。
-   * 资金流向必须采用 **流水线步骤点（如：第一步 ➔ 第二步 ➔ 第三步）**。
+6. **加粗语法防崩四大军规（严格对齐墨滴排版规范）**：
+   * **列表小标题冒号内包**：一律写作 `* **小标题 (英文)：** 正文`（冒号在粗体内，加粗后跟空格），严禁 `)**:` 或 `)**：` 双标点夹击。
+   * **比较与数学符号绝对外置**：一律写作 `≥ **4.0% ~ 5.0%**`、`< **1.0%**`、`**10.95%** ≈ **11.0%**`，严禁将 `≥`、`<`、`≈` 包入粗体内。
+   * **粗体紧贴句号/分号/括号时显式留空格**：一律写作 `**11.0%** 。`、`**20%** 提成；`、`**$2,050 亿** （其中...）`，严禁标点粘连。
+   * **单单元格紧凑对比**：双标的对比数据必须在同单元格内使用 `<br>`，行间不留空行。
+   * 📘 **完整避坑手册请查阅**：[articles/WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)
 
 ---
 
@@ -74,5 +77,6 @@
 
 ## 📌 专栏配套规则与规范文件索引
 
+* 📘 **微信排版与语法避坑手册**：请查阅 [articles/WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)
 * ⚙️ **自动化行为规则**：请查阅 [.agents/rules/industry-metrics-guide-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/industry-metrics-guide-rules.md)
 * 🛠️ **金融机构分析规程**：请查阅 [.agents/skills/fig-analyzer/SKILL.md](file:///Users/siyi/Documents/code/investment-research/.agents/skills/fig-analyzer/SKILL.md)

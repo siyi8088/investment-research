@@ -7,6 +7,7 @@
 
 * 🎯 **专栏总规划与规范**：请查阅 [COLUMN_MASTER_PLAN.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/COLUMN_MASTER_PLAN.md)
   * 包含：14 讲完整课程大纲、微信/墨滴排版绝对红线（严禁单次引用超300字、禁用LaTeX、禁用Mermaid）、AI 封面提示词库、状态跟踪表。
+* 📘 **微信公众号与墨滴排版通用指南**：请查阅 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)（加粗防崩四大军规、Unicode公式标准、表格紧凑CSS补丁）。
 
 ---
 
@@ -38,5 +39,15 @@
 
 ---
 
-> **《买方级估值修炼手册》全专栏 14 讲已全部完稿。**
+### 【实战案例演练篇：行业龙头买方级估值与投资备忘录】
+> 将专栏 14 讲武器融会贯通，直接对全球标杆龙头展开地毯式解剖与估值定价实战。
+
+* 💎 **实战案例 01**：[01_台积电TSM_买方估值与预期投资学实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/01_台积电TSM_买方估值与预期投资学实战.md)（已完稿·微信发布就绪 ✅ | 封面：`assets/cover_case01_tsm_2.35x1.jpg` | 雷达图：`assets/tsm_radar.png`）
+  * **解剖核心**：垄断全球 92% 先进制程、净利率破 51% 的超级印钞机，为什么 2027E PE 跌至 19.3 倍？
+  * **调用武器**：5 年现金流造血阶梯瀑布（CFO/NI 153.9%）、不可退预付款护城河、EV Bridge 企业价值桥、反向 DCF 逆向求解（现价 $414.24 隐含 10 年 FCF 年化增速仅需 +10.37%）、显性扣除 20% 结构性地缘折价后的 2027E 落地三情景建模（Bear $280 / Base $465 / Bull $590）、双变量敏感性压力测试与买方六维雷达自查（53.5分/60分）。
+
+---
+
+> **《买方级估值修炼手册》全专栏 14 讲方法论已全部完稿，现正式进入【买方个股深度实战案例】系列连载！**
+
 

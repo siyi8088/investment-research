@@ -10,3 +10,5 @@
    - 对于非自然年结算的公司（如 NVDA、MSFT、AAPL 等），必须在财报与研报中显式注明 Fiscal Period 与自然日历区间的对应关系。
 4. **结构完整性与证伪约束**：
    - 每份研报必须遵循 `templates/` 中的标准框架，必须包含明确的「核心投资 Thesis」、「反向证伪条件」与「三情景估值（Bear/Base/Bull）」。
+5. **微信公众号与墨滴排版规范（WeChat & mdnice Compliance）**：
+   - 凡涉及输出至微信公众号或使用墨滴 (mdnice) 排版的内容（包括专栏文章及个股实战附录），必须 100% 遵守 [.agents/rules/wechat-publishing-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/wechat-publishing-rules.md) 与全局母版 [articles/WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)，严格执行加粗防崩四大军规与零 LaTeX 原则。

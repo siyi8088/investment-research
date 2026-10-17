@@ -16,7 +16,7 @@
 1. **第 01 讲**：[01_商业银行财报解剖_JPM与BAC.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/01_商业银行财报解剖_JPM与BAC.md)（已完稿 ✅ | 标的：摩根大通 JPM vs 美国银行 BAC）
 2. **第 02 讲**：[02_华尔街投行与做市商_MS与GS.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/02_华尔街投行与做市商_MS与GS.md)（已完稿 ✅ | 标的：摩根士丹利 MS vs 高盛 GS）
 3. **第 03 讲**：[03_资管与另类投资_BLK与BX.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/03_资管与另类投资_BLK与BX.md)（已完稿 ✅ | 标的：贝莱德 BLK vs 黑石 BX）
-4. **第 04 讲**：04_医疗保险与控费航母_UNH.md（规划中 📋 | 标的：联合健康 UNH）
+4. **第 04 讲**：[04_医疗保险与控费航母_UNH与BRK.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/04_医疗保险与控费航母_UNH与BRK.md)（已完稿 ✅ | 标的：联合健康 UNH vs 伯克希尔哈撒韦 BRK）
 
 ### 【第二板块：数字经济与科技软件·订阅与网络效应】
 5. **第 05 讲**：05_SaaS与云服务深度体检_CRM与SNOW.md（规划中 📋 | 标的：赛富时 CRM vs Snowflake SNOW）
