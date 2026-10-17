@@ -1,6 +1,6 @@
 # 第 01 讲｜商业银行财报解剖：核心指标、计算公式与跨周期真实财报实战（JPMorgan 与 Bank of America）
 
-![《商业银行财报解剖：NIM、ROTCE 与 CET1》专栏封面图](assets/cover_ep01.jpg)
+![《商业银行财报解剖：NIM、ROTCE 与 CET1》专栏封面图](assets/cover_ep01_2.35x1.jpg)
 
 > **专栏定位**：全行业 10-K/10-Q 外科手术显微镜与非 GAAP 核心指标全景字典  
 > **解剖标的**：摩根大通 (JPMorgan Chase, JPM) 主轴深度穿透 ＋ 美国银行 (Bank of America, BAC) 镜像对照  
