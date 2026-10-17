@@ -17,7 +17,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **第 01 讲** | 商业银行解剖：为什么银行没有毛利与FCF？穿透 NIM、ROTCE 与 CET1 监管红线 | 摩根大通 (JPM) vs 美国银行 (BAC) | 净利息收入(NII)、净息差(NIM)、ROTCE、CET1、贷款拨备(Provision) | **已完稿** ✅ | `assets/cover_ep01_2.35x1.jpg` |
 | **第 02 讲** | 华尔街投行与做市商：轻重资产转型、交易做市与投资银行佣金池 | 摩根士丹利 (MS) vs 高盛 (GS) | 非利息收入结构、财富管理净新增资产(NNA)、收费客户资产(Fee-Based Assets)、薪酬费用率、SLR、ROTCE | **已完稿** ✅ | `assets/cover_ep02_2.35x1.jpg` |
-| **第 03 讲** | 资管与另类投资印钞机：AUM 蓄水池、有机净流入与费率 bps 经济学 | 贝莱德 (BLK) vs 黑石 (BX) | AUM、有机资金净流入率(Organic Inflow)、管理费率(bps)、Carry 业绩提成 | 待动笔 📋 | `assets/cover_ep03_2.35x1.jpg` |
+| **第 03 讲** | 资管与另类投资印钞机：AUM 蓄水池、有机净流入与费率 bps 经济学 | 贝莱德 (BLK) vs 黑石 (BX) | AUM、有机资金净流入率(Organic Inflow)、管理费率(bps)、Carry 业绩提成、FRE、DE、干粉储备 | **已完稿** ✅ | `assets/cover_ep03_2.35x1.jpg` |
 | **第 04 讲** | 医疗保险与控费航母：医疗损失率 (MLR) 红线与巴菲特浮存金炼金术 | 联合健康 (UNH)（配对参考：伯克希尔 BRK） | 医疗赔付率(MLR)、Optum 经营利润率、Float 浮存金与投资收益 | 待动笔 📋 | `assets/cover_ep04_2.35x1.jpg` |
 | **第 05 讲** | SaaS 与云服务深度体检：合同负债蓄水池、留存率与 CAC 回收期 | 赛富时 (CRM) vs Snowflake (SNOW) | ARR/MRR、净金额留存率(NDR)、现时剩余履约义务(cRPO)、递延收入 | 待动笔 📋 | `assets/cover_ep05_2.35x1.jpg` |
 | **第 06 讲** | 互联网平台与双边网络：变现漏斗、抽成率与单客经济学 (ARPU/LTV) | 优步 (UBER) vs 爱彼迎 (ABNB) | 总预订额(Gross Bookings)、抽成率(Take Rate)、变现漏斗、单均边际贡献 | 待动笔 📋 | `assets/cover_ep06_2.35x1.jpg` |
