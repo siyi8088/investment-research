@@ -18,18 +18,19 @@
 | **第 01 讲** | 商业银行解剖：为什么银行没有毛利与FCF？穿透 NIM、ROTCE 与 CET1 监管红线 | 摩根大通 (JPM) vs 美国银行 (BAC) | 净利息收入(NII)、净息差(NIM)、ROTCE、CET1、贷款拨备(Provision) | **已完稿** ✅ | `assets/cover_ep01_2.35x1.jpg` |
 | **第 02 讲** | 华尔街投行与做市商：轻重资产转型、交易做市与投资银行佣金池 | 摩根士丹利 (MS) vs 高盛 (GS) | 非利息收入结构、财富管理净新增资产(NNA)、收费客户资产(Fee-Based Assets)、薪酬费用率、SLR、ROTCE | **已完稿** ✅ | `assets/cover_ep02_2.35x1.jpg` |
 | **第 03 讲** | 资管与另类投资印钞机：AUM 蓄水池、有机净流入与费率 bps 经济学 | 贝莱德 (BLK) vs 黑石 (BX) | AUM、有机资金净流入率(Organic Inflow)、管理费率(bps)、Carry 业绩提成、FRE、DE、干粉储备 | **已完稿** ✅ | `assets/cover_ep03_2.35x1.jpg` |
-| **第 04 讲** | 医疗保险与控费航母：医疗损失率 (MLR) 红线与巴菲特浮存金炼金术 | 联合健康 (UNH)（配对参考：伯克希尔 BRK） | 医疗赔付率(MLR)、Optum 经营利润率、Float 浮存金与投资收益 | **已完稿** ✅ | `assets/cover_ep04_2.35x1.jpg` |
-| **第 05 讲** | SaaS 与云服务深度体检：合同负债蓄水池、留存率与 CAC 回收期 | 赛富时 (CRM) vs Snowflake (SNOW) | ARR/MRR、净金额留存率(NDR)、现时剩余履约义务(cRPO)、递延收入 | 待动笔 📋 | `assets/cover_ep05_2.35x1.jpg` |
-| **第 06 讲** | 互联网平台与双边网络：变现漏斗、抽成率与单客经济学 (ARPU/LTV) | 优步 (UBER) vs 爱彼迎 (ABNB) | 总预订额(Gross Bookings)、抽成率(Take Rate)、变现漏斗、单均边际贡献 | 待动笔 📋 | `assets/cover_ep06_2.35x1.jpg` |
-| **第 07 讲** | 芯片代工与设备垄断：晶圆良率、折旧剪刀差与在手订单转化 | 台积电 (TSM) vs 阿斯麦 (ASML) | 晶圆良率(Yield)、Fab利用率、制程收入占比、Net Bookings净订单与Backlog | 待动笔 📋 | `assets/cover_ep07_2.35x1.jpg` |
-| **第 08 讲** | 硬件生态与供应链：BOM 成本结构与供应链营运资本极致压榨 | 苹果公司 (AAPL) vs 英伟达 (NVDA) | BOM 成本拆解、服务/硬件毛利剪刀差、库存天数、采购承诺(Commitments) | 待动笔 📋 | `assets/cover_ep08_2.35x1.jpg` |
-| **第 09 讲** | 创新药与 Biotech：没有收入怎么看？现金跑道、研发烧钱率与催化剂日历 | 福莱医药 (VRTX) / 高增长 Biotech 标杆 | Cash Runway(现金跑道)、Burn Rate(烧钱率)、FDA PDUFA 日期、临床 POS | 待动笔 📋 | `assets/cover_ep09_2.35x1.jpg` |
-| **第 10 讲** | 成熟药企与医疗器械：重磅药专利悬崖 vs 达芬奇机器人的耗材复购 | 诺和诺德 (NVO) vs 直觉外科 (ISRG) | 重磅药单品依赖度、专利悬崖(Patent Cliff)、装机量(Installed Base)、手术量增速 | 待动笔 📋 | `assets/cover_ep10_2.35x1.jpg` |
-| **第 11 讲** | 线下连锁零售与餐饮的生命线：同店增速 (SSSG)、坪效与单店模型 | 好市多 (COST) vs 星巴克 (SBUX) / Chipotle | 同店销售增长(SSSG)、会员续费率、单店年销售额(AUV)、店面级利润率、坪效 | 待动笔 📋 | `assets/cover_ep11_2.35x1.jpg` |
-| **第 12 讲** | 特许加盟 vs 直营商业模式镜像：商业地租抽成与轻资产营运杠杆 | 麦当劳 (MCD) vs 达美乐披萨 (DPZ) | 体系销售额(System-wide Sales)、特许使用费率(Royalty Rate)、单店回收期 | 待动笔 📋 | `assets/cover_ep12_2.35x1.jpg` |
-| **第 13 讲** | AI 电力与公用事业：长期购电协议 (PPA) 与度电利润 Spark Spread | 维斯达能源 (VST) vs 星云能源 (CEG) | 长期购电协议(PPA)、容量电价机制(PJM Auction)、Spark Spread、对冲比例 | 待动笔 📋 | `assets/cover_ep13_2.35x1.jpg` |
-| **第 14 讲** | 周期大宗与航运重资产：全维持现金成本、资本开支周期与资产净值倒推 | 以星航运 (ZIM) / 马士基 vs 自由港铜业 (FCX) | 全维持现金成本(AISC)、运价指数(SCFI)、手持订单占比(Orderbook)、NAV | 待动笔 📋 | `assets/cover_ep14_2.35x1.jpg` |
-| **第 15 讲** | 全行业指标勾稽与买方财报自查清单（收官总览）：15 大行业核心暗门速查字典 | 全行业顶流龙头矩阵横向联立穿透 | 终极买方行业指标全景矩阵图、10-K/10-Q 披露章节索引与一票否决红线 | 待动笔 📋 | `assets/cover_ep15_2.35x1.jpg` |
+| **第 04 讲** | 财产与意外险 (P&C) 解剖：承保周期、综合成本率 (Combined Ratio) 与巴菲特的神秘持仓 | 前进保险 (PGR) vs 丘博保险 (CB) | 签单净保费(NPW)、已赚保费(NPE)、综合成本率(Combined Ratio)、巨灾负荷(Cat Load)、准备金前后滚动调整(Reserve Dev)、浮存金(Float) | **已完稿** ✅ | `assets/cover_ep04_2.35x1.jpg` |
+| **第 05 讲** | 人身与人寿保险 (Life) 解剖：新业务价值 (VNB)、内含价值 (EV) 与三差分润 | 友邦保险 (1299.HK) vs 英国保诚 (2378.HK) | 年化新保费(APE)、新业务价值(VNB)、新业务价值率(VNB Margin)、内含价值(EV)、合约服务边际(CSM)、保单继续率 | **已完稿** ✅ | `assets/cover_ep05_2.35x1.jpg` |
+| **第 06 讲** | SaaS 与云服务深度体检：合同负债蓄水池、留存率与 CAC 回收期 | 赛富时 (CRM) vs Snowflake (SNOW) | ARR/MRR、净金额留存率(NDR)、现时剩余履约义务(cRPO)、递延收入 | 待动笔 📋 | `assets/cover_ep06_2.35x1.jpg` |
+| **第 07 讲** | 互联网平台与双边网络：变现漏斗、抽成率与单客经济学 (ARPU/LTV) | 优步 (UBER) vs 爱彼迎 (ABNB) | 总预订额(Gross Bookings)、抽成率(Take Rate)、变现漏斗、单均边际贡献 | 待动笔 📋 | `assets/cover_ep07_2.35x1.jpg` |
+| **第 08 讲** | 芯片代工与设备垄断：晶圆良率、折旧剪刀差与在手订单转化 | 台积电 (TSM) vs 阿斯麦 (ASML) | 晶圆良率(Yield)、Fab利用率、制程收入占比、Net Bookings净订单与Backlog | 待动笔 📋 | `assets/cover_ep08_2.35x1.jpg` |
+| **第 09 讲** | 硬件生态与供应链：BOM 成本结构与供应链营运资本极致压榨 | 苹果公司 (AAPL) vs 英伟达 (NVDA) | BOM 成本拆解、服务/硬件毛利剪刀差、库存天数、采购承诺(Commitments) | 待动笔 📋 | `assets/cover_ep09_2.35x1.jpg` |
+| **第 10 讲** | 创新药与 Biotech：没有收入怎么看？现金跑道、研发烧钱率与催化剂日历 | 福莱医药 (VRTX) / 高增长 Biotech 标杆 | Cash Runway(现金跑道)、Burn Rate(烧钱率)、FDA PDUFA 日期、临床 POS | 待动笔 📋 | `assets/cover_ep10_2.35x1.jpg` |
+| **第 11 讲** | 成熟药企与医疗器械：重磅药专利悬崖 vs 达芬奇机器人的耗材复购 | 诺和诺德 (NVO) vs 直觉外科 (ISRG) | 重磅药单品依赖度、专利悬崖(Patent Cliff)、装机量(Installed Base)、手术量增速 | 待动笔 📋 | `assets/cover_ep11_2.35x1.jpg` |
+| **第 12 讲** | 线下连锁零售与餐饮的生命线：同店增速 (SSSG)、坪效与单店模型 | 好市多 (COST) vs 星巴克 (SBUX) / Chipotle | 同店销售增长(SSSG)、会员续费率、单店年销售额(AUV)、店面级利润率、坪效 | 待动笔 📋 | `assets/cover_ep12_2.35x1.jpg` |
+| **第 13 讲** | 特许加盟 vs 直营商业模式镜像：商业地租抽成与轻资产营运杠杆 | 麦当劳 (MCD) vs 达美乐披萨 (DPZ) | 体系销售额(System-wide Sales)、特许使用费率(Royalty Rate)、单店回收期 | 待动笔 📋 | `assets/cover_ep13_2.35x1.jpg` |
+| **第 14 讲** | AI 电力与公用事业：长期购电协议 (PPA) 与度电利润 Spark Spread | 维斯达能源 (VST) vs 星云能源 (CEG) | 长期购电协议(PPA)、容量电价机制(PJM Auction)、Spark Spread、对冲比例 | 待动笔 📋 | `assets/cover_ep14_2.35x1.jpg` |
+| **第 15 讲** | 周期大宗与航运重资产：全维持现金成本、资本开支周期与资产净值倒推 | 以星航运 (ZIM) / 马士基 vs 自由港铜业 (FCX) | 全维持现金成本(AISC)、运价指数(SCFI)、手持订单占比(Orderbook)、NAV | 待动笔 📋 | `assets/cover_ep15_2.35x1.jpg` |
+| **第 16 讲** | 全行业指标勾稽与买方财报自查清单（收官总览）：16 大行业核心暗门速查字典 | 全行业顶流龙头矩阵横向联立穿透 | 终极买方行业指标全景矩阵图、10-K/10-Q 披露章节索引与一票否决红线 | 待动笔 📋 | `assets/cover_ep16_2.35x1.jpg` |
 
 ---
 
