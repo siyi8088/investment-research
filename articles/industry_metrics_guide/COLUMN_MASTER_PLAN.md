@@ -20,8 +20,8 @@
 | **第 03 讲** | 资管与另类投资印钞机：AUM 蓄水池、有机净流入与费率 bps 经济学 | 贝莱德 (BLK) vs 黑石 (BX) | AUM、有机资金净流入率(Organic Inflow)、管理费率(bps)、Carry 业绩提成、FRE、DE、干粉储备 | **已完稿** ✅ | `assets/cover_ep03_2.35x1.jpg` |
 | **第 04 讲** | 财产与意外险 (P&C) 解剖：承保周期、综合成本率 (Combined Ratio) 与巴菲特的神秘持仓 | 前进保险 (PGR) vs 丘博保险 (CB) | 签单净保费(NPW)、已赚保费(NPE)、综合成本率(Combined Ratio)、巨灾负荷(Cat Load)、准备金前后滚动调整(Reserve Dev)、浮存金(Float) | **已完稿** ✅ | `assets/cover_ep04_2.35x1.jpg` |
 | **第 05 讲** | 人身与人寿保险 (Life) 解剖：新业务价值 (VNB)、内含价值 (EV) 与三差分润 | 友邦保险 (1299.HK) vs 英国保诚 (2378.HK) | 年化新保费(APE)、新业务价值(VNB)、新业务价值率(VNB Margin)、内含价值(EV)、合约服务边际(CSM)、保单继续率 | **已完稿** ✅ | `assets/cover_ep05_2.35x1.jpg` |
-| **第 06 讲** | SaaS 与云服务深度体检：合同负债蓄水池、留存率与 CAC 回收期 | 赛富时 (CRM) vs Snowflake (SNOW) | ARR/MRR、净金额留存率(NDR)、现时剩余履约义务(cRPO)、递延收入 | 待动笔 📋 | `assets/cover_ep06_2.35x1.jpg` |
-| **第 07 讲** | 互联网平台与双边网络：变现漏斗、抽成率与单客经济学 (ARPU/LTV) | 优步 (UBER) vs 爱彼迎 (ABNB) | 总预订额(Gross Bookings)、抽成率(Take Rate)、变现漏斗、单均边际贡献 | 待动笔 📋 | `assets/cover_ep07_2.35x1.jpg` |
+| **第 06 讲** | SaaS 与云服务深度体检：合同负债蓄水池、留存率与 CAC 回收期 | 赛富时 (CRM) vs Snowflake (SNOW) | ARR/MRR、净金额留存率(NDR)、现时剩余履约义务(cRPO)、递延收入、Rule of 40、SBC稀释率 | **已完稿** ✅ | `assets/cover_ep06_2.35x1.jpg` |
+| **第 07 讲** | 互联网平台与双边网络：变现漏斗、抽成率与单客经济学 (ARPU/LTV) | 优步 (UBER) vs 爱彼迎 (ABNB) | 总预订额(Gross Bookings)、抽成率(Take Rate)、MAPCs、单均边际贡献、未付浮存金 | **已完稿** ✅ | `assets/cover_ep07_2.35x1.jpg` |
 | **第 08 讲** | 芯片代工与设备垄断：晶圆良率、折旧剪刀差与在手订单转化 | 台积电 (TSM) vs 阿斯麦 (ASML) | 晶圆良率(Yield)、Fab利用率、制程收入占比、Net Bookings净订单与Backlog | 待动笔 📋 | `assets/cover_ep08_2.35x1.jpg` |
 | **第 09 讲** | 硬件生态与供应链：BOM 成本结构与供应链营运资本极致压榨 | 苹果公司 (AAPL) vs 英伟达 (NVDA) | BOM 成本拆解、服务/硬件毛利剪刀差、库存天数、采购承诺(Commitments) | 待动笔 📋 | `assets/cover_ep09_2.35x1.jpg` |
 | **第 10 讲** | 创新药与 Biotech：没有收入怎么看？现金跑道、研发烧钱率与催化剂日历 | 福莱医药 (VRTX) / 高增长 Biotech 标杆 | Cash Runway(现金跑道)、Burn Rate(烧钱率)、FDA PDUFA 日期、临床 POS | 待动笔 📋 | `assets/cover_ep10_2.35x1.jpg` |

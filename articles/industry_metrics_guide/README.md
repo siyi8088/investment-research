@@ -20,8 +20,8 @@
 5. **第 05 讲**：[05_人身与人寿保险_AIA与PRU.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/05_人身与人寿保险_AIA与PRU.md)（已完稿 ✅ | 标的：友邦保险 AIA vs 英国保诚 PRU）
 
 ### 【第二板块：数字经济与科技软件·订阅与网络效应】
-6. **第 06 讲**：06_SaaS与云服务深度体检_CRM与SNOW.md（规划中 📋 | 标的：赛富时 CRM vs Snowflake SNOW）
-7. **第 07 讲**：07_互联网平台与双边网络_UBER与ABNB.md（规划中 📋 | 标的：优步 UBER vs 爱彼迎 ABNB）
+6. **第 06 讲**：[06_SaaS与云服务深度体检_CRM与SNOW.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/06_SaaS与云服务深度体检_CRM与SNOW.md)（已完稿 ✅ | 标的：赛富时 CRM vs Snowflake SNOW）
+7. **第 07 讲**：[07_互联网平台与双边网络_UBER与ABNB.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/07_互联网平台与双边网络_UBER与ABNB.md)（已完稿 ✅ | 标的：优步 UBER vs 爱彼迎 ABNB）
 
 ### 【第三板块：硬科技与先进制造·良率、产能与订单】
 8. **第 08 讲**：08_芯片代工与设备垄断_TSM与ASML.md（规划中 📋 | 标的：台积电 TSM vs 阿斯麦 ASML）
