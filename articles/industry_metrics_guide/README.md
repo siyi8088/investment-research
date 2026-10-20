@@ -24,20 +24,21 @@
 7. **第 07 讲**：[07_互联网平台与双边网络_UBER与ABNB.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/07_互联网平台与双边网络_UBER与ABNB.md)（已完稿 ✅ | 标的：优步 UBER vs 爱彼迎 ABNB）
 
 ### 【第三板块：硬科技与先进制造·良率、产能与订单】
-8. **第 08 讲**：08_芯片代工与设备垄断_TSM与ASML.md（规划中 📋 | 标的：台积电 TSM vs 阿斯麦 ASML）
-9. **第 09 讲**：09_硬件生态与供应链_AAPL与NVDA.md（规划中 📋 | 标的：苹果 AAPL vs 英伟达 NVDA）
+8. **第 08 讲**：[08_半导体前道设备_ASML与KLA.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/08_半导体前道设备_ASML与KLA.md)（已完稿 ✅ | 标的：阿斯麦 ASML vs 科磊 KLA）
+9. **第 09 讲**：[09_晶圆代工与先进制程制造_TSM与SMIC.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/09_晶圆代工与先进制程制造_TSM与SMIC.md)（撰写中 ✍️ | 标的：台积电 TSMC vs 中芯国际 SMIC）
+10. **第 10 讲**：10_芯片设计与算力平台_NVDA与AMD.md（规划中 📋 | 标的：英伟达 NVDA vs 超威半导体 AMD）
 
 ### 【第四板块：医疗健康与生命科学·从管线期权到器械耗材】
-10. **第 10 讲**：10_创新药与Biotech研发期权_VRTX.md（规划中 📋 | 标的：福莱医药 VRTX / 经典Biotech）
-11. **第 11 讲**：11_成熟药企与医疗器械_NVO与ISRG.md（规划中 📋 | 标的：诺和诺德 NVO vs 直觉外科 ISRG）
+11. **第 11 讲**：11_创新药与Biotech研发期权_VRTX.md（规划中 📋 | 标的：福莱医药 VRTX / 经典Biotech）
+12. **第 12 讲**：12_成熟药企与医疗器械_NVO与ISRG.md（规划中 📋 | 标的：诺和诺德 NVO vs 直觉外科 ISRG）
 
 ### 【第五板块：大消费与连锁实体·单体经济学】
-12. **第 12 讲**：12_线下连锁零售与餐饮生命线_COST与SBUX.md（规划中 📋 | 标的：好市多 COST vs 星巴克 SBUX）
-13. **第 13 讲**：13_特许加盟与轻资产营运_MCD与DPZ.md（规划中 📋 | 标的：麦当劳 MCD vs 达美乐 DPZ）
+13. **第 13 讲**：13_线下连锁零售与餐饮生命线_COST与SBUX.md（规划中 📋 | 标的：好市多 COST vs 星巴克 SBUX）
+14. **第 14 讲**：14_特许加盟与轻资产营运_MCD与DPZ.md（规划中 📋 | 标的：麦当劳 MCD vs 达美乐 DPZ）
 
 ### 【第六板块：周期重资产、公用事业与宏观基础设施】
-14. **第 14 讲**：14_AI电力与公用事业_VST与CEG.md（规划中 📋 | 标的：维斯达能源 VST vs 星云能源 CEG）
-15. **第 15 讲**：15_周期大宗与航运重资产_ZIM与FCX.md（规划中 📋 | 标的：以星航运 ZIM / 马士基 vs 自由港铜业 FCX）
-16. **第 16 讲**：16_全行业指标勾稽与买方财报自查清单.md（收官总览 📋 | 全行业顶流龙头矩阵横向联立）
+15. **第 15 讲**：15_AI电力与公用事业_VST与CEG.md（规划中 📋 | 标的：维斯达能源 VST vs 星云能源 CEG）
+16. **第 16 讲**：16_周期大宗与航运重资产_ZIM与FCX.md（规划中 📋 | 标的：以星航运 ZIM / 马士基 vs 自由港铜业 FCX）
+17. **第 17 讲**：17_全行业指标勾稽与买方财报自查清单.md（收官总览 📋 | 全行业顶流龙头矩阵横向联立）
 
 ---
