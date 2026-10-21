@@ -1,0 +1,169 @@
+﻿标的,财年,科目,代码,数值(亿美元/%/天),XBRL标签或公式,报告期截止日,10-K申报编号(accn),申报日期,后续被重述,数据性质
+NVDA,2022,营业收入,revenue,269.14,Revenues,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,营业收入,revenue,269.74,Revenues,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,营业收入,revenue,609.22,Revenues,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,营业收入,revenue,1304.97,Revenues,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,营业收入,revenue,2159.38,Revenues,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,营业成本,cogs,94.39,CostOfRevenue,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,营业成本,cogs,116.18,CostOfRevenue,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,营业成本,cogs,166.21,CostOfRevenue,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,营业成本,cogs,326.39,CostOfRevenue,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,营业成本,cogs,624.75,CostOfRevenue,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,毛利润,gross_profit,174.75,GrossProfit,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,毛利润,gross_profit,153.56,GrossProfit,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,毛利润,gross_profit,443.01,GrossProfit,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,毛利润,gross_profit,978.58,GrossProfit,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,毛利润,gross_profit,1534.63,GrossProfit,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,研发费用,rnd,52.68,ResearchAndDevelopmentExpense,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,研发费用,rnd,73.39,ResearchAndDevelopmentExpense,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,研发费用,rnd,86.75,ResearchAndDevelopmentExpense,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,研发费用,rnd,129.14,ResearchAndDevelopmentExpense,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,研发费用,rnd,184.97,ResearchAndDevelopmentExpense,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,净利润,net_income,97.52,NetIncomeLoss,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,净利润,net_income,43.68,NetIncomeLoss,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,净利润,net_income,297.6,NetIncomeLoss,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,净利润,net_income,728.8,NetIncomeLoss,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,净利润,net_income,1200.67,NetIncomeLoss,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,经营现金流,cfo,91.08,NetCashProvidedByUsedInOperatingActivities,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,经营现金流,cfo,56.41,NetCashProvidedByUsedInOperatingActivities,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,经营现金流,cfo,280.9,NetCashProvidedByUsedInOperatingActivities,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,经营现金流,cfo,640.89,NetCashProvidedByUsedInOperatingActivities,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,经营现金流,cfo,1027.18,NetCashProvidedByUsedInOperatingActivities,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,资本开支,capex,9.76,PaymentsToAcquireProductiveAssets,2022-01-30,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2023,资本开支,capex,18.33,PaymentsToAcquireProductiveAssets,2023-01-29,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2024,资本开支,capex,10.69,PaymentsToAcquireProductiveAssets,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,资本开支,capex,32.36,PaymentsToAcquireProductiveAssets,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,资本开支,capex,60.42,PaymentsToAcquireProductiveAssets,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,存货净额,inventory,26.05,InventoryNet,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,存货净额,inventory,51.59,InventoryNet,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,存货净额,inventory,52.82,InventoryNet,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,存货净额,inventory,100.8,InventoryNet,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,存货净额,inventory,214.03,InventoryNet,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,存货-原材料,inv_raw,7.91,InventoryRawMaterialsNetOfReserves,2022-01-30,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2023,存货-原材料,inv_raw,24.3,InventoryRawMaterialsNetOfReserves,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,存货-原材料,inv_raw,17.19,InventoryRawMaterialsNetOfReserves,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,存货-原材料,inv_raw,34.08,InventoryRawMaterialsNetOfReserves,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,存货-原材料,inv_raw,38.07,InventoryRawMaterialsNetOfReserves,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,存货-在产品,inv_wip,6.92,InventoryWorkInProcessNetOfReserves,2022-01-30,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2023,存货-在产品,inv_wip,4.66,InventoryWorkInProcessNetOfReserves,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,存货-在产品,inv_wip,15.05,InventoryWorkInProcessNetOfReserves,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,存货-在产品,inv_wip,33.99,InventoryWorkInProcessNetOfReserves,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,存货-在产品,inv_wip,88.22,InventoryWorkInProcessNetOfReserves,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,存货-产成品,inv_fg,11.22,InventoryFinishedGoodsNetOfReserves,2022-01-30,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2023,存货-产成品,inv_fg,22.63,InventoryFinishedGoodsNetOfReserves,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,存货-产成品,inv_fg,20.58,InventoryFinishedGoodsNetOfReserves,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,存货-产成品,inv_fg,32.73,InventoryFinishedGoodsNetOfReserves,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,存货-产成品,inv_fg,87.74,InventoryFinishedGoodsNetOfReserves,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,存货减值,inv_writedown,1.73,InventoryWriteDown,2022-01-30,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2023,存货减值,inv_writedown,10.4,InventoryWriteDown,2023-01-29,0001045810-23-000017,2023-02-24,是,✓ 10-K 原值
+NVDA,2024,存货减值,inv_writedown,7.74,InventoryWriteDown,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,存货减值,inv_writedown,16.0,InventoryWriteDown,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,存货减值,inv_writedown,40.0,InventoryWriteDown,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,采购承诺,purchase_obligation,102.96,PurchaseObligation,2022-01-30,0001045810-22-000036,2022-03-18,,✓ 10-K 原值
+NVDA,2023,采购承诺,purchase_obligation,80.63,PurchaseObligation,2023-01-29,0001045810-23-000017,2023-02-24,,✓ 10-K 原值
+NVDA,2024,采购承诺,purchase_obligation,207.07,PurchaseObligation,2024-01-28,0001045810-24-000029,2024-02-21,,✓ 10-K 原值
+NVDA,2025,采购承诺,purchase_obligation,450.79,PurchaseObligation,2025-01-26,0001045810-25-000023,2025-02-26,,✓ 10-K 原值
+NVDA,2026,采购承诺,purchase_obligation,227.0,UnrecordedUnconditionalPurchaseObligationBalanceSheetAmount,2026-01-25,0001045810-26-000021,2026-02-25,,✓ 10-K 原值
+NVDA,2022,毛利率(%),gross_margin_pct,64.9,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2022,研发费用率(%),rnd_pct,19.6,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2022,存货周转天数(天),dio,86,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+NVDA,2022,自由现金流,fcf,81.32,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+NVDA,2023,毛利率(%),gross_margin_pct,56.9,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2023,研发费用率(%),rnd_pct,27.2,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2023,存货周转天数(天),dio,122,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+NVDA,2023,自由现金流,fcf,38.08,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+NVDA,2024,毛利率(%),gross_margin_pct,72.7,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2024,研发费用率(%),rnd_pct,14.2,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2024,存货周转天数(天),dio,115,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+NVDA,2024,自由现金流,fcf,270.21,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+NVDA,2025,毛利率(%),gross_margin_pct,75.0,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2025,研发费用率(%),rnd_pct,9.9,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2025,存货周转天数(天),dio,86,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+NVDA,2025,自由现金流,fcf,608.53,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+NVDA,2026,毛利率(%),gross_margin_pct,71.1,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2026,研发费用率(%),rnd_pct,8.6,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+NVDA,2026,存货周转天数(天),dio,92,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+NVDA,2026,自由现金流,fcf,966.76,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+AMD,2021,营业收入,revenue,164.34,RevenueFromContractWithCustomerExcludingAssessedTax,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,营业收入,revenue,236.01,RevenueFromContractWithCustomerExcludingAssessedTax,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,营业收入,revenue,226.8,RevenueFromContractWithCustomerExcludingAssessedTax,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,营业收入,revenue,257.85,RevenueFromContractWithCustomerExcludingAssessedTax,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,营业收入,revenue,346.39,RevenueFromContractWithCustomerExcludingAssessedTax,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,营业成本,cogs,85.05,CostOfGoodsAndServicesSold,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,营业成本,cogs,129.98,CostOfGoodsAndServicesSold,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,营业成本,cogs,122.2,CostOfGoodsAndServicesSold,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,营业成本,cogs,130.6,CostOfGoodsAndServicesSold,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,营业成本,cogs,174.87,CostOfGoodsAndServicesSold,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,毛利润,gross_profit,79.29,GrossProfit,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,毛利润,gross_profit,106.03,GrossProfit,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,毛利润,gross_profit,104.6,GrossProfit,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,毛利润,gross_profit,127.25,GrossProfit,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,毛利润,gross_profit,171.52,GrossProfit,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,研发费用,rnd,28.45,ResearchAndDevelopmentExpense,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,研发费用,rnd,50.05,ResearchAndDevelopmentExpense,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,研发费用,rnd,58.72,ResearchAndDevelopmentExpense,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,研发费用,rnd,64.56,ResearchAndDevelopmentExpense,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,研发费用,rnd,80.91,ResearchAndDevelopmentExpense,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,净利润,net_income,31.62,NetIncomeLoss,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,净利润,net_income,13.2,NetIncomeLoss,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,净利润,net_income,8.54,NetIncomeLoss,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,净利润,net_income,16.41,NetIncomeLoss,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,净利润,net_income,43.35,NetIncomeLoss,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,经营现金流,cfo,35.21,NetCashProvidedByUsedInOperatingActivities,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,经营现金流,cfo,35.65,NetCashProvidedByUsedInOperatingActivities,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,经营现金流,cfo,16.67,NetCashProvidedByUsedInOperatingActivities,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,经营现金流,cfo,30.41,NetCashProvidedByUsedInOperatingActivities,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,经营现金流,cfo,77.09,NetCashProvidedByUsedInOperatingActivities,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,资本开支,capex,3.01,PaymentsToAcquirePropertyPlantAndEquipment,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,资本开支,capex,4.5,PaymentsToAcquirePropertyPlantAndEquipment,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,资本开支,capex,5.46,PaymentsToAcquirePropertyPlantAndEquipment,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,资本开支,capex,6.36,PaymentsToAcquirePropertyPlantAndEquipment,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,资本开支,capex,9.74,PaymentsToAcquirePropertyPlantAndEquipment,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,存货净额,inventory,19.55,InventoryNet,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,存货净额,inventory,37.71,InventoryNet,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,存货净额,inventory,43.51,InventoryNet,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,存货净额,inventory,57.34,InventoryNet,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,存货净额,inventory,79.2,InventoryNet,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,存货-原材料,inv_raw,0.82,InventoryRawMaterials,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,存货-原材料,inv_raw,2.31,InventoryRawMaterials,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,存货-原材料,inv_raw,2.79,InventoryRawMaterials,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,存货-原材料,inv_raw,3.51,InventoryRawMaterials,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,存货-原材料,inv_raw,9.09,InventoryRawMaterials,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,存货-在产品,inv_wip,16.76,InventoryWorkInProcess,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,存货-在产品,inv_wip,26.48,InventoryWorkInProcess,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,存货-在产品,inv_wip,32.6,InventoryWorkInProcess,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,存货-在产品,inv_wip,42.89,InventoryWorkInProcess,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,存货-在产品,inv_wip,47.68,InventoryWorkInProcess,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,存货-产成品,inv_fg,1.97,InventoryFinishedGoods,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,存货-产成品,inv_fg,8.92,InventoryFinishedGoods,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,存货-产成品,inv_fg,8.12,InventoryFinishedGoods,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,存货-产成品,inv_fg,10.94,InventoryFinishedGoods,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,存货-产成品,inv_fg,22.43,InventoryFinishedGoods,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2022,存货减值,inv_writedown,0.0,InventoryWriteDown,2022-12-31,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2023,存货减值,inv_writedown,0.0,InventoryWriteDown,2023-12-30,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2024,存货减值,inv_writedown,0.65,InventoryWriteDown,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2021,采购承诺,purchase_obligation,90.66,PurchaseObligation,2021-12-25,0000002488-22-000016,2022-02-03,,✓ 10-K 原值
+AMD,2022,采购承诺,purchase_obligation,86.1,PurchaseObligation,2022-12-31,0000002488-23-000047,2023-02-27,,✓ 10-K 原值
+AMD,2023,采购承诺,purchase_obligation,45.94,PurchaseObligation,2023-12-30,0000002488-24-000012,2024-01-31,,✓ 10-K 原值
+AMD,2024,采购承诺,purchase_obligation,49.68,PurchaseObligation,2024-12-28,0000002488-25-000012,2025-02-05,,✓ 10-K 原值
+AMD,2025,采购承诺,purchase_obligation,121.66,PurchaseObligation,2025-12-27,0000002488-26-000018,2026-02-04,,✓ 10-K 原值
+AMD,2021,毛利率(%),gross_margin_pct,48.2,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2021,研发费用率(%),rnd_pct,17.3,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2021,存货周转天数(天),dio,72,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+AMD,2021,自由现金流,fcf,32.2,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+AMD,2022,毛利率(%),gross_margin_pct,44.9,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2022,研发费用率(%),rnd_pct,21.2,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2022,存货周转天数(天),dio,80,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+AMD,2022,自由现金流,fcf,31.15,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+AMD,2023,毛利率(%),gross_margin_pct,46.1,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2023,研发费用率(%),rnd_pct,25.9,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2023,存货周转天数(天),dio,121,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+AMD,2023,自由现金流,fcf,11.21,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+AMD,2024,毛利率(%),gross_margin_pct,49.4,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2024,研发费用率(%),rnd_pct,25.0,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2024,存货周转天数(天),dio,141,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+AMD,2024,自由现金流,fcf,24.05,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算
+AMD,2025,毛利率(%),gross_margin_pct,49.5,毛利润 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2025,研发费用率(%),rnd_pct,23.4,研发 ÷ 营收,,,,,✓ 由 10-K 原值计算
+AMD,2025,存货周转天数(天),dio,142,(期初+期末存货)/2 ÷ 营业成本 × 365,,,,,✓ 由 10-K 原值计算
+AMD,2025,自由现金流,fcf,67.35,经营现金流 − 资本开支,,,,,✓ 由 10-K 原值计算

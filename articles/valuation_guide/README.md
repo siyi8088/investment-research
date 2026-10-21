@@ -45,6 +45,9 @@
 * 💎 **实战案例 01**：[01_台积电TSM_买方估值与预期投资学实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/01_台积电TSM_买方估值与预期投资学实战.md)（已完稿·微信发布就绪 ✅ | 封面：`assets/cover_case01_tsm_2.35x1.jpg` | 雷达图：`assets/tsm_radar.png`）
   * **解剖核心**：垄断全球 92% 先进制程、净利率破 51% 的超级印钞机，为什么 2027E PE 跌至 19.3 倍？
   * **调用武器**：5 年现金流造血阶梯瀑布（CFO/NI 153.9%）、不可退预付款护城河、EV Bridge 企业价值桥、反向 DCF 逆向求解（现价 $414.24 隐含 10 年 FCF 年化增速仅需 +10.37%）、显性扣除 20% 结构性地缘折价后的 2027E 落地三情景建模（Bear $280 / Base $465 / Bull $590）、双变量敏感性压力测试与买方六维雷达自查（53.5分/60分）。
+* ✈️ **实战案例 02**：[02_通用电气航天GE_买方估值与后市场商业模式实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/02_通用电气航天GE_买方估值与后市场商业模式实战.md)（已完稿·微信发布就绪 ✅ | 封面：`assets/cover_case02_ge_2.35x1.jpg` | 雷达图：`assets/ge_radar.png`）
+  * **解剖核心**：卖发动机不赚钱，修发动机赚百亿！分拆重生的通用电气（GE），凭什么享受 38 倍高 PE？
+  * **调用武器**：“剃刀与刀片”商业模式穿透、5 年现金流造血瀑布（FCF/NI 连续 >100%）、飞行小时协议（CSA）180 亿美元无息客户浮存金、EV Bridge（净负债仅 0.7x EBITDA）、反向 DCF 逆向求解（现价 $308.00 隐含 10 年 FCF 年化增速仅需 +10.42%）、商用与防务 SOTP 三情景建模（Bear $260 / Base $365 / Bull $440）、双变量网格压力测试、4 大死因事前验尸、前置非价格证伪红线与买方六维雷达自查（53.0分/60分）。
 
 ---
 
