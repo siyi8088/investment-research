@@ -358,9 +358,9 @@
 
 ---
 
-### 下讲预告：【行业指标 11】早期创新药与临床 Biotech：没有收入怎么看？现金跑道、研发失血流速与全稀释股本暗门（福莱医药 VRTX 与 传奇生物 LEGN）
+### 下讲预告：【行业指标 11】早期创新药与临床 Biotech：没有收入怎么看？现金跑道、研发失血流速与全稀释股本暗门（传奇生物 LEGN 与 CRISPR Therapeutics CRSP）
 
 解剖了冷峻硅基世界里的 **无晶圆厂芯片设计与算力平台（Fabless）** ，我们正式跨入软硬件之外、同样由高额研发驱动但商业逻辑更为惊险的全新领域—— **【第四板块：医疗健康与生命科学·早期创新药与临床 Biotech】！**
 
-在下一讲中，我们将派出全球罕见病商业化霸主**福莱医药（Vertex, VRTX.US）**，正面迎战全球前沿 CAR-T 细胞治疗先锋**传奇生物（Legend Biotech, LEGN.US）**！我们将用**现金跑道与真实现金净烧钱流速 (Cash Runway & Net Burn)**、**研发开支纯度与临床外包结构 (R&D Purity)**、**跨国合作授权经济学与递延收入负债池 (Collaboration Economics)** 以及 **全稀释股本膨胀与 ATM 市场化抽水暗门 (ATM Overhang)** ，为您呈现实战买方对零收入生命科技公司的外科手术式财报排雷心法，敬请期待！
+在下一讲中，我们将派出全球前沿 CAR-T 细胞治疗先锋**传奇生物（Legend Biotech, LEGN.US）**，正面迎战诺奖级基因编辑拓荒者 **CRISPR Therapeutics (CRSP.US)**！我们将用**现金跑道与真实现金净烧钱流速 (Cash Runway & Net Burn)**、**研发开支纯度与临床外包结构 (R&D Purity)**、**跨国合作授权经济学与递延收入负债池 (Collaboration Economics)** 以及 **全稀释股本膨胀与 ATM 市场化抽水暗门 (ATM Overhang)** ，为您呈现实战买方对生命科学早期与临床 Biotech 公司的外科手术式财报排雷心法，敬请期待！
 

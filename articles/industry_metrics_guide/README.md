@@ -29,7 +29,7 @@
 10. **【行业指标 10】**：[10_无晶圆厂芯片设计与算力平台_NVDA与AMD.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/10_无晶圆厂芯片设计与算力平台_NVDA与AMD.md)（已完稿 ✅ | 标的：英伟达 NVDA vs 超威半导体 AMD）
 
 ### 【第四板块：医疗健康与生命科学·从管线期权到器械耗材】
-11. **【行业指标 11】**：[11_早期创新药与临床Biotech_VRTX与LEGN.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/11_早期创新药与临床Biotech_VRTX与LEGN.md)（已完稿 ✅ | 标的：福莱医药 VRTX vs 传奇生物 LEGN）
+11. **【行业指标 11】**：[11_早期创新药与临床Biotech_LEGN与CRSP.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/11_早期创新药与临床Biotech_LEGN与CRSP.md)（已完稿 ✅ | 标的：传奇生物 LEGN vs CRISPR Therapeutics CRSP）
 12. **【行业指标 12】**：12_跨国大药企与重磅炸弹药_LLY与NVO.md（规划中 📋 | 标的：礼来 LLY vs 诺和诺德 NVO）
 13. **【行业指标 13】**：13_医疗器械与微创手术机器人_ISRG与SYK.md（规划中 📋 | 标的：直觉外科 ISRG vs 史赛克 SYK）
 
