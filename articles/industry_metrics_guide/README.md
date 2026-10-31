@@ -23,15 +23,15 @@
 6. **【行业指标 06】**：[06_SaaS与云服务深度体检_CRM与SNOW.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/06_SaaS与云服务深度体检_CRM与SNOW.md)（已完稿 ✅ | 标的：赛富时 CRM vs Snowflake SNOW）
 7. **【行业指标 07】**：[07_互联网平台与双边网络_UBER与ABNB.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/07_互联网平台与双边网络_UBER与ABNB.md)（已完稿 ✅ | 标的：优步 UBER vs 爱彼迎 ABNB）
 
-### 【第三板块：硬科技与先进制造·良率、产能与订单】
-8. **【行业指标 08】**：[08_半导体前道设备_ASML与KLA.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/08_半导体前道设备_ASML与KLA.md)（已完稿 ✅ | 标的：阿斯麦 ASML vs 科磊 KLA）
-9. **【行业指标 09】**：[09_晶圆代工与先进制程制造_TSM与SMIC.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/09_晶圆代工与先进制程制造_TSM与SMIC.md)（已完稿 ✅ | 标的：台积电 TSMC vs 中芯国际 SMIC）
-10. **【行业指标 10】**：[10_无晶圆厂芯片设计与算力平台_NVDA与AMD.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/10_无晶圆厂芯片设计与算力平台_NVDA与AMD.md)（已完稿 ✅ | 标的：英伟达 NVDA vs 超威半导体 AMD）
+### 【第三板块：医疗健康与生命科学·从商业器械到管线期权】
+8. **【行业指标 08】**：[08_医疗器械与微创手术机器人_ISRG与SYK.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/08_医疗器械与微创手术机器人_ISRG与SYK.md)（已完稿 ✅ | 标的：直觉外科 ISRG vs 史赛克 SYK）
+9. **【行业指标 09】**：[09_跨国大药企与重磅炸弹药_LLY与NVO.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/09_跨国大药企与重磅炸弹药_LLY与NVO.md)（已完稿 ✅ | 标的：礼来 LLY vs 诺和诺德 NVO）
+10. **【行业指标 10】**：[10_早期创新药与临床Biotech_LEGN与CRSP.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/10_早期创新药与临床Biotech_LEGN与CRSP.md)（已完稿 ✅ | 标的：传奇生物 LEGN vs CRISPR Therapeutics CRSP）
 
-### 【第四板块：医疗健康与生命科学·从管线期权到器械耗材】
-11. **【行业指标 11】**：[11_早期创新药与临床Biotech_LEGN与CRSP.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/11_早期创新药与临床Biotech_LEGN与CRSP.md)（已完稿 ✅ | 标的：传奇生物 LEGN vs CRISPR Therapeutics CRSP）
-12. **【行业指标 12】**：12_跨国大药企与重磅炸弹药_LLY与NVO.md（规划中 📋 | 标的：礼来 LLY vs 诺和诺德 NVO）
-13. **【行业指标 13】**：13_医疗器械与微创手术机器人_ISRG与SYK.md（规划中 📋 | 标的：直觉外科 ISRG vs 史赛克 SYK）
+### 【第四板块：硬科技与先进制造·良率、产能与订单】
+11. **【行业指标 11】**：[11_半导体前道设备_ASML与KLA.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/11_半导体前道设备_ASML与KLA.md)（已完稿 ✅ | 标的：阿斯麦 ASML vs 科磊 KLA）
+12. **【行业指标 12】**：[12_晶圆代工与先进制程制造_TSM与SMIC.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/12_晶圆代工与先进制程制造_TSM与SMIC.md)（已完稿 ✅ | 标的：台积电 TSMC vs 中芯国际 SMIC）
+13. **【行业指标 13】**：[13_无晶圆厂芯片设计与算力平台_NVDA与AMD.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/13_无晶圆厂芯片设计与算力平台_NVDA与AMD.md)（已完稿 ✅ | 标的：英伟达 NVDA vs 超威半导体 AMD）
 
 ### 【第五板块：大消费与连锁实体·单体经济学】
 14. **【行业指标 14】**：14_线下连锁零售与餐饮生命线_COST与SBUX.md（规划中 📋 | 标的：好市多 COST vs 星巴克 SBUX）
