@@ -6,7 +6,7 @@
 > **当前稀释总市值**：**$2,209.5 亿美元**  
 > **基准企业价值 (EV)**：**$2,219.3 亿美元**（含净负债 $9.85 亿美元）  
 > **目标价公允区间**：**Base Case $180.67（+7.5%）** | **Bull Case $239.70（+42.7%）** | **Bear Case $118.25（-29.6%）**  
-> **模型算法验证**：[`scratch/run_klac_sotp.py`](file:///Users/siyi/.gemini/antigravity-ide/brain/159fe7b7-7cf5-4584-8175-254182c52397/scratch/run_klac_sotp.py) 脚本 100% 勾稽校验
+> **模型算法验证**：`scratch/run_klac_sotp.py` 脚本 100% 勾稽校验
 
 ---
 
