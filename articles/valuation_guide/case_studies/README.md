@@ -7,7 +7,7 @@
 
 ## 📘 生产与写作规范指南
 * 📐 **标准化生产规程 (SOP)**：[CASE_STUDY_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/CASE_STUDY_STANDARDS.md)
-  * 包含：4 步快速生产流、实时股价获取与模型联动、爆款标题公式、正文“标准七幕剧”全息模板、微信 ＋ 墨滴排版格式红线、视觉资产规格与 10 项终检清单。
+  * 包含：双轨生产流水线、七幕方向指南与数据格式约定、实时股价与模型联动、微信 ＋ 墨滴排版免死规程与 10 项终检清单。
 
 ---
 
@@ -28,5 +28,5 @@
 1. **信源定位**：打开 `companies/<TICKER>/research/investment-memo.md` 与季报纪要；
 2. **实时市价**：采集当天最新收盘价，重新计算 EV Bridge、反向 DCF、三情景收益分布与盈亏比；
 3. **视觉生成**：出图 2.35:1 宽屏封面至 `assets/cover_case{XX}_{ticker}_2.35x1.jpg`，准备雷达图 `assets/{ticker}_radar.png`；
-4. **规范行文**：按照 [CASE_STUDY_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/CASE_STUDY_STANDARDS.md) 七幕剧模板填入数据并进行买方哲学升华。
+4. **规范行文**：按照 [CASE_STUDY_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/CASE_STUDY_STANDARDS.md) 的七幕方向指南与数据标准展开客观买方分析。
 
