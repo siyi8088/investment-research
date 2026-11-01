@@ -87,6 +87,6 @@
 
 ## 📌 专栏配套规则与规范文件索引
 
-* 📘 **微信排版与语法避坑手册**：请查阅 [articles/WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)
-* ⚙️ **自动化行为规则**：请查阅 [.agents/rules/industry-metrics-guide-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/industry-metrics-guide-rules.md)
+* 📐 **标准化生产规程 (SOP)**：请查阅 [INDUSTRY_METRICS_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/INDUSTRY_METRICS_STANDARDS.md)
+* 📘 **微信排版与语法避坑手册**：请查阅 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/WECHAT_MDNICE_STYLEGUIDE.md)
 * 🛠️ **金融机构分析规程**：请查阅 [.agents/skills/fig-analyzer/SKILL.md](file:///Users/siyi/Documents/code/investment-research/.agents/skills/fig-analyzer/SKILL.md)

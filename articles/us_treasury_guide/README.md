@@ -8,6 +8,7 @@
 
 * **专栏定位**：硬核固定收益与美债投资专栏。拒绝学术八股与泛泛科普，以买方视角穿透美国国债运转机制与美股交易实操。
 * **规划总览**：请查阅核心建设规划文档 [COLUMN_MASTER_PLAN.md](file:///Users/siyi/Documents/code/investment-research/articles/us_treasury_guide/COLUMN_MASTER_PLAN.md)。
+* **交付标准与深度规范**：请查阅核心交付标准 [GUIDE_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/us_treasury_guide/GUIDE_STANDARDS.md)。
 * **微信排版规范**：全篇严格遵循 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)。
 
 ## 📚 章节目录索引

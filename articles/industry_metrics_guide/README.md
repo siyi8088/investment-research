@@ -5,8 +5,11 @@
 
 ## 📖 核心文档索引
 
-* 🎯 **专栏总规划与规范**：请查阅 [COLUMN_MASTER_PLAN.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/COLUMN_MASTER_PLAN.md)
-  * 包含：18 讲完整课程大纲、行业顶级标的对决清单、微信/墨滴排版绝对红线、各讲核心指标速查表。
+* 🎯 **专栏总规划与连载追踪**：请查阅 [COLUMN_MASTER_PLAN.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/COLUMN_MASTER_PLAN.md)
+  * 包含：18 讲完整课程大纲、行业顶级标的对决清单、连载进度追踪。
+* 📐 **标准化生产规程 (SOP)**：请查阅 [INDUSTRY_METRICS_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/INDUSTRY_METRICS_STANDARDS.md)
+  * 包含：专栏核心哲学（文字做方向指南，数据做严格格式）、标准七步交付范式、6 周期原生底表规范、微信/墨滴排版免死规程与成稿交付终检清单。
+* 📘 **微信排版与语法避坑手册**：请查阅 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/WECHAT_MDNICE_STYLEGUIDE.md)
 
 ---
 
