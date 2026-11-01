@@ -64,10 +64,10 @@ def main():
     parser.add_argument("--price", type=float, required=True, help="Current stock price ($)")
     parser.add_argument("--shares", type=float, required=True, help="Fully diluted shares (Millions)")
     parser.add_argument("--net_debt", type=float, default=0.0, help="Net debt in $M (Positive = net debt, Negative = net cash)")
-    parser.add_argument("--wacc", type=float, default=0.085, help="Weighted Average Cost of Capital (e.g., 0.085 for 8.5%)")
-    parser.add_argument("--g", type=float, default=0.025, help="Perpetual growth rate (e.g., 0.025 for 2.5%)")
+    parser.add_argument("--wacc", type=float, default=0.085, help="Weighted Average Cost of Capital (e.g., 0.085 for 8.5%%)")
+    parser.add_argument("--g", type=float, default=0.025, help="Perpetual growth rate (e.g., 0.025 for 2.5%%)")
     parser.add_argument("--base_fcf", type=float, required=True, help="Normalized base year FCF ($M)")
-    parser.add_argument("--hist_cagr", type=float, default=None, help="Historical 5-year FCF CAGR (e.g. 0.05 for 5%)")
+    parser.add_argument("--hist_cagr", type=float, default=None, help="Historical 5-year FCF CAGR (e.g. 0.05 for 5%%)")
     parser.add_argument("--mgmt_guidance", type=float, default=None, help="Management guided revenue/FCF growth rate")
 
     args = parser.parse_args()
