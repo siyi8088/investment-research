@@ -18,7 +18,8 @@
 | **01** | **台积电 (NYSE: TSM)** | [01_台积电TSM_买方估值与预期投资学实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/01_台积电TSM_买方估值与预期投资学实战.md) | 半导体物理垄断、不可退预付款护城河、反向 DCF 隐含 +10.4% 增速、**显性扣除 20% 地缘折价**、双网格承压测试。 | 2.35:1 封面 ✅<br>六维雷达图 ✅ |
 | **02** | **通用电气航天 (NYSE: GE)** | [02_通用电气航天GE_买方估值与后市场商业模式实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/02_通用电气航天GE_买方估值与后市场商业模式实战.md) | “剃刀与刀片”后市场商业模式、CSA 协议 $180 亿无息客户 Float、反向 DCF 逆向求解、商用与防务 **SOTP 分部加总**、4 大死因事前验尸。 | 2.35:1 封面 ✅<br>六维雷达图 ✅ |
 | **03** | **诺基亚 (NYSE: NOK)** | [03_诺基亚NOK_买方估值与AI光通信周期逆向实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/03_诺基亚NOK_买方估值与AI光通信周期逆向实战.md) | Q3 现金流由正转负“会计视错觉”硬核穿透（€4 亿战略备货垫资）、€25.8 亿净现金底牌、三大业务 SOTP 分部加总、非对称赔率 **4.64:1**。 | 2.35:1 封面 ✅<br>六维雷达图 ✅ |
-| **04** | **波音 (NYSE: BA)** | [04_波音BA_买方估值与大飞机双寡头困境反转实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/04_波音BA_买方估值与大飞机双寡头困境反转实战.md) | 单日暴跌 -10.7% 利空出清与质量重置（新 CEO 铁腕“拒绝工序漂移”）、$7,450 亿天量在手积压、737-7/10 认证落地、三大军团 SOTP、一级击球区触发。 | 2.35:1 封面 ✅<br>六维雷达图 ✅ |
+| **04** | **波音 (NYSE: BA)** | [04_波音BA_买方估值与大飞机双寡头困境反转实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/04_波音BA_买方估值与大飞机双寡头困境反转实战.md) | 单日暴跌 -10.7% 利空出清与质量重置（新 CEO 铁腕“拒绝工序漂移”）、7,450 亿美元天量在手积压、737-7/10 认证落地、三大军团 SOTP、一级击球区触发。 | 2.35:1 封面 ✅<br>六维雷达图 ✅ |
+| **05** | **英特尔 (NASDAQ: INTC)** | [05_英特尔INTC_买方估值与半导体巨头资产错配重构实战.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/05_英特尔INTC_买方估值与半导体巨头资产错配重构实战.md) | 10-30 收盘暴跌 -28.58% 砸至 $65.76、PC 毛利断崖 38% 与台积电外包抽水穿透、代工单季失血 18.75 亿施加 50% 经济利差减记、反向 DCF 逆向求解、做空公诉人抗辩、造血不及格一票否决、严格限定为观察仓。 | 2.35:1 封面 ✅<br>六维雷达图 ✅ |
 
 ---
 
