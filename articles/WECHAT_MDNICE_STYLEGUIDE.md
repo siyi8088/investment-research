@@ -12,7 +12,7 @@
 | 架构层级 | 规程名称与真理源路径 | 核心覆盖范围与职责 |
 | :--- | :--- | :--- |
 | **第一层<br>系统级通用规范** | [`.agents/rules/investment-rules.md`](file:///Users/siyi/Documents/code/investment-research/.agents/rules/investment-rules.md) | **全局通用金融数据素养（Universal Data Hygiene）**：<br>• 表格单一定义单位，单元格 100% 纯数字，严禁尾随散落 `M`、`B`、`$`<br>• 宏观纯中文金融单位（`7,450 亿美元`，严禁 `$40 亿` 混杂）<br>• 股票价格点位纯代码块包裹（`$157.91`，外层严禁加粗）<br>• 客观克制研报语言风格与读者视角纯净性（零过程自白泄漏） |
-| **第二层<br>发布渠道防御** | [`.agents/rules/wechat-publishing-rules.md`](file:///Users/siyi/Documents/code/investment-research/.agents/rules/wechat-publishing-rules.md) | **微信公众号与墨滴排版免死八大军规（Channel Defense）**：<br>• 加粗标记内严禁空格，列表小标题冒号内包（`* **小标题：**`）<br>• 比较与算术符号绝对外置（`≥ **4.0%**`，`< **1.0%**`）<br>• 居中块级公式（`$$ ... $$`）墨滴矢量 SVG 转换，正文严禁行内单 `$`<br>• 表格跨端紧凑换行（`<br>`），微信引用块（`>`）单块 300 汉字红线<br>• 严禁微信不支持的 Mermaid 流程图脚本与 ASCII 字符边框 |
+| **第二层<br>发布渠道防御** | [`.agents/rules/wechat-publishing-rules.md`](file:///Users/siyi/Documents/code/investment-research/.agents/rules/wechat-publishing-rules.md) | **微信公众号与墨滴排版免死六大军规（Channel Defense）**：<br>• 加粗标记内严禁空格，列表小标题冒号内包（`* **小标题：**`）<br>• 比较与算术符号绝对外置（`≥ **4.0%**`，`< **1.0%**`）<br>• 居中块级公式（`$$ ... $$`）墨滴矢量 SVG 转换，正文严禁行内单 `$`<br>• 表格跨端紧凑换行（`<br>`），微信引用块（`>`）单块 300 汉字红线<br>• 严禁微信不支持的 Mermaid 流程图脚本与 ASCII 字符边框 |
 | **第三层<br>下游业务标准** | [`CASE_STUDY_STANDARDS.md`](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/case_studies/CASE_STUDY_STANDARDS.md) | **估值案例专栏七幕叙事与底表结构（Domain Standards）**：<br>• 七幕深度叙事结构与核心穿透任务<br>• 5 大买方标准底表与双变量压力测试网格<br>• 单一综合公允目标价定锚与 IRR 年化决算纪律 |
 
 ---
