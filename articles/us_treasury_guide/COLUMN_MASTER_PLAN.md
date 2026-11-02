@@ -15,7 +15,7 @@
 
 | 讲数 | 章节主题 | 核心微观机制与硬核指标 | 核心标的与实战案例 | 状态 | 配套封面资产 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **【美债 01】** | 美债底层第一性原理：为什么收益率上涨国债跌？解剖久期、凸性与折现杠杆 | 贴现因子、到期收益率(YTM)、麦考利久期、修正久期、有效久期、凸性(Convexity)补偿 | 2年期短债 (SHY) vs 20年期长债 (TLT) 波动剧烈度极端实战回测 | **已完稿** ✅ | `assets/cover_ep01_2.35x1.jpg` |
+| **【美债 01】** | 美债底层第一性原理：为什么收益率上涨国债跌？解剖久期、凸性与折现杠杆 | 贴现因子、到期收益率(YTM)、麦考利久期、修正久期、有效久期、凸性(Convexity)补偿 | 2年期短债 (SHY) vs 20年期长债 (TLT) 波动剧烈度极端实战回测 | 待动笔 📋 | `assets/cover_ep01_2.35x1.jpg` |
 | **【美债 02】** | 解密财政部拍卖（核心硬核）：投标倍数、尾差 (Tail) 与神秘的“三大买家画像” | 投标倍数(Bid-to-Cover)、最高中标利率(High Yield)、发行前利率(When-Issued/WI)、尾部差价(Tail / Stop-through)、间接投标者(Indirect)、一级交易商(Primary Dealers)包销率 | 财政部官方 Auction Results 原生报告解剖、美债拍卖爆冷流标惨案现场还原 | 待动笔 📋 | `assets/cover_ep02_2.35x1.jpg` |
 | **【美债 03】** | 财政部发债总牌局：TGA 账户、季度再融资声明 (QRA) 与国债供给冲击 | 财政部一般账户(TGA)、发债结构(Bills vs Coupons)、季度再融资声明(QRA)、期限溢价(Term Premium ACM模型) | 耶伦发债魔术：利用短债抽取逆回购(ON RRP)缓冲长端利率的宏观推演 | 待动笔 📋 | `assets/cover_ep03_2.35x1.jpg` |
 | **【美债 04】** | 收益率曲线形态密码：倒挂、陡峭化与四种宏观周期的资产轮动 | 2Y-10Y / 3M-10Y 利差倒挂、牛陡(Bull Steepener)、熊陡(Bear Steepener)、牛平、熊平、衰退滞后性 | 历史 6 次收益率曲线“解倒挂”瞬间美股与经济出清复盘 | 待动笔 📋 | `assets/cover_ep04_2.35x1.jpg` |
@@ -151,7 +151,6 @@
 3. **严禁 Mermaid JS 代码块**：逻辑流程一律用带 Emoji 序号的步骤卡（①、②、③、🔻、⚙️）或 Markdown 表格排版；
 4. **加粗语法防崩四大军规**：列表小标题冒号内包（`* **小标题：** 正文`）、数学比较符号绝对外置（`≥ **2.5x**`）、标点符号显式留空格；
 5. **官方信披出处可追溯**：每个指标必须注明 Treasury FiscalData / BLS / BEA 原生披露章节。
-6. **深度交付与数据标准**：单篇写作与数据结构必须严格遵守 [GUIDE_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/us_treasury_guide/GUIDE_STANDARDS.md) 七步交付规程与指标矩阵。
 
 ---
 
