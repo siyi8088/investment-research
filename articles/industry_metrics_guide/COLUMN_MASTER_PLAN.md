@@ -28,7 +28,7 @@
 | **【行业指标 11】** | 半导体前道核心设备：订单出货比、在手积压转化与装机服务飞轮 | 阿斯麦 (ASML) vs 科磊 (KLA) | 订单出货比(B2B)、积压订单覆盖(Backlog)、装机服务占比(Services %)、现场装机存货(Installations in Progress)、稳态毛利率与研发强度 | **已完稿** ✅ | `assets/cover_ep11_2.35x1.jpg` |
 | **【行业指标 12】** | 晶圆先进制程代工与制造：产能利用率、晶圆单价与折旧悬崖 | 台积电 (TSMC) vs 中芯国际 (SMIC) | 产能利用率(Utilization Rate)、综合晶圆平均售价(Blended ASP)、资本开支占营收比(CapEx Intensity %)、折旧悬崖(Depreciation Cliff)、先进制程营收占比 | **已完稿** ✅ | `assets/cover_ep12_2.35x1.jpg` |
 | **【行业指标 13】** | 无晶圆厂芯片设计与算力平台：研发流片、表外产能锁水与芯片库存周期 | 英伟达 (NVDA) vs 超威半导体 (AMD) | 纯研发费用率(R&D Intensity)、存货周转天数与跌价计提(DIO & Write-downs)、表外产能不可撤销采购承诺(Purchase Obligations)、全栈软件毛利溢价(CUDA) | **已完稿** ✅ | `assets/cover_ep13_2.35x1.jpg` |
-| **【行业指标 14】** | 线下连锁零售与餐饮的生命线：同店增速 (SSSG)、坪效与单店模型 | 好市多 (COST) vs 星巴克 (SBUX) / Chipotle | 同店销售增长(SSSG)、会员续费率、单店年销售额(AUV)、店面级利润率、坪效 | 待动笔 📋 | `assets/cover_ep14_2.35x1.jpg` |
+| **【行业指标 14】** | 线下连锁零售与餐饮的生命线：同店增速 (SSSG)、坪效与单店模型 | 好市多 (COST) vs 星巴克 (SBUX) | 同店可比销售增长(SSSG: Traffic vs Ticket)、单店年销售额(AUV)、每平方英尺坪效(Sales/Sq.Ft.)、直营店面级营业利润率(Store Margin) | **已完稿** ✅ | `assets/cover_ep14_2.35x1.jpg` |
 | **【行业指标 15】** | 特许加盟 vs 直营商业模式镜像：商业地租抽成与轻资产营运杠杆 | 麦当劳 (MCD) vs 达美乐披萨 (DPZ) | 体系销售额(System-wide Sales)、特许使用费率(Royalty Rate)、单店回收期 | 待动笔 📋 | `assets/cover_ep15_2.35x1.jpg` |
 | **【行业指标 16】** | AI 电力与公用事业：长期购电协议 (PPA) 与度电利润 Spark Spread | 维斯达能源 (VST) vs 星云能源 (CEG) | 长期购电协议(PPA)、容量电价机制(PJM Auction)、Spark Spread、对冲比例 | 待动笔 📋 | `assets/cover_ep16_2.35x1.jpg` |
 | **【行业指标 17】** | 周期大宗与航运重资产：全维持现金成本、资本开支周期与资产净值倒推 | 以星航运 (ZIM) / 马士基 vs 自由港铜业 (FCX) | 全维持现金成本(AISC)、运价指数(SCFI)、手持订单占比(Orderbook)、NAV | 待动笔 📋 | `assets/cover_ep17_2.35x1.jpg` |

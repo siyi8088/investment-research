@@ -37,7 +37,7 @@
 13. **【行业指标 13】**：[13_无晶圆厂芯片设计与算力平台_NVDA与AMD.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/13_无晶圆厂芯片设计与算力平台_NVDA与AMD.md)（已完稿 ✅ | 标的：英伟达 NVDA vs 超威半导体 AMD）
 
 ### 【第五板块：大消费与连锁实体·单体经济学】
-14. **【行业指标 14】**：14_线下连锁零售与餐饮生命线_COST与SBUX.md（规划中 📋 | 标的：好市多 COST vs 星巴克 SBUX）
+14. **【行业指标 14】**：[14_线下连锁零售与餐饮生命线_COST与SBUX.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/14_线下连锁零售与餐饮生命线_COST与SBUX.md)（已完稿 ✅ | 标的：好市多 COST vs 星巴克 SBUX）
 15. **【行业指标 15】**：15_特许加盟与轻资产营运_MCD与DPZ.md（规划中 📋 | 标的：麦当劳 MCD vs 达美乐 DPZ）
 
 ### 【第六板块：周期重资产、公用事业与宏观基础设施】
