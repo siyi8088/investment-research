@@ -26,22 +26,61 @@ def audit_markdown_file(file_path):
         if len(clean_bq) > 300:
             errors.append(f"Blockquote {i+1} length {len(clean_bq)} exceeds WeChat limit of 300 chars")
 
-    # 3. Check for bold delimiter collisions
+    # 3. Check for mdnice bold delimiter collisions (across ALL lines, including tables!)
+    ascii_punct = set("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
+    white_space = set(" \t\n\r\u00a0")
+
     for idx, line in enumerate(lines, 1):
-        if line.strip().startswith("|"):
-            continue # table cells may have specific syntax
-        m_colon = re.findall(r"\*\*[^*]+\*\*[:：]", line)
-        if m_colon:
-            errors.append(f"Line {idx}: Bold touching colon outside: {m_colon}")
-        m_period = re.findall(r"\*\*[^*]+\*\*。", line)
-        if m_period:
-            errors.append(f"Line {idx}: Bold touching period: {m_period}")
-        m_bracket = re.findall(r"\*\*[^*]+\*\*[(（]", line)
-        if m_bracket:
-            errors.append(f"Line {idx}: Bold touching bracket: {m_bracket}")
-        m_bracket_left = re.findall(r"[(（]\*\*[^*]+\*\*", line)
-        if m_bracket_left:
-            errors.append(f"Line {idx}: Bracket touching bold on left: {m_bracket_left}")
+        for m in re.finditer(r"\*\*([^*]+)\*\*", line):
+            inner = m.group(1)
+            start, end = m.start(), m.end()
+            prev_ch = line[start - 1] if start > 0 else " "
+            next_ch = line[end] if end < len(line) else " "
+
+            first_inner = inner[0]
+            last_inner = inner[-1]
+
+            # A. Leading comparison / approx symbol inside bold (军规 2)
+            if re.match(r"^\s*[≥≤<>≈~]", inner):
+                errors.append(
+                    f"Line {idx}: Comparison/approx symbol inside bold '**{inner}**' (move ≥/≤/</>/≈/~ outside **)"
+                )
+
+            # B. mdnice left-flanking check: if inner starts with ASCII punct, prev_ch must be whitespace or ASCII punct
+            open_prev_white = prev_ch in white_space
+            open_next_white = first_inner in white_space
+            open_prev_punct = prev_ch in ascii_punct
+            open_next_punct = first_inner in ascii_punct
+            can_open = (not open_next_white) and (
+                (not open_next_punct) or open_prev_white or open_prev_punct
+            )
+            if not can_open:
+                errors.append(
+                    f"Line {idx}: mdnice CANNOT OPEN bold at {prev_ch!r}'**{inner}**' (add a space before **)"
+                )
+
+            # C. mdnice right-flanking check: if inner ends with ASCII punct (e.g. %, )), next_ch must be whitespace or ASCII punct (like <br>)
+            close_prev_white = last_inner in white_space
+            close_next_white = next_ch in white_space
+            close_prev_punct = last_inner in ascii_punct
+            close_next_punct = next_ch in ascii_punct
+            can_close = (not close_prev_white) and (
+                (not close_prev_punct) or close_next_white or close_next_punct
+            )
+            if not can_close:
+                errors.append(
+                    f"Line {idx}: mdnice CANNOT CLOSE bold at '**{inner}**'{next_ch!r} (add a space after **)"
+                )
+
+            # D. Outer punctuation collision check (brackets, colons, periods, semicolons touching **)
+            if prev_ch in "（(":
+                errors.append(
+                    f"Line {idx}: Left bracket touching bold at {prev_ch!r}'**{inner}**' (add a space after bracket)"
+                )
+            if next_ch in "（）():：。；":
+                errors.append(
+                    f"Line {idx}: Bold touching outer punctuation at '**{inner}**'{next_ch!r} (add a space after **)"
+                )
 
     # 4. Check for ASCII tree box characters
     ascii_boxes = re.findall(r"[┌─│└├┬┴┼]", text)
@@ -59,28 +98,23 @@ def audit_markdown_file(file_path):
         if re.search(r"今天是\s*\*{0,2}[0-9]{4}\s*年", line):
             errors.append(f"Line {idx}: Unnecessary specific day timestamp found: '{line.strip()[:60]}'. Use evergreen reporting phrasing instead.")
 
-    # 7. Check 5-part anatomical skeleton for Section 一 core indicators:
+    # 7. Check core indicators presence in Section 一:
     indicators = re.findall(r"^### 指标\s*[0-9]+", text, re.M)
-    num_indicators = len(indicators)
-    part1_defs = re.findall(r"^#### 1\.\s*深度定义与经济内涵", text, re.M)
-    part2_formulas = re.findall(r"^#### 2\.\s*精确计算公式", text, re.M)
-    rules_of_thumb = re.findall(r"^#### 3\.\s*买方实战判读法则", text, re.M)
-    filing_guides = re.findall(r"\*\*10-K 定点检索指南：\*\*", text)
-    misconceptions = re.findall(r"\*\*买方常见认知误区：\*\*", text)
+    if len(indicators) == 0:
+        errors.append("Missing '### 指标 N' sections in Chapter 1")
 
-    if num_indicators > 0:
-        if len(part1_defs) < num_indicators:
-            errors.append(f"Missing '#### 1. 深度定义与经济内涵': found {len(part1_defs)} of {num_indicators} indicators")
-        if len(part2_formulas) < num_indicators:
-            errors.append(f"Missing '#### 2. 精确计算公式': found {len(part2_formulas)} of {num_indicators} indicators")
-        if len(rules_of_thumb) < num_indicators:
-            errors.append(f"Missing '#### 3. 买方实战判读法则': found {len(rules_of_thumb)} of {num_indicators} indicators")
-        if len(filing_guides) < num_indicators:
-            errors.append(f"Missing '**10-K 定点检索指南：**': found {len(filing_guides)} of {num_indicators} indicators")
-        if len(misconceptions) < num_indicators:
-            errors.append(f"Missing '**买方常见认知误区：**': found {len(misconceptions)} of {num_indicators} indicators")
+    # 8. Check WeChat Summary (> **摘要：**) presence and <= 120 char limit
+    m_summary = re.search(r"^>\s*\*\*摘要：\*\*\s*(.+)$", text, re.M)
+    if not m_summary:
+        errors.append("Missing '> **摘要：** ...' block in the header section")
+    else:
+        summary_text = m_summary.group(1).strip()
+        if len(summary_text) > 120:
+            errors.append(
+                f"WeChat summary length {len(summary_text)} exceeds 120 chars limit: '{summary_text[:40]}...'"
+            )
 
-    # 8. Check Standard Chapter H2 Skeleton (Chapters 一 to 六)
+    # 9. Check Standard Chapter H2 Skeleton (Chapters 一 to 六)
     ch1 = re.search(r"^## 一、\s*.*核心指标深度解剖", text, re.M)
     ch2 = re.search(r"^## 二、\s*.*(核心特异性指标全景速查对照表|核心指标全景速查对照表)", text, re.M)
     ch3 = re.search(r"^## 三、\s*标杆实例深度实战：", text, re.M)
@@ -111,8 +145,13 @@ def audit_markdown_file(file_path):
         return False
 
 if __name__ == "__main__":
-    target = sys.argv[1] if len(sys.argv) > 1 else "10_无晶圆厂芯片设计与算力平台_NVDA与AMD.md"
-    if not os.path.isabs(target):
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        target = os.path.join(base_dir, target)
-    audit_markdown_file(target)
+    targets = sys.argv[1:] if len(sys.argv) > 1 else ["10_无晶圆厂芯片设计与算力平台_NVDA与AMD.md"]
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    all_ok = True
+    for target in targets:
+        if not os.path.isabs(target):
+            target = os.path.join(base_dir, target)
+        if not audit_markdown_file(target):
+            all_ok = False
+    if not all_ok:
+        sys.exit(1)

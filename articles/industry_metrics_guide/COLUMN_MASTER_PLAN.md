@@ -22,8 +22,8 @@
 | **【行业指标 05】** | 人身与人寿保险 (Life) 解剖：新业务价值 (VNB)、内含价值 (EV) 与三差分润 | 友邦保险 (1299.HK) vs 英国保诚 (2378.HK) | 年化新保费(APE)、新业务价值(VNB)、新业务价值率(VNB Margin)、内含价值(EV)、合约服务边际(CSM)、保单继续率 | **已完稿** ✅ | `assets/cover_ep05_2.35x1.jpg` |
 | **【行业指标 06】** | SaaS 与云服务深度体检：合同负债蓄水池、留存率与 CAC 回收期 | 赛富时 (CRM) vs Snowflake (SNOW) | ARR/MRR、净金额留存率(NDR)、现时剩余履约义务(cRPO)、递延收入、Rule of 40、SBC稀释率 | **已完稿** ✅ | `assets/cover_ep06_2.35x1.jpg` |
 | **【行业指标 07】** | 互联网平台与双边网络：变现漏斗、抽成率与单客经济学 (ARPU/LTV) | 优步 (UBER) vs 爱彼迎 (ABNB) | 总预订额(Gross Bookings)、抽成率(Take Rate)、MAPCs、单均边际贡献、未付浮存金 | **已完稿** ✅ | `assets/cover_ep07_2.35x1.jpg` |
-| **【行业指标 08】** | 医疗器械与微创手术机器人：达芬奇 vs 骨科 Mako，装机基座与剃刀耗材复购年金 | 直觉外科 (ISRG) vs 史赛克 (SYK) | 存量有效装机基座与投放结构(Installed Base & Leases %)、单机手术利用率与总量增速(Utilization & Procedure Growth)、经常性耗材与维保年金占比(Recurring Mix %)、单台手术耗材变现均价(I&A Yield per Procedure) | **已完稿** ✅ | `assets/cover_ep08_2.35x1.jpg` |
-| **【行业指标 09】** | 跨国大药企与重磅炸弹药：GLP-1 世纪争霸、专利悬崖与 Gross-to-Net 折价玄机 | 礼来 (LLY) vs 诺和诺德 (NVO) | 重磅单品专营权集中度(Blockbuster Franchise %)、标价与实收净价差(Gross-to-Net %)、学术推广商业化效率与超级经营杠杆(SG&A & Operating Margin %) | **已完稿** ✅ | `assets/cover_ep09_2.35x1.jpg` |
+| **【行业指标 08】** | 医疗器械行业财报解剖：耗材复购、量价拆分、费率结构与并购商誉暗门 | 直觉外科 (ISRG) vs 史赛克 (SYK) | 收入结构与经常性耗材/服务占比(Recurring / Consumables Mix %)、内生增长量价拆分(Organic Volume vs Price vs M&A)、毛利与销售推广/研发费率结构(Gross Margin & SG&A vs R&D %)、并购无形资产摊销与商誉减值召回暗门(GAAP vs Non-GAAP Margin & Goodwill %) | **已完稿** ✅ | `assets/cover_ep08_2.35x1.jpg` |
+| **【行业指标 09】** | 跨国大药企财报解剖：重磅单品集中度、量价返利折价、销售经营杠杆与管线并购暗门 | 礼来 (LLY) vs 诺和诺德 (NVO) | 核心单品专营权集中度与专利悬崖(Franchise Concentration & LOE %)、处方量价拆分与医保返利折价(Volume vs Price & GTN %)、高毛利与销售研发经营杠杆(Gross Margin & SG&A vs R&D %)、外延管线引进(IPR&D)与研发减值及扩产资本开支 | **已完稿** ✅ | `assets/cover_ep09_2.35x1.jpg` |
 | **【行业指标 10】** | 早期创新药与临床 Biotech：没有收入怎么看？现金跑道、研发失血流速与全稀释股本暗门 | 传奇生物 (LEGN) vs CRISPR Therapeutics (CRSP) | 现金跑道与净烧钱率(Cash Runway & Net Burn)、研发开支纯度与外包结构(R&D Purity)、合作授权分成与递延收入(Collaboration Economics)、全稀释股本与 ATM 抽水暗门(Fully Diluted & ATM Overhang) | **已完稿** ✅ | `assets/cover_ep10_2.35x1.jpg` |
 | **【行业指标 11】** | 半导体前道核心设备：订单出货比、在手积压转化与装机服务飞轮 | 阿斯麦 (ASML) vs 科磊 (KLA) | 订单出货比(B2B)、积压订单覆盖(Backlog)、装机服务占比(Services %)、现场装机存货(Installations in Progress)、稳态毛利率与研发强度 | **已完稿** ✅ | `assets/cover_ep11_2.35x1.jpg` |
 | **【行业指标 12】** | 晶圆先进制程代工与制造：产能利用率、晶圆单价与折旧悬崖 | 台积电 (TSMC) vs 中芯国际 (SMIC) | 产能利用率(Utilization Rate)、综合晶圆平均售价(Blended ASP)、资本开支占营收比(CapEx Intensity %)、折旧悬崖(Depreciation Cliff)、先进制程营收占比 | **已完稿** ✅ | `assets/cover_ep12_2.35x1.jpg` |
@@ -65,23 +65,13 @@
 ## 🧭 单篇公众号文章的“黄金交付范式”（Standard Article Blueprint）
 
 专栏所有文章必须 **100% 遵守“以行业为重，标的公司仅为验证标本”** 的第一铁律：
-* **行业第一性原理为主（Industry First）**：专栏的核心灵魂是建立各行各业通用的财务物理第一性原理与买方显微镜。第一章与第二章必须是纯粹的行业分析，严禁通篇围绕个股写研报；
-* **指标数量按行业客观实际决定（No Arbitrary Count）**：核心指标数量不搞固定名额限制，看行业商业特异性，有多少就是多少，严禁凑数，也绝不为了形式主义而强行删减合并；
-* **指标必须 100% 真实可披露、可取数（SEC Ground Truth）**：严禁使用公司不公开披露的纯工程微观参数或学术试验参数（如芯片良率缺陷密度 D₀ 等内部机密），所有指标必须能从 SEC 10-K/20-F 正式财报、官方季报或法会材料中定点取数与勾稽；
-* **标的公司仅为实战验证标本（Empirical Specimens）**：标的仅在第三、四章登场，作为真实商业标本验证第一章提出的行业特异性指标体系；
-* **下讲预告必须遵循行业演进逻辑（Cross-Industry Evolution）**：从当前行业的技术/物理边界，自然过渡至下一个行业的商业物种与供应链层级。
+* **大行业普适覆盖（Industry-Wide Generality）**：第一章与第二章只讲整个大行业通用的概念与商业逻辑，严禁围绕某一种细分产品形态或某家个股写研报；
+* **指标数量按行业客观实际决定（No Arbitrary Count）**：核心指标数量不搞固定名额限制，有多少列几个，绝不凑数；
+* **双标本 10-K 原生可查（SEC Ground Truth）**：选定的每一个核心指标，必须确保在本讲主标杆（第三章）与对照公司（第四章）双方的官方财报中都能找到原生披露数据；
+* **基准线采用通用整数锚点（Round-Number Benchmarks）**：行业优秀线、观察区与预警线统一采用五进位或十进位整数锚点，严禁根据本篇个股的具体数字倒推定制；
+* **图表管数据、文字管逻辑（Logic Over Number-Dumping）**：底表集中呈现跨周期数据，正文重点剖析背后的商业逻辑，告别机械的算式堆砌与页码报菜名。
 
-所有文章严格遵循统一的七步交付架构：
-
-```text
-① 视觉封面与一句话买方导读 ➔ 2.35:1 官方题图 ＋ 头部三行规范（定位/标的/指标）＋ 一句话直击行业本质
-② 行业核心指标解剖与精密算法 ➔ 行业商业底色原则 ＋ 分析维度先导总览表 ＋ 各核心特异指标（深度定义＋Unicode算式＋买方判定线＋SEC出处，禁用 LaTeX）
-③ 行业核心指标全景速查对照表 ➔ 统一标准 6 列速查表（指标名称、符号、考核焦点、优秀基准线、危险阈值、SEC取数出处，严禁堆叠个股）
-④ 标杆实例深度实战（主航道 Anchor 标的） ➔ 纯净年份表头 ＋ 首行宏观周期基准行 ＋ 6 周期全景原生底表（覆盖至最新季报实战） ＋ 核心战局算式现场数学还原
-⑤ 标杆实例镜像对照（独立对照 Mirror 标的） ➔ 横向拉齐对比底表 ＋ 高清跨周期对比图（带图表买方核心解读块） ＋ 标杆镜像关键差异深度复盘
-⑥ 实战对账自查表（买方外科手术排查卡） ➔ 步骤卡片流（与第一章核心指标 1 对 1 严格闭环映射） ＋ 🟢/🟡/🔴 状态指示灯 ＋ 查账标准（禁用 ASCII 边框代码块）
-⑦ 买方终极心法总结 ＋ 下讲引子预告 ➔ 核心心法收官 ＋ 干净引出下一讲行业与双雄对决（禁止多余承上启下串讲）
-```
+> 📐 **完整六章结构与详细写作标准请查阅**：[INDUSTRY_METRICS_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/INDUSTRY_METRICS_STANDARDS.md)
 
 ---
 
