@@ -358,9 +358,9 @@
 
 ---
 
-### 下讲预告：【行业指标 14】线下连锁零售与餐饮的生命线：同店增速 (SSSG)、坪效与单店模型（好市多 COST 与 星巴克 SBUX / Chipotle）
+### 下讲预告：【行业指标 14】线下连锁零售与餐饮的生命线：同店增速 (SSSG)、坪效与单店模型（好市多 COST 与 星巴克 SBUX）
 
 解剖了冷峻硅基世界里的 **无晶圆厂芯片设计与算力平台（Fabless）** ，我们正式跨入软硬件之外、最贴近亿万大众日常生活与高频消费的全新阵地—— **【第五板块：大消费与现代服务业·线下连锁零售与餐饮】！**
 
-在下一讲中，我们将派出全球仓储会员制零售教科书**好市多（Costco, COST.US）**，正面迎战全球咖啡与快休闲连锁传奇**星巴克（Starbucks, SBUX.US）**与 **Chipotle (CMG.US)**！我们将用**同店销售增长率 (Same-Store Sales Growth / SSSG)**、**会员续费率与负营运资本飞轮 (Membership Renewal Rate)**、**单店平均年销售额 (Average Unit Volume / AUV)** 以及 **每平方英尺坪效与店面级营业利润率 (Sales per Sq Ft & Store-level Margin %)** ，为您彻底拆解线下零售如何抵抗电商冲击、打造百年常青商业现金牛的底层财务密码，敬请期待！
+在下一讲中，我们将派出全球仓储会员制零售教科书**好市多（Costco, COST.US）**，正面迎战全球现磨咖啡与第三空间连锁传奇**星巴克（Starbucks, SBUX.US）**！我们将用**同店可比销售增长率与量价双轮驱动 (SSSG: Comp Traffic vs Average Ticket)** 、**单店平均年销售额与每平方英尺坪效 (AUV & Sales per Sq.Ft.)** 以及 **直营店面级营业利润率与工时杠杆 (Store-Level Operating Margin & Labor Leverage)** ，为您彻底拆解线下零售如何抵抗电商冲击、打造百年常青商业现金牛的底层财务密码，敬请期待！
 

@@ -228,8 +228,8 @@
 
 ---
 
-### 下讲预告：【行业指标 10】早期创新药与临床 Biotech：没有产品收入怎么看？现金跑道、研发纯度与授权分成暗门（传奇生物 LEGN 与 CRISPR Therapeutics CRSP）
+### 下讲预告：【行业指标 10】早期创新药与临床 Biotech 财报解剖：现金跑道、研发纯度、合作分成与股本稀释暗门（传奇生物 LEGN 与 CRISPR Therapeutics CRSP）
 
 解剖了坐拥数百亿美元营收、依靠全球商业化网络和重磅大单品印钞的 **跨国成熟大药企** ，我们将视野推向医药产业链最前端、也是无数重磅新药诞生的摇篮——尚处于临床试验阶段或商业化初期的 **【早期创新药与临床 Biotech 篇】！**
 
-当一家生物科技公司还没有稳定的药品销售收入、利润表常年亏损时，买方该如何给它做财务体检？在下一讲中，我们将派出凭 CAR-T 细胞疗法走向全球商业化的**传奇生物（Legend Biotech, LEGN.US）**，正面迎战诺奖级基因编辑先锋 **CRISPR Therapeutics (CRSP.US)** ！我们将运用财报原生披露的 **现金跑道与净烧钱率 (Cash Runway & Net Burn)** 、**研发开支结构与管理费用占比 (R&D vs. G&A Mix)** 、**大药企合作授权首付款与分成会计勾稽 (Collaboration Revenue & Profit Split)** 以及 **全稀释股本与增发摊薄暗门 (Dilution & ATM Overhang)** ，为您揭开临床期创新药企的生存与排雷密码，敬请期待！
+当一家生物科技公司还没有稳定的药品销售收入、利润表常年亏损时，买方该如何给它做财务体检？在下一讲中，我们将派出凭 CAR-T 细胞疗法走向全球商业化的**传奇生物（Legend Biotech, LEGN.US）**，正面迎战诺奖级基因编辑先锋 **CRISPR Therapeutics (CRSP.US)** ！我们将运用财报原生披露的 **现金跑道与真实现金净烧钱流速 (Cash Runway & Net Cash Burn)** 、**核心研发投入纯度与行政费用纪律 (R&D Expense Purity & G&A Discipline)** 、**商业化合作分成与授权造血结构 (Collaboration Economics & Profit/Loss Split)** 以及 **全稀释股本膨胀与增发抽水暗门 (Fully Diluted Share Overhang & Equity Financing)** ，为您揭开临床期创新药企的生存与排雷密码，敬请期待！
