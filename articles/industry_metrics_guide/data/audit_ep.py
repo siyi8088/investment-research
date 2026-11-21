@@ -98,10 +98,13 @@ def audit_markdown_file(file_path):
         if re.search(r"今天是\s*\*{0,2}[0-9]{4}\s*年", line):
             errors.append(f"Line {idx}: Unnecessary specific day timestamp found: '{line.strip()[:60]}'. Use evergreen reporting phrasing instead.")
 
+    is_capstone = os.path.basename(file_path).startswith("20_")
+
     # 7. Check core indicators presence in Section 一:
-    indicators = re.findall(r"^### 指标\s*[0-9]+", text, re.M)
-    if len(indicators) == 0:
-        errors.append("Missing '### 指标 N' sections in Chapter 1")
+    if not is_capstone:
+        indicators = re.findall(r"^### 指标\s*[0-9]+", text, re.M)
+        if len(indicators) == 0:
+            errors.append("Missing '### 指标 N' sections in Chapter 1")
 
     # 8. Check WeChat Summary (> **摘要：**) presence and <= 120 char limit
     m_summary = re.search(r"^>\s*\*\*摘要：\*\*\s*(.+)$", text, re.M)
@@ -114,26 +117,43 @@ def audit_markdown_file(file_path):
                 f"WeChat summary length {len(summary_text)} exceeds 120 chars limit: '{summary_text[:40]}...'"
             )
 
-    # 9. Check Standard Chapter H2 Skeleton (Chapters 一 to 六)
-    ch1 = re.search(r"^## 一、\s*.*核心指标深度解剖", text, re.M)
-    ch2 = re.search(r"^## 二、\s*.*(核心特异性指标全景速查对照表|核心指标全景速查对照表)", text, re.M)
-    ch3 = re.search(r"^## 三、\s*标杆实例深度实战：", text, re.M)
-    ch4 = re.search(r"^## 四、\s*标杆实例镜像对照：", text, re.M)
-    ch5 = re.search(r"^## 五、\s*实战对账自查表：", text, re.M)
-    ch6 = re.search(r"^## 六、\s*本讲买方总结与下讲预告", text, re.M)
+    # 9. Check Standard Chapter H2 Skeleton (Ep 01-19: 6 chapters; Ep 20 Capstone: 5-part architecture)
+    if is_capstone:
+        ch1 = re.search(r"^## 一、\s*", text, re.M)
+        ch2 = re.search(r"^## 二、\s*", text, re.M)
+        ch3 = re.search(r"^## 三、\s*", text, re.M)
+        ch4 = re.search(r"^## 四、\s*", text, re.M)
+        ch5 = re.search(r"^## 五、\s*", text, re.M)
+        if not ch1:
+            errors.append("Capstone Part 1 missing (expected '## 一、 ...')")
+        if not ch2:
+            errors.append("Capstone Part 2 missing (expected '## 二、 ...')")
+        if not ch3:
+            errors.append("Capstone Part 3 missing (expected '## 三、 ...')")
+        if not ch4:
+            errors.append("Capstone Part 4 missing (expected '## 四、 ...')")
+        if not ch5:
+            errors.append("Capstone Part 5 missing (expected '## 五、 ...')")
+    else:
+        ch1 = re.search(r"^## 一、\s*.*核心指标深度解剖", text, re.M)
+        ch2 = re.search(r"^## 二、\s*.*(核心特异性指标全景速查对照表|核心指标全景速查对照表)", text, re.M)
+        ch3 = re.search(r"^## 三、\s*标杆实例深度实战：", text, re.M)
+        ch4 = re.search(r"^## 四、\s*标杆实例镜像对照：", text, re.M)
+        ch5 = re.search(r"^## 五、\s*实战对账自查表：", text, re.M)
+        ch6 = re.search(r"^## 六、\s*本讲买方总结与下讲预告", text, re.M)
 
-    if not ch1:
-        errors.append("Chapter 1 missing or incorrectly formatted (expected '## 一、 ...核心指标深度解剖')")
-    if not ch2:
-        errors.append("Chapter 2 missing or incorrectly formatted (expected '## 二、 ...核心特异性指标全景速查对照表')")
-    if not ch3:
-        errors.append("Chapter 3 missing or incorrectly formatted (expected '## 三、 标杆实例深度实战：...')")
-    if not ch4:
-        errors.append("Chapter 4 missing or incorrectly formatted (expected '## 四、 标杆实例镜像对照：...')")
-    if not ch5:
-        errors.append("Chapter 5 missing or incorrectly formatted (expected '## 五、 实战对账自查表：...')")
-    if not ch6:
-        errors.append("Chapter 6 missing or incorrectly formatted (expected '## 六、 本讲买方总结与下讲预告')")
+        if not ch1:
+            errors.append("Chapter 1 missing or incorrectly formatted (expected '## 一、 ...核心指标深度解剖')")
+        if not ch2:
+            errors.append("Chapter 2 missing or incorrectly formatted (expected '## 二、 ...核心特异性指标全景速查对照表')")
+        if not ch3:
+            errors.append("Chapter 3 missing or incorrectly formatted (expected '## 三、 标杆实例深度实战：...')")
+        if not ch4:
+            errors.append("Chapter 4 missing or incorrectly formatted (expected '## 四、 标杆实例镜像对照：...')")
+        if not ch5:
+            errors.append("Chapter 5 missing or incorrectly formatted (expected '## 五、 实战对账自查表：...')")
+        if not ch6:
+            errors.append("Chapter 6 missing or incorrectly formatted (expected '## 六、 本讲买方总结与下讲预告')")
 
     if not errors:
         print(f"✅ {os.path.basename(file_path)}: 100% Passed all audits!")

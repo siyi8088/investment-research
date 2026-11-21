@@ -31,10 +31,10 @@
 | **【行业指标 14】** | 线下商超与会员制零售：同店量价、空间坪效、毛销差与存货周转 | 好市多 (COST) vs 塔吉特 (TGT) | 同店可比销售增速与客流/客单拆解(SSSG: Traffic vs Ticket & Digital %)、每平方英尺坪效与单店年产出(Sales/Sq.Ft. & AUV)、非商品其他收入占比与利润贡献(Non-Merchandise Rev & OpInc Mix %)、商品毛利率与 SG&A 毛销差纪律(GM − SG&A Spread)、存货周转天数与应付占款覆盖率(DIO, AP/Inventory % & CCC) | **已完稿** ✅ | `assets/cover_ep14_2.35x1.jpg` |
 | **【行业指标 15】** | 连锁餐饮与特许经营帝国：直营四壁模型、体系流水与商业地租抽成 | 麦当劳 (MCD) vs 奇波雷 (CMG) | 同店可比增速与量价拆解(Comp: Traffic vs Check & Digital %)、单店产出与净开店力(AUV & Net Unit Growth %)、四壁营业利润率与首要成本(RLOM & Prime Cost %)、特许占比、体系流水、双轨抽成与总部体系杠杆(Franchised %, Systemwide Sales, Take Rate & G&A/Sys %) | **已完稿** ✅ | `assets/cover_ep15_2.35x1.jpg` |
 | **【行业指标 16】** | 电力与公用事业财报解剖：受管制资产基数、发电结构与 AI 电力市场化重估 | 新纪元能源 (NEE) vs 维斯达能源 (VST) | 收入定价与回报确定性(Rate Base/Allowed ROE vs Merchant & PPA)、电源装机结构与机组容量因子(Capacity Mix & Capacity Factor)、燃料购电占比与未实现衍生品 MTM 畸变(Fuel Ratio & MTM Distortion)、重资产资本开支强度与信用覆盖红线(CapEx/OCF & CFO/Debt) | **已完稿** ✅ | `assets/cover_ep16_2.35x1.jpg` |
-| **【行业指标 17】** | 上游金属矿业与资源周期财报解剖：探明储量、单位现金成本与资源民族主义暗门 | 自由港迈克墨伦 (FCX) vs 南方铜业 (SCCO) | 储量权益与开采年限(P&P Reserves, Equity % & Reserve Life)、核心产量品位与副产品(Production, Ore Grade & By-Products)、单位现金成本与均价剪刀差(Gross/Net C1 vs Realized Price)、资本开支周期与少数股东利润截留(CapEx/CFO & NCI Leakage) | **已完稿** ✅ | `assets/cover_ep17_2.35x1.jpg` |
-| **【行业指标 18】** | 上游油气与一体化能源：储量替代率、桶油成本与上下游裂解价差对冲 | 埃克森美孚 (XOM) vs 康菲石油 (COP) | 油气储量替代率(RRR)、油气当量日产量(MBOE/d)、单桶开采与发现成本(Lifting & F&D Cost)、上下游一体化裂解价差(Crack Spread)与盈亏平衡油价 | 待动笔 📋 | `assets/cover_ep18_2.35x1.jpg` |
-| **【行业指标 19】** | 全球航运与重资产运力周期：箱量运价、供给订单与综合/干线模式分化 | 马士基 (Maersk) vs 中远海控 (1919.HK) | 装运箱量与单箱平均运价(Volume FEU/TEU & Freight Rate)、运力结构与在手新船订单比(Fleet & Orderbook %)、海运与综合物流分部 EBIT 率、租船负债与资产净值(NAV) | 待动笔 📋 | `assets/cover_ep19_2.35x1.jpg` |
-| **【行业指标 20】** | 全行业指标勾稽与买方财报自查清单（收官总览）：20 大行业核心暗门速查字典 | 全行业顶流龙头矩阵横向联立穿透 | 终极买方行业指标全景矩阵图、10-K/10-Q/20-F 披露章节索引与一票否决红线 | 待动笔 📋 | `assets/cover_ep20_2.35x1.jpg` |
+| **【行业指标 17】** | 上游金属矿业与资源周期财报解剖：探明储量、单位现金成本与资源民族主义暗门 | 自由港迈克墨伦 (FCX) vs 南方铜业 (SCCO) | 储量权益与开采年限(P&P Reserves, Equity % & Reserve Life)、核心产量品位与副产品(Production, Ore Grade & By-Products)、单位现金成本 C1 与均价剪刀差(Gross/Net C1 & C1 Cash Margin) | **已完稿** ✅ | `assets/cover_ep17_2.35x1.jpg` |
+| **【行业指标 18】** | 上游油气与一体化能源：储量替代率、桶油成本与上下游裂解价差对冲 | 埃克森美孚 (XOM) vs 康菲石油 (COP) | 探明储量/内生储量替代率(Organic RRR)与储采比(R/P)、油气当量日产量(MBOE/d)与液态/纯原油占比、全周期桶油成本(开采＋折耗 DD&A)与综合净回值、上下游一体化盈利结构与炼化对冲度 | **已完稿** ✅ | `assets/cover_ep18_2.35x1.jpg` |
+| **【行业指标 19】** | 全球航运与重资产运力周期：箱量运价、供给订单与综合/干线模式分化 | 马士基 (Maersk) vs 中远海控 (1919.HK) | 装运箱量与单箱平均运价(Volume TEU/FFE & Freight Rate)、船队运力/自有租入结构与在手新船订单比(Fleet & Orderbook %)、海运/码头/综合物流分部盈利分化(Segment EBIT Margin %) | **已完稿** ✅ | `assets/cover_ep19_2.35x1.jpg` |
+| **【行业指标 20】** | 全行业指标勾稽与买方财报自查清单（收官总览）：20 大行业核心暗门速查字典 | 全行业顶流龙头矩阵横向联立穿透 | 五大商业基因簇坐标系、19 行业专属指标全景速查字典、六大跨赛道财报幻觉勾稽与十大一票否决红线 | **已完稿** ✅ | `assets/cover_ep20_2.35x1.jpg` |
 
 ---
 

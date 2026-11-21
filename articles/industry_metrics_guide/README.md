@@ -6,7 +6,7 @@
 ## 📖 核心文档索引
 
 * 🎯 **专栏总规划与连载追踪**：请查阅 [COLUMN_MASTER_PLAN.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/COLUMN_MASTER_PLAN.md)
-  * 包含：18 讲完整课程大纲、行业顶级标的对决清单、连载进度追踪。
+  * 包含：20 讲完整课程大纲、全行业 38 家顶级标的对决清单、连载进度追踪。
 * 📐 **标准化生产规程 (SOP)**：请查阅 [INDUSTRY_METRICS_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/INDUSTRY_METRICS_STANDARDS.md)
   * 包含：专栏核心哲学（文字做方向指南，数据做严格格式）、标准七步交付范式、6 周期原生底表规范、微信/墨滴排版免死规程与成稿交付终检清单。
 * 📘 **微信排版与语法避坑手册**：请查阅 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/WECHAT_MDNICE_STYLEGUIDE.md)
@@ -37,12 +37,16 @@
 13. **【行业指标 13】**：[13_无晶圆厂芯片设计与算力平台_NVDA与AMD.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/13_无晶圆厂芯片设计与算力平台_NVDA与AMD.md)（已完稿 ✅ | 标的：英伟达 NVDA vs 超威半导体 AMD）
 
 ### 【第五板块：大消费与连锁实体·单体经济学】
-14. **【行业指标 14】**：[14_线下连锁零售与餐饮生命线_COST与SBUX.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/14_线下连锁零售与餐饮生命线_COST与SBUX.md)（已完稿 ✅ | 标的：好市多 COST vs 星巴克 SBUX）
-15. **【行业指标 15】**：15_特许加盟与轻资产营运_MCD与DPZ.md（规划中 📋 | 标的：麦当劳 MCD vs 达美乐 DPZ）
+14. **【行业指标 14】**：[14_线下商超与会员制零售_COST与TGT.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/14_线下商超与会员制零售_COST与TGT.md)（已完稿 ✅ | 标的：好市多 COST vs 塔吉特 TGT）
+15. **【行业指标 15】**：[15_连锁餐饮与特许经营帝国_MCD与CMG.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/15_连锁餐饮与特许经营帝国_MCD与CMG.md)（已完稿 ✅ | 标的：麦当劳 MCD vs 奇波雷 CMG）
 
-### 【第六板块：周期重资产、公用事业与宏观基础设施】
-16. **【行业指标 16】**：16_AI电力与公用事业_VST与CEG.md（规划中 📋 | 标的：维斯达能源 VST vs 星云能源 CEG）
-17. **【行业指标 17】**：17_周期大宗与航运重资产_ZIM与FCX.md（规划中 📋 | 标的：以星航运 ZIM / 马士基 vs 自由港铜业 FCX）
-18. **【行业指标 18】**：18_全行业指标勾稽与买方财报自查清单.md（收官总览 📋 | 全行业顶流龙头矩阵横向联立）
+### 【第六板块：公用事业、周期资源与全球航运】
+16. **【行业指标 16】**：[16_电力与公用事业_NEE与VST.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/16_电力与公用事业_NEE与VST.md)（已完稿 ✅ | 标的：新纪元能源 NEE vs 维斯达能源 VST）
+17. **【行业指标 17】**：[17_上游金属矿业与资源周期_FCX与SCCO.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/17_上游金属矿业与资源周期_FCX与SCCO.md)（已完稿 ✅ | 标的：自由港迈克墨伦 FCX vs 南方铜业 SCCO）
+18. **【行业指标 18】**：[18_上游油气与一体化能源_XOM与COP.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/18_上游油气与一体化能源_XOM与COP.md)（已完稿 ✅ | 标的：埃克森美孚 XOM vs 康菲石油 COP）
+19. **【行业指标 19】**：[19_全球航运与重资产运力周期_马士基与中远海控.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/19_全球航运与重资产运力周期_马士基与中远海控.md)（已完稿 ✅ | 标的：马士基 Maersk vs 中远海控 1919.HK）
+
+### 【第七板块：终极收官·跨行业联合手术台】
+20. **【行业指标 20】**：[20_全行业指标勾稽与买方财报自查清单_收官总览.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/20_全行业指标勾稽与买方财报自查清单_收官总览.md)（已完稿 ✅ | 19 大行业全景速查字典与买方 10 分钟排雷 SOP）
 
 ---
