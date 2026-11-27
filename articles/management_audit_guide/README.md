@@ -16,7 +16,7 @@
 
 ### 阶段 A：权力边界与纠偏契约（定规矩）
 1. **【第 01 讲】** [控制权地图：股权结构、超级投票权与股东权利边界（Meta META 与 苹果 AAPL）](file:///Users/siyi/Documents/code/investment-research/articles/management_audit_guide/01_控制权地图与超级投票权_META与AAPL.md) ✅
-2. **【第 02 讲】** 董事会制衡、章程壁垒与激进股东（`13D`）提效纠偏（英伟达 NVDA 与 赛富时 CRM / 迪士尼 DIS）
+2. **【第 02 讲】** [董事会制衡、章程壁垒与激进股东（13D）提效纠偏（英伟达 NVDA 与 赛富时 CRM）](file:///Users/siyi/Documents/code/investment-research/articles/management_audit_guide/02_董事会制衡与激进股东纠偏_NVDA与CRM.md) ✅
 
 ### 阶段 B：激励函数与稀释账本（切蛋糕）
 3. **【第 03 讲】** 高管薪酬函数解剖：`DEF 14A` 里的复利引擎与败家指挥棒（博通 AVGO / 微软 MSFT 与 波音 BA）

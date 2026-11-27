@@ -56,38 +56,42 @@ rects2 = ax1.bar(x + width/2, nvda_cap_ret, width, label='NVDA 股东现金回�
 ax1.set_ylabel('营业利润与股东现金回馈 (亿美元)', color=c_text, fontsize=12, fontweight='bold', labelpad=10)
 ax1.set_xticks(x)
 ax1.set_xticklabels(periods, fontsize=11, color=c_text)
-ax1.set_ylim(0, 1650)
+ax1.set_ylim(0, 1880)
 
 ax1_twin = ax1.twinx()
 l1 = ax1_twin.plot(x, nvda_gaap_opm, color=c_line_1, marker='o', linewidth=2.8, label='NVDA GAAP 营业利润率 (%) [右轴]')
 l2 = ax1_twin.plot(x, nvda_sbc_pct, color=c_line_sbc, marker='s', linewidth=2.4, linestyle='--', label='NVDA 股权激励 SBC 占营收比重 (%) [右轴]')
 ax1_twin.set_ylabel('利润率与股权激励占比 (%)', color=c_text, fontsize=12, fontweight='bold', labelpad=10)
 ax1_twin.tick_params(colors=c_muted, labelsize=11)
-ax1_twin.set_ylim(0, 82)
+ax1_twin.set_ylim(0, 92)
 ax1_twin.grid(False)
 
 for rect in rects1:
     h = rect.get_height()
-    ax1.annotate(f"{h:.1f}" if h < 200 else f"{h:.0f}", (rect.get_x() + rect.get_width()/2, h + 18),
+    ax1.annotate(f"{h:.1f}" if h < 200 else f"{h:.0f}", (rect.get_x() + rect.get_width()/2, h + 20),
                  ha='center', va='bottom', color='#6ee7b7', fontsize=9.2, weight='bold')
-for rect in rects2:
+for i, rect in enumerate(rects2):
     h = rect.get_height()
-    ax1.annotate(f"{h:.1f}" if h < 100 else f"{h:.0f}", (rect.get_x() + rect.get_width()/2, h + 18),
+    y_off = 55 if i == 2 else 20
+    ax1.annotate(f"{h:.1f}" if h < 100 else f"{h:.0f}", (rect.get_x() + rect.get_width()/2, h + y_off),
                  ha='center', va='bottom', color='#67e8f9', fontsize=9.2, weight='bold')
 
 for i, txt in enumerate(nvda_gaap_opm):
-    ax1_twin.annotate(f"{txt:.1f}%", (x[i], nvda_gaap_opm[i] + 2.2),
+    x_shift = 0.24 if i == 1 else (-0.18 if i == 2 else 0.0)
+    y_delta = 1.8 if i == 1 else 2.5
+    ax1_twin.annotate(f"{txt:.1f}%", (x[i] + x_shift, nvda_gaap_opm[i] + y_delta),
                       ha='center', color=c_line_1, fontsize=9.5, weight='bold')
 for i, txt in enumerate(nvda_sbc_pct):
-    ax1_twin.annotate(f"{txt:.1f}%", (x[i], nvda_sbc_pct[i] + 1.8),
+    y_delta = -3.6 if i == 2 else 2.2
+    ax1_twin.annotate(f"{txt:.1f}%", (x[i], nvda_sbc_pct[i] + y_delta),
                       ha='center', color=c_line_sbc, fontsize=9.0, weight='bold')
 
-# Milestone callout box on Panel 1
+# Milestone callout box on Panel 1 (cleanly in upper-right empty space above bars)
 ax1.annotate('2026 治理双节点:\n• 6月: 86.8% 选票强拆超多数决\n• 11月: 11天换帅复职 → 首设独立董事长\n  +全独董国安专委会+CCO越级汇报',
-             xy=(4.85, 820), xytext=(1.65, 1180),
-             arrowprops=dict(arrowstyle='->', color='#fbbf24', lw=1.8),
-             bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='#fbbf24', alpha=0.92),
-             fontsize=9.5, color='#fde68a', weight='bold')
+             xy=(5.0, 840), xytext=(2.15, 1540),
+             arrowprops=dict(arrowstyle='->', color='#fbbf24', lw=1.8, connectionstyle='arc3,rad=-0.18'),
+             bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='#fbbf24', alpha=0.95),
+             fontsize=9.2, color='#fde68a', weight='bold')
 
 ax1.set_title('图 1：英伟达 (NVDA) 3.58% 创始人选票 vs 万亿关键人效应与护栏重构\n66.9% 营业利润率印钞机下，“留住灵魂统帅 + 焊死三道独立护栏”的制度均衡',
               fontsize=12.8, fontweight='bold', color=c_text, pad=16)
@@ -105,15 +109,15 @@ rects4 = ax2.bar(x + width/2, crm_cap_ret, width, label='CRM 股东现金回馈�
 
 ax2.axvline(1.5, color='#fbbf24', linestyle='-.', linewidth=1.8, alpha=0.75)
 ax2.annotate('2023年初 五大激进基金围猎:\n• ValueAct掌门进董事会任薪酬主席\n• 正式解散董事会“并购委员会”\n• 裁员控费 + 开启百亿回购与分红',
-             xy=(1.5, 128), xytext=(1.75, 150),
+             xy=(1.5, 165), xytext=(1.82, 162),
              arrowprops=dict(arrowstyle='->', color='#fbbf24', lw=1.8),
-             bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='#fbbf24', alpha=0.92),
-             fontsize=9.5, color='#fde68a', weight='bold')
+             bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='#fbbf24', alpha=0.95),
+             fontsize=9.2, color='#fde68a', weight='bold')
 
 ax2.set_ylabel('自由现金流与股东现金回馈 (亿美元)', color=c_text, fontsize=12, fontweight='bold', labelpad=10)
 ax2.set_xticks(x)
 ax2.set_xticklabels(periods, fontsize=11, color=c_text)
-ax2.set_ylim(0, 195)
+ax2.set_ylim(0, 215)
 
 ax2_twin = ax2.twinx()
 l3 = ax2_twin.plot(x, crm_nongaap_opm, color='#38bdf8', marker='^', linewidth=2.6, linestyle='--', label='CRM Non-GAAP 营业利润率 (%) [右轴]')
@@ -121,16 +125,17 @@ l4 = ax2_twin.plot(x, crm_gaap_opm, color=c_line_2, marker='o', linewidth=3.0, l
 l5 = ax2_twin.plot(x, crm_sbc_pct, color=c_line_sbc, marker='d', linewidth=2.2, linestyle=':', label='CRM 股权激励 SBC 占营收比重 (%) [右轴]')
 ax2_twin.set_ylabel('营业利润率与股权激励占比 (%)', color=c_text, fontsize=12, fontweight='bold', labelpad=10)
 ax2_twin.tick_params(colors=c_muted, labelsize=11)
-ax2_twin.set_ylim(0, 44)
+ax2_twin.set_ylim(0, 48)
 ax2_twin.grid(False)
 
 for rect in rects3:
     h = rect.get_height()
-    ax2.annotate(f"{h:.1f}", (rect.get_x() + rect.get_width()/2, h + 2.2),
+    ax2.annotate(f"{h:.1f}", (rect.get_x() + rect.get_width()/2, h + 2.5),
                  ha='center', va='bottom', color='#7dd3fc', fontsize=9.2, weight='bold')
-for rect in rects4:
+for i, rect in enumerate(rects4):
     h = rect.get_height()
-    ax2.annotate(f"{h:.1f}", (rect.get_x() + rect.get_width()/2, h + 2.2),
+    y_pos = h + 11.0 if i == 1 else h + 2.5
+    ax2.annotate(f"{h:.1f}", (rect.get_x() + rect.get_width()/2, y_pos),
                  ha='center', va='bottom', color='#fde68a', fontsize=9.2, weight='bold')
 
 for i, txt in enumerate(crm_gaap_opm):
