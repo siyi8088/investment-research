@@ -14,7 +14,9 @@ investment-research/
 │   │   ├── financial-forensics/    # [排雷与穿透] 真实造血质量穿透 (CFO瀑布、SBC稀释、CCC飞轮、EV桥)
 │   │   ├── valuation-engine/       # [估值引擎] 预期投资学逆向DCF求解器 (市价倒推隐含CAGR、三情景建模)
 │   │   └── investment-memo/        # [风控决策] 买方投资备忘录 (事前验尸、非价格证伪红线、六维雷达量规)
-│   └── rules/investment-rules.md  # 投研通用数据规范与财年对齐规则
+│   └── rules/
+│       ├── investment-rules.md      # 第一层：投研数据源、通用数据口径与研报文风规范
+│       └── wechat-publishing-rules.md # 第二层：微信与墨滴通用排版语法防御规范
 ├── README.md               # [全局索引] 覆盖标的看板与总览
 ├── companies/              # [个股深度主档案、历季财报与买方备忘录]
 │   ├── NVDA/                 # 英伟达 (AI算力系统级垄断者 / 核心底仓 / 备忘录 55.0分)

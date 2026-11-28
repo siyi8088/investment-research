@@ -2,7 +2,7 @@
 
 > **适用范围**：`articles/industry_metrics_guide/` 专栏全系列文章的撰写、修订与质检。  
 > **核心理念**：**站在普通读者视角讲透行业商业逻辑，用真实官方财报数据做验证。** 拒绝生硬模板、拒绝数字堆砌、拒绝拿个股特征冒充行业标准。  
-> **排版与信源底线**：微信与墨滴（mdnice）排版规则参见 [WECHAT_MDNICE_STYLEGUIDE.md](WECHAT_MDNICE_STYLEGUIDE.md)；所有公司财务与经营数据必须 100% 源自 SEC 10-K/20-F 年报或 10-Q 季报，严禁估算脑补。
+> **数据口径与排版规范**：全局数据口径与微信/墨滴排版语法统一遵循 [`.agents/rules/investment-rules.md`](file:///Users/siyi/Documents/code/investment-research/.agents/rules/investment-rules.md) 与 [`.agents/rules/wechat-publishing-rules.md`](file:///Users/siyi/Documents/code/investment-research/.agents/rules/wechat-publishing-rules.md) （双标的同格 `<br>` 紧凑换行所需的墨滴自定义 CSS 见 [`mdnice_custom.css`](file:///Users/siyi/Documents/code/investment-research/articles/mdnice_custom.css) ）；所有公司财务与经营数据必须 100% 源自 SEC 10-K/20-F 年报或 10-Q 季报，严禁估算脑补。
 
 ---
 
@@ -51,8 +51,11 @@
 ### 第四章：标杆实例镜像对照（同业对照公司）
 * **核心任务**：引入同行业另一家商业模式或扩张路径不同的代表性公司，通过横向对比展现不同战略路径的财务分野。
 * **写作规范**：除遵循第三章的底表与正文规范外，包含三个要素：
-  1. **双雄横向对照底表（9 列）**：比第三章多一列 `标的`，两家公司数据在同一单元格内用 `<br>` 上下紧凑分行对比；
+  1. **双雄横向对照底表（9 列）**：比第三章多一列 `标的`，两家公司数据在同一单元格内用 `<br>` 上下紧凑分行对比（不在两行之间多留空行；前端渲染需配合 [`mdnice_custom.css`](file:///Users/siyi/Documents/code/investment-research/articles/mdnice_custom.css) 消除多余行高）；
   2. **跨周期走势对比图**：插入由 Python 脚本生成的双联高清对比图（存入 `assets/`），下方配一段 `< 150 字` 的 `> **图表买方核心解读：**`；
+     * **一标的一主色**：双标的分别绑定冷色系与暖色系主题色（同公司跨指标保持同色系，不混用多色相）；
+     * **形态与明度分层**：体量存量指标用同色半透明柱状图（Alpha 0.50~0.65），比率与效率指标用高饱和度实线/虚线（线宽 2.5~3.0）搭配数据点标记；
+     * **深色终端画布与坐标同步**：采用暗色研究终端底色（`#0B0F17` / `#111827`）与灰色降噪轴线，X 轴时间刻度与 6 周期 SEC 数据底表 100% 同步，推荐尺寸 `1920 × 860` 像素、`300 DPI`，标注框严禁遮挡曲线；
   3. **关键差异深度复盘**：用 `#### 关键差异 ① / ② / ③` 聚焦解释“为什么两家公司会走出截然不同的财务曲线”。
 
 ### 第五章：实战对账自查表

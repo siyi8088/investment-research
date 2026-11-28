@@ -1,0 +1,38 @@
+/* ==========================================================================
+   墨滴（mdnice）微信公众号自定义 CSS 归档
+   用途：直接完整复制粘贴至墨滴（mdnice.com）右侧「自定义 CSS」面板
+   功能：
+     1. 消除表格单元格内使用 <br> 换行对比时的多余上下行距（主要用于《行业财报解剖》等双标的同格对照表）
+     2. 开启微信移动端表格横向丝滑滚动，防止窄屏下表头与数字被竖排挤压变形
+   ========================================================================== */
+
+/* 1. 表格单元格紧凑行高与 <br> 无缝换行 */
+table td {
+  line-height: 1.25 !important;
+  vertical-align: middle !important;
+}
+
+table td br {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2. 开启表格在手机端的横向丝滑滑动，杜绝文字竖排挤压 */
+.table-container,
+table {
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+}
+
+/* 3. 单元格内边距与字体微调 */
+table th,
+table td {
+  padding: 8px 12px !important;
+  white-space: nowrap !important;
+  font-size: 13px !important;
+}

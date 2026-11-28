@@ -6,8 +6,8 @@
 ## 📖 核心文档索引
 
 * 🎯 **专栏总规划与规范**：请查阅 [COLUMN_MASTER_PLAN.md](file:///Users/siyi/Documents/code/investment-research/articles/valuation_guide/COLUMN_MASTER_PLAN.md)
-  * 包含：14 讲完整课程大纲、微信/墨滴排版绝对红线（严禁单次引用超300字、禁用LaTeX、禁用Mermaid）、AI 封面提示词库、状态跟踪表。
-* 📘 **微信公众号与墨滴排版通用指南**：请查阅 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)（加粗防崩四大军规、Unicode公式标准、表格紧凑CSS补丁）。
+  * 包含：14 讲完整课程大纲、AI 封面提示词库、单篇交付范式与状态跟踪表。
+* 📘 **全局数据口径与微信排版规范**：请查阅 [.agents/rules/investment-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/investment-rules.md) 与 [.agents/rules/wechat-publishing-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/wechat-publishing-rules.md) （墨滴自定义 CSS 见 [mdnice_custom.css](file:///Users/siyi/Documents/code/investment-research/articles/mdnice_custom.css) ）。
 
 ---
 

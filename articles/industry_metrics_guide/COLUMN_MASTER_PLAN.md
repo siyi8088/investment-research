@@ -38,32 +38,6 @@
 
 ---
 
-## 🎨 微信公众号与墨滴（mdnice）格式铁律（CRITICAL RULES）
-
-在后续撰写和排版中，**必须 100% 遵守以下格式红线**，防止复制进微信后台时发生报错或错乱：
-
-1. **单次引用块绝对字数红线**：
-   * 微信公众平台严格限制：**单个 `<blockquote>`（即 `>`）引述内容不得超过 300 汉字**。
-   * **排版铁律**：正文中绝对不使用 `>` 包裹长篇案例文本、故事或长段落！
-   * `>` 引用块仅用于：**1~2 句大师名言警句、公式结论卡片，单块严格控制在 100 字以内**。
-2. **严禁使用 LaTeX 原生语法**：
-   * 微信公众号不支持 `$ ... $` 或 `$$ ... $$` 数学公式渲染（复制后会直接显示原始代码）。
-   * 所有公式必须使用 **标准 Unicode 数学符号**（如 `+`、`−`、`×`、`÷`、`=`、`Δ`、`→`）配合加粗文本和清晰行内排版。
-3. **严禁使用 Mermaid JS 代码块**：
-   * 微信后台不执行 Mermaid 渲染，会变成一坨丑陋的代码。
-   * 逻辑推演必须使用：**买方横向对比表格（GFM Table）** 或 **带 Emoji 序号的步骤卡（①、②、③、🔻、⚙️）**。
-4. **严禁使用 ASCII 边框字符代码块**：
-   * 避免 ````text ┌─── ```` 这类文本边框，微信会将其当成代码块显示行号。
-   * 结构图一律用标准 Markdown 表格排版，墨滴渲染后有优雅底色与边框。
-6. **加粗语法防崩四大军规（严格对齐墨滴排版规范）**：
-   * **列表小标题冒号内包**：一律写作 `* **小标题 (英文)：** 正文`（冒号在粗体内，加粗后跟空格），严禁 `)**:` 或 `)**：` 双标点夹击。
-   * **比较与数学符号绝对外置**：一律写作 `≥ **4.0% ~ 5.0%**`、`< **1.0%**`、`**10.95%** ≈ **11.0%**`，严禁将 `≥`、`<`、`≈` 包入粗体内。
-   * **粗体紧贴句号/分号/括号时显式留空格**：一律写作 `**11.0%** 。`、`**20%** 提成；`、`**$2,050 亿** （其中...）`，严禁标点粘连。
-   * **单单元格紧凑对比**：双标的对比数据必须在同单元格内使用 `<br>`，行间不留空行。
-   * 📘 **完整避坑手册请查阅**：[articles/WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/WECHAT_MDNICE_STYLEGUIDE.md)
-
----
-
 ## 🧭 单篇公众号文章的“黄金交付范式”（Standard Article Blueprint）
 
 专栏所有文章必须 **100% 遵守“以行业为重，标的公司仅为验证标本”** 的第一铁律：
@@ -80,5 +54,5 @@
 ## 📌 专栏配套规则与规范文件索引
 
 * 📐 **标准化生产规程 (SOP)**：请查阅 [INDUSTRY_METRICS_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/INDUSTRY_METRICS_STANDARDS.md)
-* 📘 **微信排版与语法避坑手册**：请查阅 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/WECHAT_MDNICE_STYLEGUIDE.md)
+* 📘 **全局数据口径与微信排版规范**：请查阅 [.agents/rules/investment-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/investment-rules.md) 与 [.agents/rules/wechat-publishing-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/wechat-publishing-rules.md) （墨滴自定义 CSS 见 [mdnice_custom.css](file:///Users/siyi/Documents/code/investment-research/articles/mdnice_custom.css) ）
 * 🛠️ **金融机构分析规程**：请查阅 [.agents/skills/fig-analyzer/SKILL.md](file:///Users/siyi/Documents/code/investment-research/.agents/skills/fig-analyzer/SKILL.md)

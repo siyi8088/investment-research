@@ -8,8 +8,8 @@
 * 🎯 **专栏总规划与连载追踪**：请查阅 [COLUMN_MASTER_PLAN.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/COLUMN_MASTER_PLAN.md)
   * 包含：20 讲完整课程大纲、全行业 38 家顶级标的对决清单、连载进度追踪。
 * 📐 **标准化生产规程 (SOP)**：请查阅 [INDUSTRY_METRICS_STANDARDS.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/INDUSTRY_METRICS_STANDARDS.md)
-  * 包含：专栏核心哲学（文字做方向指南，数据做严格格式）、标准七步交付范式、6 周期原生底表规范、微信/墨滴排版免死规程与成稿交付终检清单。
-* 📘 **微信排版与语法避坑手册**：请查阅 [WECHAT_MDNICE_STYLEGUIDE.md](file:///Users/siyi/Documents/code/investment-research/articles/industry_metrics_guide/WECHAT_MDNICE_STYLEGUIDE.md)
+  * 包含：专栏核心哲学（文字做方向指南，数据做严格格式）、标准六章交付范式、6 周期原生底表规范、双标的走势图规范与成稿自动化质检命令。
+* 📘 **全局数据口径与微信排版规范**：请查阅 [.agents/rules/investment-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/investment-rules.md) 与 [.agents/rules/wechat-publishing-rules.md](file:///Users/siyi/Documents/code/investment-research/.agents/rules/wechat-publishing-rules.md) （墨滴自定义 CSS 归档见 [mdnice_custom.css](file:///Users/siyi/Documents/code/investment-research/articles/mdnice_custom.css) ）
 
 ---
 
